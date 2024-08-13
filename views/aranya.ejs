@@ -1,0 +1,77 @@
+<%-include("background.ejs")%>
+<link rel="stylesheet" href="/style/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+    .jayant-page {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        color: #2f4507;
+    }
+
+    .jayant-page .profile-container {
+        max-width: 1200px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #ffffff;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+    }
+
+    .jayant-page .profile-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .jayant-page .profile-header img {
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        margin-right: 20px;
+    }
+
+    .jayant-page .profile-header div {
+        flex-grow: 1;
+    }
+
+    .jayant-page .profile-header h1 {
+        margin: 0;
+        font-size: 2rem;
+        color: #2f4507;
+    }
+
+    .jayant-page .profile-header h2 {
+        margin: 0;
+        font-size: 1.5rem;
+        color: #4CAF50;
+    }
+
+    .jayant-page .profile-content {
+        line-height: 1.6;
+        font-size: 1rem;
+        color: #2f4507;
+    }
+
+    .jayant-page .profile-content p {
+        margin-bottom: 15px;
+    }
+</style>
+
+<div class="jayant-page">
+    <div class="profile-container">
+        <div class="profile-header">
+            <img src="/aranya.jpg" alt="Dr. Jayant Kumar">
+            <div>
+                <h1>Aranya Ranjan</h1>
+                <h2>General Secretary</h2>
+            </div>
+        </div>
+        <div class="profile-content">
+            <p>Aranya Ranjan, a Master’s graduate in Sociology from HNB Garhwal University, is a committed advocate continuing the legacy of the esteemed social activist Shri Pratap Sekhar. Renowned for his transformative work in forest protection, soil and water conservation, and combating alcohol consumption, Aranya carries forward this noble tradition with unwavering dedication.</p>
+            <p>With 25 years of experience in the volunteer sector, Aranya has worked intimately with grassroots groups and organizations, addressing critical social issues through research with national and international bodies. His expertise in micro planning on disaster risk reduction (DRR) for UNDP and state governments underscores his strategic acumen in disaster management.</p>
+            <p>As a trainer, moderator, and resource person, Aranya excels in gender sensitization, local self-governance, decentralization, and disaster management. He is a founding member of MFH, Community Radio Henwalwani, and Mountain Food Connect, which promotes millet and organic farming while ensuring fair value for farmers. His active participation in social movements since his student days highlights his lifelong commitment to community empowerment and sustainable development.</p>
+        </div>
+    </div>
+</div>
+
+<%- include("footer.ejs") %>

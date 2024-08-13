@@ -1,0 +1,87 @@
+<%- include("background.ejs") %>
+
+<!-- Custom CSS for the Vision and Mission page -->
+<style>
+    .vision-mission-image {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        height: 500px; /* Adjust the height as needed */
+    }
+
+    .vision-mission-img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: auto;
+        transform: translate(-50%, -50%);
+    }
+
+    .vision-mission-content {
+        max-width: 1200px; /* Adjust max-width as needed */
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #ffffff; /* Example background color */
+        color: #2f4507; /* Example text color */
+    }
+
+    .vision-mission-content h1, .vision-mission-content h2, .vision-mission-content h3 {
+        color: #2f4507;
+    }
+
+    .vision-mission-content h1 {
+        margin-bottom: 30px; /* Increase space below h1 */
+    }
+
+    .vision-mission-content h2 {
+        margin-top: 30px; /* Increase space above h2 */
+        margin-bottom: 20px; /* Adjust space below h2 if needed */
+    }
+
+    .vision-mission-content p, .vision-mission-content ul {
+        margin-bottom: 20px;
+        line-height: 1.6;
+        font-size: 1rem;
+    }
+
+    .vision-mission-content ul {
+        list-style-type: disc;
+        padding-left: 20px;
+    }
+</style>
+
+<!-- Image Section -->
+<div class="vision-mission-image">
+    <img src="vis.JPG" alt="Mountain Image" class="vision-mission-img">
+</div>
+
+<!-- Content Section -->
+<div class="vision-mission-content">
+    <h1>Vision and Mission</h1>
+    <h2>VISION STATEMENT</h2>
+    <p>Mountain Forum Himalayas envisions a safe and prosperous society where every section of the society can live a quality life along with economic, social and cultural development and restoration of the ecosystem.</p>
+    
+    <h2>MISSION STATEMENT</h2>
+    <ul>
+        <li>Mountain Forum will protect the rights of economically weaker sections, Dalits, exploited, disabled, women, especially single women, and ensure sustainable livelihood by judicious use of local resources.</li>
+        <li>Mountain Forum will coordinate with the government and organizations for disaster risk reduction, relief, rescue and rehabilitation.</li>
+        <li>Mountain Forum will promote nature-based solutions to address biodiversity conservation and climate change mitigation and adaptation.</li>
+        <li>Mountain Forum will provide a platform to voluntary organizations, people's organizations, village level organizations working in the Himalayan regions to work on environmental protection, livelihood promotion, disaster management, health and education and will work to protect the rights of women as well as other gender minorities (L.G.B.T.).</li>
+        <li>Mountain Forum will ensure adequate opportunities and participation of women at all levels and structures.</li>
+        <li>To eliminate social and economic inequality through good governance, strengthening of information system and easy access.</li>
+        <li>To encourage continuous efforts for sustainable livelihood promotion.</li>
+    </ul>
+
+    <h2>GOALS</h2>
+    <ul>
+        <li>Strengthening and empowering mass organization</li>
+        <li>Climate Justice</li>
+        <li>Disaster management, relief and rehabilitation of families.</li>
+        <li>Good governance, strengthening information system</li>
+        <li>Livelihood Promotion</li>
+        <li>Gender Justice</li>
+    </ul>
+</div>
+
+<%- include("footer.ejs") %>

@@ -1,0 +1,55 @@
+<%- include("background.ejs") %>
+
+<!-- Custom CSS for the overview page -->
+<style>
+    .overview-image {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        height: 420px; /* Adjust the height as needed */
+    }
+
+    .overview-img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: auto;
+        transform: translate(-50%, -50%);
+    }
+
+    .overview-content {
+        max-width: 1200px; /* Adjust max-width as needed */
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #ffffff; /* Example background color */
+        color: #2f4507; /* Example text color */
+    }
+
+    .overview-content h1, .overview-content h2 {
+        color: #2f4507;
+    }
+
+    .overview-content p {
+        margin-bottom: 20px;
+        line-height: 1.6;
+        font-size: 1rem;
+    }
+</style>
+
+<!-- Image Section -->
+<div class="overview-image">
+    <img src="overview.JPG" alt="Mountain Image" class="overview-img">
+</div>
+
+<!-- Content Section -->
+<div class="overview-content">
+    <h1>Overview</h1>
+    <p>Established in 1997, Mountain Forum Himalayas (MFH) is a unique collective model evolved organically in order to address the multifaceted concerns of Northern Himalayan region and their inhabitants, particularly the impoverished and marginalized, to enhance their livelihoods, to fight the growing climate crisis, building the resilience of people exposed to several man-made and natural disasters, empower women and strengthen local self-Governance.</p>
+    <p>Over the years, MFH has evolved both organizationally and thematically, expanding its interventions from core developmental work to specialized initiatives such as emergency response and anti-human trafficking interventions. It has facilitated dialogues with government bodies on climate change and disaster risk reduction and forged alliances with many like-minded organizations.</p>
+    <p>MFH has formed a multi-stakeholder platform in the name of Mountain Collective consisting of people's organizations, civil society networks, concerned individuals, Academicians, experts in Himachal Pradesh and Uttarakhand with the objective of bringing together entities at the grassroots level under one umbrella to address the issues affecting the people in the Mountain areas. Mountain Collective is a powerful network of more than 100 civil society organizations, 17 mass-based People’s organizations and 30 individuals and experts in the state of Uttarakhand and Himachal Pradesh, driving collective and sustainable action to fight the climate crisis and to achieve social and gender justice.</p>
+    <p>MFH has played a pivotal role in policy advocacy, drafting the Himachal Pradesh state disaster management policy, establishing GO-NGO coordination committees for disaster response both in Himachal Pradesh and Uttarakhand, framing of policies relating to Panchayati Raj and also implementing the Act as per the letter and spirit, giving recommendations on State Climate change plan and BPL selection process.</p>
+    <p>The leadership of MFH has the intent to spread MFH’s presence in the entire Hindu Kush region because of the similarity in issues related to Himalayan topography, especially on Climate change and disaster issues. First it visualizes to consolidate its efforts in DRR, Climate change and bio-diversity conservation within the Indian part of Northern Himalayas and gradually with experience and networking expand its operation from Jammu and Kashmir in the west to Arunachal Pradesh in North East India and later on spread its intervention in Nepal and Bhutan.</p>
+</div>
+
+<%- include("footer.ejs") %>

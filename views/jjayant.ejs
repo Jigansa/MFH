@@ -1,0 +1,77 @@
+<%-include("background.ejs")%>
+<link rel="stylesheet" href="/style/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+    .jayant-page {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        color: #2f4507;
+    }
+
+    .jayant-page .profile-container {
+        max-width: 1200px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #ffffff;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+    }
+
+    .jayant-page .profile-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .jayant-page .profile-header img {
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        margin-right: 20px;
+    }
+
+    .jayant-page .profile-header div {
+        flex-grow: 1;
+    }
+
+    .jayant-page .profile-header h1 {
+        margin: 0;
+        font-size: 2rem;
+        color: #2f4507;
+    }
+
+    .jayant-page .profile-header h2 {
+        margin: 0;
+        font-size: 1.5rem;
+        color: #4CAF50;
+    }
+
+    .jayant-page .profile-content {
+        line-height: 1.6;
+        font-size: 1rem;
+        color: #2f4507;
+    }
+
+    .jayant-page .profile-content p {
+        margin-bottom: 15px;
+    }
+</style>
+
+<div class="jayant-page">
+    <div class="profile-container">
+        <div class="profile-header">
+            <img src="/jayant_board.jpg" alt="Dr. Jayant Kumar">
+            <div>
+                <h1>Dr. Jayant Kumar</h1>
+                <h2>President</h2>
+            </div>
+        </div>
+        <div class="profile-content">
+            <p>Dr. Jayant Kumar is a highly esteemed development professional with over 40 years of experience in the sector. He holds a Bachelor of Science from Ranchi University and a Postgraduate degree in Social Science with a specialization in Rural Development from Xavier Institute of Social Service. His academic credentials are further bolstered by a PhD in “Gender in Development” from the University of Rajasthan and an MBA with a focus on Management Information Systems.</p>
+            <p>Currently serving as the Head of Programme at CASA, Dr. Kumar has an extensive track record in institutional and organizational development, project management, and human potential development. He is the current Chairperson of Credibility Alliance (CA) and has previously led Voluntary Action Network India (VANI) as Chairperson.</p>
+            <p>His expertise includes facilitating sustainable development interventions, emergency response systems, and community-based disaster preparedness. Dr. Kumar has also played key roles in evaluating major development programs in India and abroad. His published work spans various topics including disaster management, corporate social responsibility, and gender issues, reflecting his deep engagement with both theoretical and practical aspects of development.</p>
+        </div>
+    </div>
+</div>
+
+<%- include("footer.ejs") %>

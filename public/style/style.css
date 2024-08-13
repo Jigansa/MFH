@@ -1,0 +1,334 @@
+/* General Styles */
+* {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+.panel {
+    height: 90px;
+    background-color: #2f4507;
+    display: flex;
+    align-items: center;
+    
+}
+
+.panel-all {
+    flex: 0 0 auto;
+    padding-left: 20px;
+}
+
+.panel-ops {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.panel-ops .border {
+    border: 1.5px solid transparent;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.panel-ops .border:hover {
+    border: 1px solid #FFFFFF;
+    color: #B5D8B2; 
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content, .dropdown-content-sub {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    font-size: 0.9rem;
+}
+
+.dropdown-content a, .dropdown-content-sub a {
+    color: black;
+    padding: 8px 12px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover, .dropdown-content-sub a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-sub {
+    position: relative;
+}
+
+.dropdown-sub .dropdown-content-sub {
+    top: 0;
+    left: 100%;
+}
+
+.dropdown-sub:hover .dropdown-content-sub {
+    display: block;
+}
+
+.hero-section {
+    background-color: #B5D8B2;
+    background-size: cover;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.hero-msg {
+    background-color: #f1f1f1;
+    color: black;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.05rem;
+    width: 97.5%;
+    margin-bottom: 10px;
+}
+
+.hero-msg a {
+    color: #3B5738;
+}
+
+.shop-section {
+    background-color: #B5D8B2;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.box {
+    height: 435px;
+    width: 23%;
+    background-color: #B5D8B2;
+}
+
+.logo {
+    max-height: 80px;
+    width: auto;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+
+}
+
+.slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin-top: 1px;
+}
+
+.slides {
+    display: flex;
+    width: 100%;
+    transition: transform 1s ease-in-out;
+}
+
+.slide {
+    width: 100%;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    height: 85vh;
+    object-fit: cover;
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 20px; /* Position the text near the bottom */
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 3vw;
+    text-align: center;
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better readability */
+    padding: 10px; /* Add some padding around the text */
+    border-radius: 5px; /* Optional: add rounded corners to the background */
+}
+
+.overlay a {
+    color: white;
+    text-decoration: none;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 3vw;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px; /* Adjusted for rectangular shape */
+    cursor: pointer;
+    border-radius: 8px; /* Rounded corners */
+    z-index: 2;
+}
+
+.arrow.left {
+    left: 10px;
+}
+
+.arrow.right {
+    right: 10px;
+}
+
+.social-media-icons {
+    position: fixed;
+    top: 35%; /* Adjusted upwards */
+    right: 10px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #B5D8B2;
+    width: 60px; /* Increased width for square boxes */
+    align-items: center;
+    padding: 10px; /* Padding around the icons */
+    border-radius: 10px;
+}
+
+.social-icon {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px; /* Square box size */
+    height: 50px; /* Square box size */
+    background-color: #fff; /* Background color for the square */
+    color: #2f4507; /* Icon color */
+    border-radius: 5px; /* Optional: rounded corners */
+    font-size: 24px; /* Adjust icon size */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    text-align: center; /* Center the icon */
+    line-height: 50px; /* Center text vertically */
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+    background-color: #2f4507; /* Background color on hover */
+    color: #fff; /* Icon color on hover */
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.contact-form {
+    width: 45%;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+    margin-bottom: 20px;
+    color: #2f4507;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    background-color: #2f4507;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #3B5738;
+}
+
+.contact-info {
+    width: 45%;
+}
+
+.contact-info h2 {
+    color: #2f4507;
+    font-size: 1.5rem; /* Increase font size for main heading */
+    margin-bottom: 20px; /* Add spacing below the main heading */
+}
+
+.contact-info .office {
+    margin-bottom: 25px; /* Increase spacing between sections */
+}
+
+.contact-info .office h3 {
+    margin-bottom: 5px;
+    font-size: 1.2rem; /* Increase font size for subheadings */
+}
+
+
+/* Specific Styles for Contact Page */
+.captcha-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.captcha-container input[type="checkbox"] {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+.captcha-container label {
+    color: #333;
+}
+
+/* For social media icons in the contact page */
+.contacts-social-media-icons {
+    display: flex;
+    gap: 15px; /* Adjust gap between icons */
+    margin-top: 10px; /* Space from top element */
+}
+
+.contact-social-media-icons {
+    text-decoration: none;
+    font-size: 35px; /* Adjust icon size */
+    color: #2f4507;
+}
+
+.contact-social-media-icons:hover {
+    transform: scale(1.1);
+}
+

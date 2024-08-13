@@ -1,0 +1,218 @@
+<%- include("background.ejs") %>
+<style>
+        .vision-mission-image {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        height: 520px; /* Adjust the height as needed */
+    }
+
+    .vision-mission-img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: auto;
+        transform: translate(-50%, -50%);
+    }
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    h1 {
+        text-align: center;
+        color: #ffffff;
+        background-color: #2f4f2f; /* Use a color from the logo */
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+
+    .section {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+    background-color: #C9DABF;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: max-height 0.3s ease;
+    max-height: 250px; /* Adjust to the collapsed height */
+    }
+
+    .section.expanded {
+    max-height: 1000px; /* Adjust to a height that fits your expanded content */
+    }
+
+    .section.expanded img {
+    height: auto; /* Allow the image height to adjust with content */
+    }
+
+
+    .section img {
+    width: 40%;
+    height: 100%;
+    object-fit: cover;
+    transition: height 0.3s ease;
+    }
+
+    .content {
+        padding: 20px;
+        flex-grow: 1;
+    }
+
+    .content h2 {
+        color: #2f4f2f; /* Use a color from the logo */
+        margin-bottom: 10px;
+    }
+
+    .content p {
+        color: #333333;
+        line-height: 1.6;
+    }
+
+    .expand-content {
+        display: none;
+    }
+
+    .section:hover .expand-content {
+        display: inline;
+    }
+
+    @media (max-width: 768px) {
+        .section {
+            flex-direction: column;
+        }
+
+        .section img {
+            width: 100%;
+            height: auto;
+        }
+    }
+</style>
+<div class="vision-mission-image">
+    <img src="drrr.png" alt="Mountain Image" class="vision-mission-img">
+</div>
+<div class="container">
+    <h1>Disaster Risk Reduction</h1>
+
+    <div class="section">
+        <img src="/path/to/your/image1.jpg" alt="Why DRR Matters">
+        <div class="content">
+            <h2>Why DRR Matters?</h2>
+            <p>
+                Disaster Risk Reduction (DRR) in the Himalayan Mountain region is crucial due to the area's unique vulnerability to natural hazards such as earthquakes, landslides, and glacial lake outburst floods.
+                <span class="expand-content"> The Himalayas, with their steep terrain and seismic activity, are particularly prone to such events, which can have devastating impacts on communities, infrastructure, and ecosystems. Effective DRR strategies in this region can help mitigate the effects of these hazards, safeguard lives, and protect the fragile environment that supports the livelihoods of millions of people. Additionally, by integrating local knowledge and strengthening early warning systems, DRR efforts can enhance resilience and reduce the socio-economic impacts of disasters, ensuring a more sustainable and secure future for Himalayan communities.</span>
+            </p>
+        </div>
+    </div>
+    <div class="section">
+        <img src="/path/to/your/image1.jpg" alt="Challenges in the Himalayan Region">
+        <div class="content">
+            <h2>Challenges in the Himalayan Region</h2>
+            <p>
+                The Indian Himalayan Region is exceptionally vulnerable to a range of natural hazards due to its complex geology, topography, and climate. The region is located in one of the world's most seismically active zones, with frequent earthquakes that can trigger landslides and avalanches.
+                <span class="expand-content">The steep slopes and unstable soil conditions further exacerbate the risk of landslides, particularly during the monsoon season when heavy rainfall can saturate the ground and destabilize hillsides. Additionally, the region's glacial systems are under threat from rising temperatures, leading to the formation of glacial lakes that are at risk of bursting and causing devastating floods downstream. These combined factors create a high level of vulnerability, making disaster preparedness and risk reduction imperative.
+                    The socioeconomic challenges faced by communities in the Indian Himalayan Region compound the impacts of natural hazards. Many of these communities live in remote and difficult-to-access areas, which makes evacuation, relief, and recovery efforts challenging. Infrastructure such as roads, bridges, and buildings often lacks resilience to seismic or climatic stresses, further increasing the risk of damage and hindering effective emergency responses. Furthermore, the economic dependence on agriculture and tourism makes these communities particularly sensitive to disruptions caused by natural disasters, as crop failures and tourism downturns can lead to significant livelihood losses.
+                    Environmental degradation also contributes to the heightened vulnerability of the region. Unsustainable practices such as deforestation, construction on unstable slopes, and overexploitation of natural resources exacerbate the impacts of natural hazards and diminish the region's ability to recover from disasters. The loss of vegetation, for example, can reduce soil stability and increase the likelihood of landslides, while the depletion of water resources affects both drinking water availability and agricultural productivity. Addressing these environmental challenges through sustainable land use practices and conservation efforts is essential for reducing the overall risk and enhancing the resilience of communities in the Indian Himalayan Region.
+                    </span>
+            </p>
+        </div>
+    </div>
+    <h1>Disaster Preparedness</h1>
+    <div class="section">
+        <img src="image.png" alt="Community Training on DRR and Micro plan">
+        <div class="content">
+            <h2>Community Training on DRR and Micro plan</h2>
+            <p>
+                Mountain Forum Himalayas is dedicated to empowering local communities through comprehensive training on Disaster Risk Reduction (DRR) and the development of village-level micro plans. Our approach focuses on equipping communities with the knowledge and tools necessary to anticipate, prepare for, and respond to natural hazards effectively.
+                <span class="expand-content">By providing hands-on training sessions, we ensure that villagers understand risk management strategies and can implement tailored DRR measures suited to their unique environmental and socio-economic contexts. Additionally, our village-level micro plans help communities identify potential hazards, assess vulnerabilities, and establish actionable protocols for disaster response and recovery. This proactive and localized approach not only enhances community resilience but also fosters a culture of preparedness, ensuring that the people of the Himalayas are better equipped to safeguard their lives and livelihoods against the ever-present risks of natural disasters.</span>
+            </p>
+        </div>
+    </div>
+
+    <div class="section">
+        <img src="dis.jpg" alt="Disaster Safety Training and Mock Drills for School Children">
+        <div class="content">
+            <h2>Disaster Safety Training and Mock Drills for School Children</h2>
+            <p>
+                At Mountain Forum Himalayas, we believe that educating school children about disaster safety is crucial for building resilient communities. Our programs are designed to instill knowledge and preparedness in young minds, equipping them with essential skills to navigate and respond to emergencies such as earthquakes, floods, and landslides.
+                <span class="expand-content">By incorporating engaging and interactive lessons on disaster risks and safety protocols, we ensure that children not only understand the dangers but also learn practical steps to take during emergencies. Our curriculum emphasizes the importance of personal safety and collective responsibility, fostering a culture of preparedness from a young age. In addition to educational sessions, we conduct regular mock drills in schools to simulate real-life scenarios and practice emergency response procedures. These drills provide Youths with hands-on experience in a controlled environment, helping them to remain calm and act decisively when faced with actual disasters.</span>
+            </p>
+        </div>
+    </div>
+
+    <div class="section">
+        <img src="weather.jpg" alt="Early Warning Systems">
+        <div class="content">
+            <h2>Early Warning Systems</h2>
+            <p>
+                Mountain Forum Himalayas is dedicated to advancing Early Warning Systems (EWS) in the Himalayan region to tackle the specific challenges of natural disasters such as earthquakes, landslides, and floods. Recognizing the region's high vulnerability, MFH is committed to partnering with disaster management authorities, institutions, and organizations specializing in Artificial Intelligence.
+                <span class="expand-content">Our goal is to integrate cutting-edge technology with local expertise to develop a robust network for early detection and timely alerts. By deploying seismic sensors, utilizing satellite monitoring, and employing advanced weather forecasting tools, we aim to detect potential hazards as early as possible, enabling prompt and effective responses. Our strategy extends beyond technology to empower local communities through comprehensive education and tailored alert systems. We focus on creating dependable communication channels—such as mobile alerts, radio broadcasts, and community networks—to ensure that warnings reach everyone promptly and accurately.</span>
+            </p>
+        </div>
+    </div>
+
+    <div class="section">
+        <img src="save.jpg" alt="Early Warning Systems">
+        <div class="content">
+            <h2>Search & Rescue Training – cadre building </h2>
+            <p>
+                Mountain Forum Himalayas is dedicated to advancing Early Warning Systems (EWS) in the Himalayan region to tackle the specific challenges of natural disasters such as earthquakes, landslides, and floods. Recognizing the region's high vulnerability, MFH is committed to partnering with disaster management authorities, institutions, and organizations specializing in Artificial Intelligence.
+                <span class="expand-content">Our goal is to integrate cutting-edge technology with local expertise to develop a robust network for early detection and timely alerts. By deploying seismic sensors, utilizing satellite monitoring, and employing advanced weather forecasting tools, we aim to detect potential hazards as early as possible, enabling prompt and effective responses. Our strategy extends beyond technology to empower local communities through comprehensive education and tailored alert systems. We focus on creating dependable communication channels—such as mobile alerts, radio broadcasts, and community networks—to ensure that warnings reach everyone promptly and accurately.</span>
+            </p>
+        </div>
+    </div>
+    <div class="section">
+        <img src="/path/to/your/image3.jpg" alt="Early Warning Systems">
+        <div class="content">
+            <h2>Risk Assessment/ AI based Forecasting/ AI based Vulnerability mapping </h2>
+            <p>
+                Mountain Forum Himalayas is dedicated to advancing disaster resilience through innovative approaches such as Risk Assessment, AI-based Forecasting, and AI-driven Vulnerability Mapping. 
+                <span class="expand-content">We plan to collaborate with leading agencies and organizations specializing in Artificial Intelligence to develop sophisticated tools for predicting and understanding various forms of disaster in the Himalayan region. By integrating AI technologies, we aim to enhance our ability to forecast potential hazards, assess risks more accurately, and map vulnerabilities with greater precision. This collaborative effort will provide critical insights and data, allowing for more informed decision-making and effective disaster management strategies tailored to the unique challenges of the Himalayan environment. Through these advanced methodologies, MFH seeks to significantly improve disaster preparedness and resilience, ultimately protecting communities and minimizing the impact of natural disasters.</span>
+            </p>
+        </div>
+    </div>
+    <div class="section">
+        <img src="/path/to/your/image3.jpg" alt="Early Warning Systems">
+        <div class="content">
+            <h2>Go – NGO dialogue and coordination  - SENDEI framework</h2>
+            <p>
+                Mountain Forum Himalayas plays a crucial role in bridging the gap between government agencies and non-governmental organizations (NGOs) in Himachal Pradesh and Uttarakhand, fostering essential dialogue and coordination.  
+                <span class="expand-content">By engaging with a wide network of partners, including Inter-Agency Members at both state and district levels, MFH ensures a unified and effective response during real-time emergencies. This collaboration is vital for managing the complexities of disaster situations, as it brings together diverse expertise and resources to address immediate needs and streamline operational efforts. The coordinated approach enhances the capacity to respond swiftly and efficiently, ultimately improving the overall effectiveness of disaster management in the region.
+                    In addition to facilitating coordination, Mountain Forum Himalayas is dedicated to strengthening disaster risk reduction through targeted training on the Sendai Framework. These sessions are designed to equip staff and partners with the necessary knowledge and skills to apply this global strategy effectively. By aligning local practices with international standards, the training promotes a more cohesive and collaborative approach to disaster preparedness and response. This capacity-building effort ensures that all stakeholders are well-prepared to implement best practices, fostering a more resilient disaster management ecosystem. Through these initiatives, MFH enhances regional preparedness, enabling a more organized and robust response to the challenges faced by Himalayan communities.
+                    </span>
+            </p>
+        </div>
+    </div>
+    <div class="section">
+        <img src="/path/to/your/image3.jpg" alt="Early Warning Systems">
+        <div class="content">
+            <h2>Linking and liasioning with national international organisations </h2>
+            <p>
+                Mountain Forum Himalayas excels in linking and liaising with national and international organizations to enhance emergency response capabilities in the Himalayan region 
+                <span class="expand-content">. By forging strategic partnerships with global and regional entities, MFH ensures that local disaster management efforts are supported by a broad spectrum of expertise and resources. This collaborative network facilitates the exchange of best practices, advanced technologies, and essential funding, enabling a more robust and coordinated response to emergencies. Whether through joint initiatives, technical assistance, or shared resources, MFH leverages these connections to strengthen local capacities and address the complex challenges posed by natural disasters.
+                    Our role in this network also involves actively engaging with international agencies to align local disaster response strategies with global standards and frameworks. By participating in global dialogues and forums, MFH helps bring international knowledge and support to the Himalayan region, enhancing the effectiveness of emergency response efforts. This integration of international insights and practices ensures that local communities benefit from the latest advancements in disaster management and recovery, ultimately leading to more effective and comprehensive emergency responses. Through these strategic linkages, Mountain Forum Himalayas contributes to a well-coordinated global effort to safeguard vulnerable populations and build resilience against natural hazards.
+                    </span>
+            </p>
+        </div>
+    </div>
+
+</div>
+<%- include("footer.ejs") %>
+<script>
+    document.querySelectorAll('.section').forEach(section => {
+        section.addEventListener('click', function() {
+            this.classList.toggle('expanded');
+            const img = this.querySelector('img');
+            if (this.classList.contains('expanded')) {
+                img.style.height = 'auto'; // Expand image
+            } else {
+                img.style.height = '100%'; // Collapse image
+            }
+        });
+    });
+</script>
+
+

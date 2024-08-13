@@ -1,0 +1,119 @@
+<%- include("background.ejs") %>
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+  }
+
+  .title {
+    text-align: center;
+    color: #3b5e3b;
+    margin-top: 1em;
+    font-size: 2.5em;
+  }
+
+  .board-members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
+    padding: 2em;
+  }
+
+  .member {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    width: 300px;
+    padding: 1em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .member img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+
+  .member h3 {
+    color: #3b5e3b;
+    font-size: 1.4em;
+    margin: 0.5em 0 0.2em;
+  }
+
+  .member p {
+    color: #666;
+    font-size: 1em;
+    margin: 0.2em 0 1em;
+  }
+
+  .view-profile {
+    display: inline-block;
+    background-color: #3b5e3b;
+    color: #fff;
+    text-decoration: none;
+    padding: 0.7em 1.5em;
+    border-radius: 4px;
+    margin-bottom: 1em;
+    transition: background-color 0.3s;
+  }
+
+  .view-profile:hover {
+    background-color: #2d4a2d;
+  }
+</style>
+
+<main>
+  <h1 class="title">Board Members</h1>
+  <section class="board-members">
+    <div class="member">
+      <img src="jayant_board.jpg" alt="Dr. Jayant Kumar">
+      <h3>Dr. Jayant Kumar</h3>
+      <p>President</p>
+      <a href="/board-members/jayant" class="view-profile">View Profile</a>
+    </div>
+    <div class="member">
+      <img src="bhushan.jpg" alt="Bhushan Singh Rana">
+      <h3>Bhushan Singh Rana</h3>
+      <p>Vice President</p>
+      <a href="/board-members/bhushan" class="view-profile">View Profile</a>
+    </div>
+    <div class="member">
+      <img src="aranya.jpg" alt="Aranya Ranjan">
+      <h3>Aranya Ranjan</h3>
+      <p>General Secretary</p>
+      <a href="/board-members/aranya" class="view-profile">View Profile</a>
+    </div>
+    <div class="member">
+      <img src="spbahu.jpg" alt="S. P. Bahuguna">
+      <h3>S. P. Bahuguna</h3>
+      <p>Treasurer</p>
+      <a href="/board-members/spbahu" class="view-profile">View Profile</a>
+    </div>
+    <div class="member">
+      <img src="someuncle.jpg" alt="Pradeep Kumar Sharma">
+      <h3>Pradeep Kumar Sharma</h3>
+      <p>Joint Secretary</p>
+      <a href="/board-members/pradeep" class="view-profile">View Profile</a>
+    </div>
+    <div class="member">
+      <img src="sangeeta.jpg" alt="Sangeeta Jund">
+      <h3>Sangeeta Jund</h3>
+      <p>Member</p>
+      <a href="/board-members/sangeeta" class="view-profile">View Profile</a>
+    </div>
+    <div class="member">
+      <img src="kusum.jpg" alt="Kusum Ghildiyal">
+      <h3>Kusum Ghildiyal</h3>
+      <p>Member</p>
+      <a href="/board-members/kusum" class="view-profile">View Profile</a>
+    </div>
+  </section>
+</main>
+
+<%- include('footer.ejs') %>
