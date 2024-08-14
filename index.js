@@ -1,14 +1,25 @@
 import express from "express";
 import bodyParser from "body-parser";
 import pg from "pg";
-
+import mongoose from "mongoose";
 const app = express();
 const port = 3000;
 
+mongoose.connect('mongodb+srv://jigansasatapathy:iIPr8pOIlfXpsml4@mongodatabasereview.b1g5w.mongodb.net/ReviewDataBase');
+const db=mongoose.connection;
+db.once('open',()=>{
+    console.log("mongoDB connected");
+});
+const UserSchema =new mongoose.Schema({
+    name:String,
+    email:String,
+    message:String
+});
+const User=mongoose.model("Review",UserSchema);
 // Middleware
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
-
+ 
 // Set view engine to EJS
 app.set('view engine', 'ejs');
 app.set('views', './views'); // assuming your EJS files are in a folder named 'views'
@@ -67,6 +78,20 @@ app.get('/board-members/pradeep', (req, res) => {
 app.get('/board-members/spbahu', (req, res) => {
     res.render("spbahu.ejs");
 });
+app.post('/submit-feedback',async (req,res)=>{
+    console.log(req.body);
+    const name=req.body.name;
+    const msg=req.body.message;
+    const email=req.body.email;
+    const user=new User({
+        name,
+        email,
+        msg
+    })
+    await user.save();
+    console.log(user);
+    
+})
 // Start server
 app.listen(port, () => {
     console.log(`Listening on port ${port}`);
