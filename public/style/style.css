@@ -5,12 +5,103 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .panel {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .panel-all {
+        padding-left: 0;
+        padding-bottom: 10px;
+    }
+
+    .panel-ops {
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 10px 0;
+    }
+    
+    .panel-ops .border {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+
+    .hero-section {
+        height: auto;
+        padding: 20px 0;
+    }
+
+    .hero-msg {
+        font-size: 1rem;
+        padding: 8px;
+        width: 90%;
+    }
+
+    .shop-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .slider .slides {
+        flex-direction: column;
+    }
+
+    .overlay {
+        font-size: 5vw;
+    }
+
+    .arrow {
+        font-size: 5vw;
+        padding: 8px 16px;
+    }
+
+    .social-media-icons {
+        top: auto;
+        bottom: 10px;
+        right: 50%;
+        transform: translateX(50%);
+        flex-direction: row;
+        gap: 15px;
+        width: auto;
+        padding: 5px;
+    }
+
+    .social-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-form, .contact-info {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Original Styles (Non-Responsive) */
 .panel {
     height: 90px;
     background-color: #2f4507;
     display: flex;
     align-items: center;
-    
 }
 
 .panel-all {
@@ -34,9 +125,10 @@
 
 .panel-ops .border:hover {
     border: 1px solid #FFFFFF;
-    color: #B5D8B2; 
+    color: #B5D8B2;
 }
 
+/* Dropdown Menu */
 .dropdown {
     position: relative;
     display: inline-block;
@@ -80,6 +172,7 @@
     display: block;
 }
 
+/* Hero Section */
 .hero-section {
     background-color: #B5D8B2;
     background-size: cover;
@@ -105,6 +198,7 @@
     color: #3B5738;
 }
 
+/* Shop Section */
 .shop-section {
     background-color: #B5D8B2;
     display: flex;
@@ -122,13 +216,7 @@
     width: auto;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-
-}
-
+/* Slider */
 .slider {
     width: 100%;
     overflow: hidden;
@@ -157,16 +245,16 @@ body {
 
 .overlay {
     position: absolute;
-    bottom: 20px; /* Position the text near the bottom */
+    bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
     color: white;
     font-size: 3vw;
     text-align: center;
     font-weight: bold;
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better readability */
-    padding: 10px; /* Add some padding around the text */
-    border-radius: 5px; /* Optional: add rounded corners to the background */
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
 }
 
 .overlay a {
@@ -181,9 +269,9 @@ body {
     font-size: 3vw;
     color: white;
     background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px 20px; /* Adjusted for rectangular shape */
+    padding: 10px 20px;
     cursor: pointer;
-    border-radius: 8px; /* Rounded corners */
+    border-radius: 8px;
     z-index: 2;
 }
 
@@ -195,18 +283,19 @@ body {
     right: 10px;
 }
 
+/* Social Media Icons */
 .social-media-icons {
     position: fixed;
-    top: 35%; /* Adjusted upwards */
+    top: 35%;
     right: 10px;
     transform: translateY(-50%);
     display: flex;
     flex-direction: column;
     gap: 10px;
     background-color: #B5D8B2;
-    width: 60px; /* Increased width for square boxes */
+    width: 60px;
     align-items: center;
-    padding: 10px; /* Padding around the icons */
+    padding: 10px;
     border-radius: 10px;
 }
 
@@ -215,23 +304,24 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50px; /* Square box size */
-    height: 50px; /* Square box size */
-    background-color: #fff; /* Background color for the square */
-    color: #2f4507; /* Icon color */
-    border-radius: 5px; /* Optional: rounded corners */
-    font-size: 24px; /* Adjust icon size */
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    color: #2f4507;
+    border-radius: 5px;
+    font-size: 24px;
     transition: transform 0.3s ease, background-color 0.3s ease;
-    text-align: center; /* Center the icon */
-    line-height: 50px; /* Center text vertically */
+    text-align: center;
+    line-height: 50px;
 }
 
 .social-icon:hover {
     transform: scale(1.1);
-    background-color: #2f4507; /* Background color on hover */
-    color: #fff; /* Icon color on hover */
+    background-color: #2f4507;
+    color: #fff;
 }
 
+/* Contact Page */
 .contact-container {
     display: flex;
     justify-content: space-between;
@@ -284,21 +374,20 @@ body {
 
 .contact-info h2 {
     color: #2f4507;
-    font-size: 1.5rem; /* Increase font size for main heading */
-    margin-bottom: 20px; /* Add spacing below the main heading */
+    font-size: 1.5rem;
+    margin-bottom: 20px;
 }
 
 .contact-info .office {
-    margin-bottom: 25px; /* Increase spacing between sections */
+    margin-bottom: 25px;
 }
 
 .contact-info .office h3 {
     margin-bottom: 5px;
-    font-size: 1.2rem; /* Increase font size for subheadings */
+    font-size: 1.2rem;
 }
 
-
-/* Specific Styles for Contact Page */
+/* Captcha Styles */
 .captcha-container {
     display: flex;
     align-items: center;
@@ -315,7 +404,7 @@ body {
     color: #333;
 }
 
-/* For social media icons in the contact page */
+/* Social Media Icons for Contact Page */
 .contacts-social-media-icons {
     display: flex;
     gap: 15px; /* Adjust gap between icons */
