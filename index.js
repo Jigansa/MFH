@@ -1,14 +1,34 @@
 import express from "express";
 import bodyParser from "body-parser";
-import pg from "pg";
-
+import mongoose from "mongoose";
+import env from "dotenv";
 const app = express();
 const port = 3000;
-
+env.config();
+mongoose.connect('mongodb+srv://jigansasatapathy:'+process.env.MONGODB_PASSWORD+'@mongodatabasereview.b1g5w.mongodb.net/ReviewDataBase');
+const db=mongoose.connection;
+db.once('open',()=>{
+    console.log("mongoDB connected");
+});
+const UserSchema =new mongoose.Schema({
+    name:String,
+    email:String,
+    message:String
+});
+const PartnerDbSchema= new mongoose.Schema({
+    _id:String,
+    no:Number,
+    Name:String,
+    Location:String,
+    Person_Name:String,
+    Phone_no:String
+},{strict:'false'});
+const User=mongoose.model("Review",UserSchema);
+const Data=mongoose.model("exceldatas",PartnerDbSchema);
 // Middleware
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
-
+ 
 // Set view engine to EJS
 app.set('view engine', 'ejs');
 app.set('views', './views'); // assuming your EJS files are in a folder named 'views'
@@ -23,7 +43,9 @@ app.get('/media-gallery', (req, res) => {
 });
 
 app.get('/contact', (req, res) => {
-    res.render("contact.ejs");
+    res.render("contact.ejs",{
+        alert:false
+    });
 });
 
 app.get('/overview', (req, res) => {
@@ -37,8 +59,13 @@ app.get('/board-members', (req, res) => {
 app.get('/vision', (req, res) => {
     res.render("vision.ejs");
 });
-app.get('/partners', (req, res) => {
-    res.render("partners.ejs");
+app.get('/partners', async (req, res) => {
+    let datadb= await (Data.find({}));
+    console.log(datadb);
+
+    res.render("partners.ejs",{
+        data:(datadb)
+    });
 });
 app.get('/drr', (req, res) => {
     res.render("drr.ejs");
@@ -67,6 +94,22 @@ app.get('/board-members/pradeep', (req, res) => {
 app.get('/board-members/spbahu', (req, res) => {
     res.render("spbahu.ejs");
 });
+app.post('/submit-feedback',async (req,res)=>{
+    console.log(req.body);
+    const name=req.body.name;
+    const msg=req.body.message;
+    const email=req.body.email;
+    const user=new User({
+        name,
+        email,
+        msg
+    })
+    await user.save();
+    console.log(user);
+    res.render("contact.ejs",{
+        alert:true
+    });
+})
 // Start server
 app.listen(port, () => {
     console.log(`Listening on port ${port}`);
