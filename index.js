@@ -35,7 +35,7 @@ app.set('views', './views'); // assuming your EJS files are in a folder named 'v
 
 // Routes
 app.get('/', (req, res) => {
-    res.render(_dirname+"/views/index.ejs");
+    res.render(__dirname+"/views/index.ejs");
 });
 
 app.get('/media-gallery', (req, res) => {
