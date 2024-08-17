@@ -32,7 +32,7 @@ const User=mongoose.model("Review",UserSchema);
 const Data=mongoose.model("exceldatas",PartnerDbSchema);
 // Middleware
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static("public"));
+app.use(express.static(__dirname+"/public"));
  
 // Set view engine to EJS
 app.set('view engine', 'ejs');
