@@ -3,6 +3,7 @@ import bodyParser from "body-parser";
 import mongoose from "mongoose";
 import env from "dotenv";
 const app = express();
+import {dirname} from 'path';
 const port = 3000;
 env.config();
 console.log(process.env.MONGODB_PASSWORD);
