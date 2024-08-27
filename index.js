@@ -88,8 +88,14 @@ app.get('/board-members', (req, res) => {
 
 app.get('/vision', (req, res) => {
     res.render("vision.ejs");
-});  
-app.get('/partners', async (req, res) => {
+});
+app.get('/mc', (req, res) => {
+    res.render("mc.ejs");
+});
+app.get('/mrn', (req, res) => {
+    res.render("mrn.ejs");
+});
+app.get('/others', async (req, res) => {
     let datadb= await (Data.find({})); 
 
     res.render("partners.ejs",{
@@ -341,7 +347,7 @@ app.get('/board-members/pradeep', (req, res) => {
     res.render("pradeep.ejs");
 });
 app.get('/board-members/spbahu', (req, res) => {
-    res.render("spbahu.ejs");  
+    res.render("spbahu.ejs");    
 });
 app.post('/submit-feedback',async (req,res)=>{
     console.log(req.body); 
