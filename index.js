@@ -1,13 +1,20 @@
+
 import express from "express";
 import bodyParser from "body-parser";
 import mongoose from "mongoose";
 import env from "dotenv";
 const app = express();
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+import path from 'path';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 const port = 3000;
 env.config();
+console.log(process.env.MONGODB_PASSWORD);
 mongoose.connect('mongodb+srv://jigansasatapathy:'+process.env.MONGODB_PASSWORD+'@mongodatabasereview.b1g5w.mongodb.net/ReviewDataBase');
 const db=mongoose.connection;
-db.once('open',()=>{
+db.once('open',()=>{ 
     console.log("mongoDB connected");
 });
 const UserSchema =new mongoose.Schema({
@@ -17,25 +24,29 @@ const UserSchema =new mongoose.Schema({
 });
 const PartnerDbSchema= new mongoose.Schema({
     _id:String,
-    no:Number,
     Name:String,
     Location:String,
-    Person_Name:String,
+    Person_Name:String, 
     Phone_no:String
+},{strict:'false'});
+const PeoplesDbSchema= new mongoose.Schema({
+    _id:String,
+    Sl:Number,
+    Name:String,
+    Specialization:String
 },{strict:'false'});
 const User=mongoose.model("Review",UserSchema);
 const Data=mongoose.model("exceldatas",PartnerDbSchema);
 // Middleware
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static("public"));
+app.use(express.static(__dirname+"/public"));
  
 // Set view engine to EJS
 app.set('view engine', 'ejs');
-app.set('views', './views'); // assuming your EJS files are in a folder named 'views'
-
+  app.set('views', path.join(__dirname, 'views'));
 // Routes
 app.get('/', (req, res) => {
-    res.render("index.ejs");
+    res.render(__dirname+"/views/index.ejs");
 });
 
 app.get('/media-gallery', (req, res) => {
@@ -60,7 +71,7 @@ app.get('/vision', (req, res) => {
     res.render("vision.ejs");
 });
 app.get('/partners', async (req, res) => {
-    let datadb= await (Data.find({}));
+    let datadb= await (Data.find({})); 
     console.log(datadb);
 
     res.render("partners.ejs",{
@@ -86,23 +97,23 @@ app.get('/board-members/sangeeta', (req, res) => {
     res.render("sangeeta.ejs");
 });
 app.get('/board-members/kusum', (req, res) => {
-    res.render("kusum.ejs");
+    res.render("kusum.ejs"); 
 });
-app.get('/board-members/pradeep', (req, res) => {
+app.get('/board-members/pradeep', (req, res) => { 
     res.render("pradeep.ejs");
 });
 app.get('/board-members/spbahu', (req, res) => {
-    res.render("spbahu.ejs");
+    res.render("spbahu.ejs");  
 });
 app.post('/submit-feedback',async (req,res)=>{
-    console.log(req.body);
+    console.log(req.body); 
     const name=req.body.name;
-    const msg=req.body.message;
+    const message=req.body.message;
     const email=req.body.email;
-    const user=new User({
+    const user=new User({ 
         name,
-        email,
-        msg
+        email, 
+        message
     })
     await user.save();
     console.log(user);
