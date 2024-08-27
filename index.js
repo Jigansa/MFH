@@ -31,12 +31,22 @@ const PartnerDbSchema= new mongoose.Schema({
 },{strict:'false'});
 const PeoplesDbSchema= new mongoose.Schema({
     _id:String,
-    Sl:Number,
+    SN:Number,
     Name:String,
-    Specialization:String
+    Area:String,
+    Focal_Point:String,
+    Contact_Number:String
+},{strict:'false'});
+const ExpertDbSchema= new mongoose.Schema({
+    _id:String,
+    SL:Number,
+    Name:String,
+    Specialization:String,
 },{strict:'false'});
 const User=mongoose.model("Review",UserSchema);
 const Data=mongoose.model("exceldatas",PartnerDbSchema);
+const People=mongoose.model("peoples",PeoplesDbSchema);
+const Expert=mongoose.model("experts",ExpertDbSchema);
 // Middleware
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(__dirname+"/public"));
@@ -91,17 +101,31 @@ app.get('/drr', (req, res) => {
 app.get('/board-members/jayant', (req, res) => {
     res.render("jjayant.ejs");
 });
-app.get('/mc/voluntary', (req, res) => {
-    res.render("voluntary.ejs");
+app.get('/mc/voluntary', async (req, res) => {
+    let datadb= await (Data.find({})); 
+    console.log(datadb);
+
+    res.render("voluntary.ejs",{
+        data:datadb
+    });
 });
-app.get('/mc/people', (req, res) => {
-    res.render("people.ejs");
+app.get('/mc/people', async (req, res) => {
+    let datadb= await (People.find({})); 
+    console.log(datadb);
+
+    res.render("people.ejs",{
+        data:datadb
+    });
 });
-app.get('/mc/experts', (req, res) => {
-    res.render("experts.ejs");
+app.get('/mc/experts', async (req, res) => {
+    let datadb= await (Expert.find({})); 
+    console.log(datadb);
+    res.render("experts.ejs",{
+        data:datadb
+    });
 });
 app.get('/mc/institutions', (req, res) => {
-    res.render("instituitions.ejs");
+    res.render("institutions.ejs");
 }); 
 app.get('/disaster-preparedness', (req, res) => {
     res.render("disaster.ejs");
@@ -139,7 +163,7 @@ app.post('/submit-feedback',async (req,res)=>{
     res.render("contact.ejs",{
         alert:true
     });
-})
+});
 // Start server
 app.listen(port, () => {
     console.log(`Listening on port ${port}`);

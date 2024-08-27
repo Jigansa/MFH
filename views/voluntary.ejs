@@ -1,0 +1,115 @@
+<%-include("background.ejs")%>
+<style>
+    .partners-container {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        color: #333;
+        padding: 20px;
+    }
+
+    .partners-heading {
+        text-align: center;
+        color: #2f4507;
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+
+    .cont {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 20px; /* Reduced the gap */
+        margin-bottom: 10px;
+        
+        flex-direction: column;
+    }
+
+    .column {
+        background-color: #fff;
+        border-radius: 12px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .column h2 {
+        color: #2f4507;
+        margin-bottom: 10px;
+        font-size: 1.5em;
+    }
+
+    .column p {
+        line-height: 1.6;
+        margin-bottom: 15px;
+    }
+    .column ul {
+        padding-left: 10px;
+        list-style-type: disc;
+    }
+
+    .column ul li {
+        margin-bottom: 8px;
+    }
+    table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    }
+
+    td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    }
+
+    tr:nth-child(even) {
+    background-color: #dddddd;
+    }
+</style>
+<div class="cont">
+    <h1 style="align-self: center;">Uttarakhand</h1>
+    <table>
+        
+        <tr>
+            <th>No</th>
+            <th>Name of Organizations</th>
+            <th>Location</th>
+            <th>Head of Institutions</th>
+            <th>Contact Info</th>
+        </tr>
+        <% for(var i=0;i<55;i++){
+            console.log(data[i]);%>
+        <tr>
+            <td><%=i+1%></td>
+            <td><%=data[i]['Name']%></td>
+            <td><%=data[i].Location%></td>
+            <td><%=data[i].Person_Name%></td>
+            <td><%=data[i].Phone_no%></td>
+        </tr>
+        <%}%>
+        
+    </table>
+    
+    <h1 style="align-self: center;">Himachal Pradesh</h1>
+    <table>
+        
+        <tr>
+            <th>No</th>
+            <th>Name of Organizations</th>
+            <th>Location</th>
+            <th>Head of Institutions</th>
+            <th>Contact Info</th>
+        </tr>
+        <% for(var i=55;i<data.length;i++){
+            console.log(data[i]);%>
+        <tr>
+            <td><%=(i-54)%></td>
+            <td><%=data[i]['Name']%></td>
+            <td><%=data[i].Location%></td>
+            <td><%=data[i].Person_Name%></td>
+            <td><%=data[i].Phone_no%></td>
+        </tr>
+        <%}%>
+    </table>
+</div>
