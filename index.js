@@ -63,6 +63,13 @@ app.get('/overview', (req, res) => {
     res.render("overview.ejs");
 });
 
+app.get('/mc', (req, res) => {
+    res.render("mc.ejs");
+});
+
+app.get('/mrn', (req, res) => {
+    res.render("mrn.ejs");
+});
 app.get('/board-members', (req, res) => {
     res.render("board_members.ejs");
 });
@@ -84,6 +91,18 @@ app.get('/drr', (req, res) => {
 app.get('/board-members/jayant', (req, res) => {
     res.render("jjayant.ejs");
 });
+app.get('/mc/voluntary', (req, res) => {
+    res.render("voluntary.ejs");
+});
+app.get('/mc/people', (req, res) => {
+    res.render("people.ejs");
+});
+app.get('/mc/experts', (req, res) => {
+    res.render("experts.ejs");
+});
+app.get('/mc/institutions', (req, res) => {
+    res.render("instituitions.ejs");
+}); 
 app.get('/disaster-preparedness', (req, res) => {
     res.render("disaster.ejs");
 });
