@@ -1,0 +1,85 @@
+<%- include("background.ejs") %>
+<style>
+    .partners-container {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        color: #333;
+        padding: 20px;
+    }
+
+    .partners-heading {
+        text-align: center;
+        color: #2f4507;
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+
+    .cont {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 20px; /* Reduced the gap */
+        margin-bottom: 10px;
+        
+        flex-direction: column;
+    }
+
+    .column {
+        background-color: #fff;
+        border-radius: 12px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .column h2 {
+        color: #2f4507;
+        margin-bottom: 10px;
+        font-size: 1.5em;
+    }
+
+    .column p {
+        line-height: 1.6;
+        margin-bottom: 15px;
+    }
+
+    .column ul {
+        padding-left: 10px;
+        list-style-type: disc;
+    }
+
+    .column ul li {
+        margin-bottom: 8px;
+    }
+    table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    }
+
+    td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    }
+
+    tr:nth-child(even) {
+    background-color: #dddddd;
+    }
+</style>
+<div class="partners-container">
+    <div class="cont">
+
+        <div class="column">
+            <h2>Mountain Relief Network (MRN) - Enhancing Disaster Resilience through Strategic Partnerships</h2>
+            <p>Mountain Relief Network (MRN), a key initiative of Mountain Forum Himalayas (MFH), is dedicated to bolstering disaster response across the Indian Himalayan Region (IHR). With a network of over 350 member organizations, MRN plays a crucial role in delivering disaster relief, rehabilitation, and post-relief support.</p>
+            <p>Addressing the challenges of remote access and delayed information, MRN provides a vital platform for local, national, and international agencies to deliver aid within 24-48 hours of a disaster. Our approach ensures timely, accurate, and effective relief operations, crucial in the face of the severe climate change impacts affecting the Himalayan ecosystem.</p>
+            <p>MRN has mapped the region and established local focal points capable of rapid damage assessment and relief coordination. These focal points streamline aid distribution, ensuring that support reaches the most affected communities swiftly.</p>
+            <p>In addition to immediate relief, MRN collaborates with local partners and donors to support ongoing rehabilitation and development efforts. By bridging information gaps and enhancing local response capabilities, MRN strengthens disaster resilience and climate adaptation.</p>
+            <p>As an evolving, multi-stakeholder platform, MRN is committed to expanding its reach and effectiveness in disaster response and risk reduction across the Himalayas.</p>
+        </div>
+    </div>
+   
+</div>
+<%- include("footer.ejs") %>

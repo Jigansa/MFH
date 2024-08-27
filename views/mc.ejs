@@ -1,0 +1,124 @@
+<%- include("background.ejs") %>
+
+<style>
+    .partners-container {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        color: #333;
+        padding: 20px;
+    }
+
+    .partners-heading {
+        text-align: center;
+        color: #2f4507;
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+
+    .cont {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 20px; /* Reduced the gap */
+        margin-bottom: 10px;
+        flex-direction: column;
+    }
+
+    .column {
+        background-color: #fff;
+        border-radius: 12px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .column h2 {
+        color: #2f4507;
+        margin-bottom: 10px;
+        font-size: 1.5em;
+    }
+
+    .column p {
+        line-height: 1.6;
+        margin-bottom: 15px;
+    }
+
+    .column ul {
+        padding-left: 10px;
+        list-style-type: disc;
+    }
+
+    .column ul li {
+        margin-bottom: 8px;
+    }
+
+    .links-container {
+        margin-top: 15px;
+    }
+
+    .links-container a {
+        display: block;
+        color: #1a73e8; /* Blue color for links */
+        text-decoration: none;
+        margin-bottom: 5px;
+    }
+
+    .links-container a:hover {
+        text-decoration: underline;
+    }
+
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+</style>
+
+<div class="partners-container">
+    <div class="cont">
+        <div class="column">
+            <h2>Empowering the Northern Himalayas through the Mountain Collective</h2>
+            <p>Mountain Forum Himalayas (MFH) is at the forefront of transformative change in the Northern Himalayan region, encompassing Himachal Pradesh, Uttarakhand, and Ladakh. Since our inception, we have fostered over 100 grassroots organizations and social movements, channeling local expertise to address the needs of marginalized communities.</p>
+            <p>In December 2012, MFH launched the Mountain Collective, a groundbreaking multi-stakeholder platform that unites people’s organizations, civil society networks, and dedicated individuals from Himachal Pradesh and Uttarakhand. This coalition is designed to tackle critical issues including climate change, rural employment, river conservation, forest fire prevention, and women’s empowerment.</p>
+            <p>Through the Mountain Collective, we have spearheaded impactful campaigns such as:</p>
+            <ul>
+                <li><strong>Save River Movement</strong></li>
+                <li><strong>Millets Movement</strong></li>
+                <li><strong>Raksha Sutra Campaign</strong></li>
+                <li><strong>Anti-Forest Fire Campaign</strong></li>
+                <li><strong>Ekal Nari Shakti Sangathan (Single Women’s Platform)</strong></li>
+            </ul>
+            <p>We also champion initiatives like water conservation and the seed ball campaign, demonstrating our commitment to preserving natural resources and fostering sustainable development.</p>
+            <p>The Mountain Collective is a robust alliance consisting of:</p>
+            <ul>
+                <li><strong>115 Voluntary Organizations</strong>: Passionate groups delivering essential services and support on the ground.</li>
+                <li><strong>21 People’s Organizations</strong>: Grassroots entities that advocate for and represent local communities.</li>
+                <li><strong>23 Subject Experts</strong>: Specialists offering critical insights and knowledge across various fields.</li>
+                <li><strong>13 Institutions</strong>: Established bodies providing resources, research, and strategic direction.</li>
+            </ul>
+            <div class="links-container">
+                <a href="/mc/voluntary">Click here for Voluntary Organisations associated with MFH</a>
+                <a href="#peoples-organisations">Click here for People’s Organisations associated with MFH</a>
+                <a href="#individuals-experts">Click here for Individuals and experts associated with MFH</a>
+                <a href="#institutions">Click here for Institutions associated with MFH</a>
+            </div>
+            <p>Together, we form a dynamic network that drives regional development and resilience, ensuring a stronger, more sustainable future for the Himalayan communities we serve.</p>
+        </div>
+    </div>
+    <div class="cont">
+
+    </div>
+</div>
+
+<%- include("footer.ejs") %>
