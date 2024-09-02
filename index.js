@@ -89,7 +89,6 @@ app.get('/vision', (req, res) => {
 });
 app.get('/partners', async (req, res) => {
     let datadb= await (Data.find({})); 
-    console.log(datadb);
 
     res.render("partners.ejs",{
         data:(datadb)
@@ -103,7 +102,6 @@ app.get('/board-members/jayant', (req, res) => {
 });
 app.get('/mc/voluntary', async (req, res) => {
     let datadb= await (Data.find({})); 
-    console.log(datadb);
 
     res.render("voluntary.ejs",{
         data:datadb
@@ -111,15 +109,13 @@ app.get('/mc/voluntary', async (req, res) => {
 });
 app.get('/mc/people', async (req, res) => {
     let datadb= await (People.find({})); 
-    console.log(datadb);
 
     res.render("people.ejs",{
         data:datadb
     });
 });
 app.get('/mc/experts', async (req, res) => {
-    let datadb= await (Expert.find({})); 
-    console.log(datadb);
+    let datadb= await (Expert.find({}));
     res.render("experts.ejs",{
         data:datadb
     });
