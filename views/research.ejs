@@ -1,0 +1,74 @@
+<%- include("background.ejs") %>
+
+<!-- Custom CSS for the Research and Documentation page -->
+<style>
+    .vision-mission-image {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        height: 500px; /* Adjust the height as needed */
+    }
+
+    .vision-mission-img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: auto;
+        transform: translate(-50%, -50%);
+    }
+
+    .vision-mission-content {
+        max-width: 1200px; /* Adjust max-width as needed */
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #ffffff; /* Example background color */
+        color: #2f4507; /* Example text color */
+    }
+
+    .vision-mission-content h1, .vision-mission-content h2, .vision-mission-content h3 {
+        color: #2f4507;
+    }
+
+    .vision-mission-content h1 {
+        margin-bottom: 30px; /* Increase space below h1 */
+    }
+
+    .vision-mission-content h2 {
+        margin-top: 30px; /* Increase space above h2 */
+        margin-bottom: 20px; /* Adjust space below h2 if needed */
+    }
+
+    .vision-mission-content p, .vision-mission-content ul {
+        margin-bottom: 20px;
+        line-height: 1.6;
+        font-size: 1rem;
+    }
+
+    .vision-mission-content ul {
+        list-style-type: disc;
+        padding-left: 20px;
+    }
+</style>
+
+<!-- Image Section -->
+<div class="vision-mission-image">
+    <img src="research.jpg" alt="Research Image" class="vision-mission-img">
+</div>
+
+<!-- Content Section -->
+<div class="vision-mission-content">
+    <h1 style="text-align: center;">Research and Documentation / Learning and Knowledge Management</h1>
+    
+    <p>Mountain Forum Himalayas (MFH) has undertaken a significant action research study to explore how Himalayan communities perceive and adapt to climate change. This research, conducted across nine districts in Uttarakhand and Himachal Pradesh, focuses on the higher Himalayan region (2000-3000 meters above sea level). By engaging with 13 representative villages, the study investigates community perceptions, agricultural practices, agro-biodiversity, resource utilization, and health impacts related to climate change.</p>
+    
+    <p>The outcomes of this action-based research aim to provide a comprehensive understanding of how climate change is affecting these communities and the strategies they employ to cope. MFH’s study seeks to highlight the specific impacts of climate change, identify effective coping mechanisms, and recommend necessary policy and community-level actions. Through this initiative, MFH hopes to enhance resilience, inform policy decisions, and foster effective adaptation strategies to improve the quality of life for Himalayan communities facing the adverse effects of climate change.</p>
+    <p style="text-align: center;">
+        <a href="2.pdf" download="2.pdf" style="color: #2f4507; text-decoration: underline;">
+            Read detailed study report here
+        </a>
+    </p>
+    
+</div>
+
+<%- include("footer.ejs") %>

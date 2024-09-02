@@ -1,0 +1,68 @@
+<%- include("background.ejs") %>
+
+<!-- Custom CSS for the Vision and Mission page -->
+<style>
+    .vision-mission-image {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        height: 500px; /* Adjust the height as needed */
+    }
+
+    .vision-mission-img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: auto;
+        transform: translate(-50%, -50%);
+    }
+
+    .vision-mission-content {
+        max-width: 1200px; /* Adjust max-width as needed */
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #ffffff; /* Example background color */
+        color: #2f4507; /* Example text color */
+    }
+
+    .vision-mission-content h1, .vision-mission-content h2, .vision-mission-content h3 {
+        color: #2f4507;
+    }
+
+    .vision-mission-content h1 {
+        margin-bottom: 30px; /* Increase space below h1 */
+    }
+
+    .vision-mission-content h2 {
+        margin-top: 30px; /* Increase space above h2 */
+        margin-bottom: 20px; /* Adjust space below h2 if needed */
+    }
+
+    .vision-mission-content p, .vision-mission-content ul {
+        margin-bottom: 20px;
+        line-height: 1.6;
+        font-size: 1rem;
+    }
+
+    .vision-mission-content ul {
+        list-style-type: disc;
+        padding-left: 20px;
+    }
+</style>
+
+<!-- Image Section -->
+<div class="vision-mission-image">
+    <img src="19.JPG" alt="Mountain Image" class="vision-mission-img">
+</div>
+
+<!-- Content Section -->
+<div class="vision-mission-content">
+    <h1 style="text-align: center;">Climate issues in the Himalayan Context</h1>
+    
+    <p>Climate issues in the Himalayan regions of Himachal Pradesh and Uttarakhand are increasingly severe and multifaceted, posing significant challenges to local ecosystems, communities, and economies. The rapid warming of temperatures in these high-altitude areas has led to accelerated glacier melt, impacting the region’s water resources and altering river flows. This glacial retreat contributes to more frequent and intense floods, landslides, and soil erosion, which disrupt agricultural activities and threaten livelihoods. Additionally, shifting weather patterns and increased unpredictability in precipitation have exacerbated the vulnerability of local farmers, making traditional farming practices less reliable and increasing the risk of crop failures. The changing climate also affects biodiversity, with many plant and animal species struggling to adapt to the rapidly changing conditions, leading to potential disruptions in the delicate ecological balance of the region.</p>
+    <p>Efforts to address these climate issues in Himachal Pradesh and Uttarakhand require a comprehensive and integrated approach. Strategies must include enhanced monitoring and data collection to better understand and predict climate impacts, as well as the development of adaptive measures to protect both natural and human systems. Investment in climate-resilient infrastructure, such as improved flood defenses and water management systems, is crucial. Promoting sustainable agricultural practices, including crop diversification and soil conservation techniques, can help mitigate the effects of climate variability on farming. Additionally, increasing public awareness and community engagement in climate adaptation initiatives is essential for building resilience and ensuring that local knowledge and needs are incorporated into broader climate strategies. Collaborative efforts between government agencies, non-governmental organizations, and local communities are vital to effectively address and adapt to the evolving climate challenges in this critical region.</p>
+    
+</div>
+
+<%- include("footer.ejs") %>

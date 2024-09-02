@@ -1,0 +1,68 @@
+<%- include("background.ejs") %>
+
+<!-- Custom CSS for the Recovery and Rehabilitation page -->
+<style>
+    .vision-mission-image {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        height: 500px; /* Adjust the height as needed */
+    }
+
+    .vision-mission-img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: auto;
+        transform: translate(-50%, -50%);
+    }
+
+    .vision-mission-content {
+        max-width: 1200px; /* Adjust max-width as needed */
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #ffffff; /* Example background color */
+        color: #2f4507; /* Example text color */
+    }
+
+    .vision-mission-content h1, .vision-mission-content h2, .vision-mission-content h3 {
+        color: #2f4507;
+    }
+
+    .vision-mission-content h1 {
+        margin-bottom: 30px; /* Increase space below h1 */
+    }
+
+    .vision-mission-content h2 {
+        margin-top: 30px; /* Increase space above h2 */
+        margin-bottom: 20px; /* Adjust space below h2 if needed */
+    }
+
+    .vision-mission-content p, .vision-mission-content ul {
+        margin-bottom: 20px;
+        line-height: 1.6;
+        font-size: 1rem;
+    }
+
+    .vision-mission-content ul {
+        list-style-type: disc;
+        padding-left: 20px;
+    }
+</style>
+
+<!-- Image Section -->
+<div class="vision-mission-image">
+    <img src="recovery.jpg" alt="Recovery and Rehabilitation Image" class="vision-mission-img">
+</div>
+
+<!-- Content Section -->
+<div class="vision-mission-content">
+    <h1 style="text-align: center;">Recovery and Rehabilitation</h1>
+    
+    <!-- Long-Term Support Section -->
+    <h2>Long-Term Support</h2>
+    <p>At MFH, we are dedicated to crafting a robust and comprehensive recovery plan that not only addresses immediate relief needs but also paves the way for long-term rebuilding and resilience. Our long-term support efforts are meticulously designed to restore normalcy, fortify community resilience, and mitigate future risks, recognizing that recovery is a complex, multi-faceted endeavor that demands collaborative effort, strategic planning, and unwavering commitment. We ensure displaced individuals receive safe and adequate temporary housing while strategically leveraging resources from government and partner agencies to develop enduring housing solutions that replace or repair damaged homes. Our support extends to farmers, providing essential resources to restore agricultural activities and seeking compensation for losses incurred due to soil erosion from flash floods. Additionally, we offer critical psychological support to help individuals navigate trauma and stress, and we adeptly secure and manage funding from diverse sources, including government, donors, and grants, to fuel our comprehensive recovery initiatives.</p>
+</div>
+
+<%- include("footer.ejs") %>

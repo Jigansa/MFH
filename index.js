@@ -74,7 +74,7 @@ app.get('/overview', (req, res) => {
 });
 
 app.get('/mc', (req, res) => {
-    res.render("mc.ejs");
+    res.render("mc.ejs"); 
 });
 
 app.get('/mrn', (req, res) => {
@@ -91,8 +91,29 @@ app.get('/partners', async (req, res) => {
     let datadb= await (Data.find({})); 
 
     res.render("partners.ejs",{
-        data:(datadb)
+        data:(datadb) 
     });
+});
+app.get('/emergency_response', (req, res) => {
+    res.render("emergency_response.ejs");
+});
+app.get('/climatic-justice-domain', (req, res) => {
+    res.render("climatic-justice-domain.ejs");
+});
+app.get('/recovery', (req, res) => {
+    res.render("recovery.ejs");
+});
+app.get('/waste-management', (req, res) => {
+    res.render("waste-management.ejs");
+});
+app.get('/campaigns', (req, res) => {
+    res.render("campaigns.ejs");
+});
+app.get('/research', (req, res) => {
+    res.render("research.ejs");
+});
+app.get('/local', (req, res) => {
+    res.render("local.ejs");
 });
 app.get('/drr', (req, res) => {
     res.render("drr.ejs");

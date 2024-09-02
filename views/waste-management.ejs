@@ -1,0 +1,68 @@
+<%- include("background.ejs") %>
+
+<!-- Custom CSS for the Sustainable Environment and Climate page -->
+<style>
+    .vision-mission-image {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        height: 500px; /* Adjust the height as needed */
+    }
+
+    .vision-mission-img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: auto;
+        transform: translate(-50%, -50%);
+    }
+
+    .vision-mission-content {
+        max-width: 1200px; /* Adjust max-width as needed */
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #ffffff; /* Example background color */
+        color: #2f4507; /* Example text color */
+    }
+
+    .vision-mission-content h1, .vision-mission-content h2, .vision-mission-content h3 {
+        color: #2f4507;
+    }
+
+    .vision-mission-content h1 {
+        margin-bottom: 30px; /* Increase space below h1 */
+    }
+
+    .vision-mission-content h2 {
+        margin-top: 30px; /* Increase space above h2 */
+        margin-bottom: 20px; /* Adjust space below h2 if needed */
+    }
+
+    .vision-mission-content p, .vision-mission-content ul {
+        margin-bottom: 20px;
+        line-height: 1.6;
+        font-size: 1rem;
+    }
+
+    .vision-mission-content ul {
+        list-style-type: disc;
+        padding-left: 20px;
+    }
+</style>
+
+<!-- Image Section -->
+<div class="vision-mission-image">
+    <img src="waste.png" alt="Waste Management Image" class="vision-mission-img">
+</div>
+
+<!-- Content Section -->
+<div class="vision-mission-content">
+    <h1 style="text-align: center;">Sustainable Environment and Climate</h1>
+    
+    <!-- Waste Management Section -->
+    <h2>Waste Management</h2>
+    <p>MFH is dedicated to pioneering effective waste management as a fundamental element of environmental sustainability and climate change mitigation. Our strategy focuses on minimizing waste generation through proactive initiatives such as recycling, composting, and reducing dependence on single-use plastics, which conserves resources and decreases reliance on landfills. By implementing comprehensive waste segregation and treatment systems, we aim to significantly reduce greenhouse gas emissions, particularly methane—a potent climate pollutant from organic waste decomposition. Additionally, our sustainable waste management practices bolster the circular economy by converting waste into valuable resources like energy or raw materials for new products. We are committed to educating communities about responsible consumption and proper waste disposal, cultivating a culture of sustainability that enhances environmental health. Through these integrated efforts, MFH strives to foster a healthier planet, mitigate environmental impacts, and strengthen climate resilience by addressing the detrimental effects of waste on both ecosystems and climate systems.</p>
+</div>
+
+<%- include("footer.ejs") %>
