@@ -1,0 +1,99 @@
+<%- include("background.ejs") %>
+
+<!-- Custom CSS for the Volunteer page -->
+<style>
+    .volunteer-content {
+        max-width: 1200px; /* Adjust max-width as needed */
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #ffffff; /* Example background color */
+        color: #2f4507; /* Example text color */
+    }
+
+    .volunteer-content h1, .volunteer-content h2 {
+        color: #2f4507;
+    }
+
+    .volunteer-content h1 {
+        margin-bottom: 30px; /* Increase space below h1 */
+    }
+
+    .volunteer-content h2 {
+        margin-top: 30px; /* Increase space above h2 */
+        margin-bottom: 20px; /* Adjust space below h2 if needed */
+    }
+
+    .volunteer-content p {
+        margin-bottom: 20px;
+        line-height: 1.6;
+        font-size: 1rem;
+    }
+
+    /* Custom styles for volunteer button */
+    .volunteer-button {
+        display: block;
+        background-color: #166e8d;
+        color: white;
+        text-align: center;
+        padding: 15px;
+        border-radius: 5px;
+        text-decoration: none;
+        margin-bottom: 20px;
+        transition: background-color 0.3s ease;
+        width: fit-content;
+    }
+
+    .volunteer-button:hover {
+        background-color: #105970;
+    }
+
+    /* Custom styles for member organization section */
+    .member-orgs-section {
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    .member-orgs-section h2 {
+        color: #f06e2d; /* Example orange color */
+    }
+
+    .member-orgs-logos {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 40px;
+        margin-top: 20px;
+    }
+
+    .member-orgs-logos img {
+        max-width: 150px;
+        height: auto;
+        display: block;
+        object-fit: contain;
+    }
+</style>
+
+<!-- Content Section -->
+<div class="volunteer-content">
+    <h1>Volunteer With Us</h1>
+
+    <h2>Volunteers with Us:</h2>
+    <p>If you are interested to volunteer with us, you can register yourself, and we will get back to you.</p>
+    <p>For Information, write to us at: <a href="mailto:info@mountainforumhimalayas.com">info@mountainforumhimalayas.com</a></p>
+    <a href="/volunteer/v" class="volunteer-button">Volunteer with Us</a>
+
+    <!-- Member Organizations Section -->
+    <div class="member-orgs-section">
+        <h2>LIST OF MEMBER ORGANISATIONS</h2>
+        <div class="member-orgs-logos">
+            <!-- Add images of member organizations here -->
+            <img src="org1.png" alt="Organization 1">
+            <img src="org2.png" alt="Organization 2">
+            <img src="org3.png" alt="Organization 3">
+            <img src="org4.png" alt="Organization 4">
+            <!-- Add more logos as needed -->
+        </div>
+    </div>
+</div>
+
+<%- include("footer.ejs") %>

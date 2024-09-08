@@ -118,11 +118,14 @@ app.get('/local', (req, res) => {
 app.get('/drr', (req, res) => {
     res.render("drr.ejs");
 });
+app.get('/opportunities', (req, res) => {
+    res.render("opportunities.ejs");
+});
 app.get('/board-members/jayant', (req, res) => {
     res.render("jjayant.ejs");
 });
 app.get('/mc/voluntary', async (req, res) => {
-    let datadb= await (Data.find({})); 
+    let datadb= await (Data.find({}));  
 
     res.render("voluntary.ejs",{
         data:datadb
@@ -146,6 +149,19 @@ app.get('/mc/institutions', (req, res) => {
 }); 
 app.get('/disaster-preparedness', (req, res) => {
     res.render("disaster.ejs");
+});
+app.get('/partnership', (req, res) => {
+    res.render("partnership.ejs"); 
+});
+app.get('/volunteer', (req, res) => {
+    res.render("volunteer.ejs"); 
+});
+app.get('/volunteer/v', (req, res) => {
+    res.render("v.ejs");   
+});
+
+app.get('/become_member', (req, res) => {
+    res.render("become_member.ejs"); 
 });
 app.get('/board-members/aranya', (req, res) => {
     res.render("aranya.ejs");

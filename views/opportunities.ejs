@@ -1,0 +1,92 @@
+<%- include("background.ejs") %>
+
+<!-- Custom CSS for the Opportunities page -->
+<style>
+    .opportunities-image {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        height: 500px; /* Adjust the height as needed */
+    }
+
+    .opportunities-img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: auto;
+        transform: translate(-50%, -50%);
+    }
+
+    .opportunities-content {
+        max-width: 1200px; /* Adjust max-width as needed */
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #ffffff; /* Example background color */
+        color: #2f4507; /* Example text color */
+    }
+
+    .opportunities-content h1, .opportunities-content h2, .opportunities-content h3 {
+        color: #2f4507;
+    }
+
+    .opportunities-content h1 {
+        margin-bottom: 30px; /* Increase space below h1 */
+    }
+
+    .opportunities-content h2 {
+        margin-top: 30px; /* Increase space above h2 */
+        margin-bottom: 20px; /* Adjust space below h2 if needed */
+    }
+
+    .opportunities-content p {
+        margin-bottom: 20px;
+        line-height: 1.6;
+        font-size: 1rem;
+    }
+
+    /* Custom styles for vacancy buttons */
+    .vacancy-button {
+        display: block;
+        background-color: #166e8d;
+        color: white;
+        text-align: center;
+        padding: 15px;
+        border-radius: 5px;
+        text-decoration: none;
+        margin-bottom: 20px;
+        transition: background-color 0.3s ease;
+    }
+
+    .vacancy-button:hover {
+        background-color: #105970;
+    }
+
+    .no-vacancies {
+        text-align: center;
+        color: #666;
+        margin-bottom: 20px;
+    }
+</style>
+
+<!-- Image Section -->
+<div class="opportunities-image">
+    <img src="10.jpg" alt="Opportunities Image" class="opportunities-img">
+</div>
+
+<!-- Content Section -->
+<div class="opportunities-content">
+    <h1>Opportunities</h1>
+
+    <h2>WORK WITH US</h2>
+    <p>At Mountain Forum Himalayas, you will join a passionate and dedicated team working across the Himalayan region to bring sustainable development and disaster risk reduction. Our team is made up of individuals from diverse backgrounds, committed to making a difference in mountain communities.</p>
+    <p>If you believe you have the skills and the drive to contribute to our work in climate justice, disaster response, or community resilience, you can check available opportunities or contact us at: <a href="mailto:mfhshimla01@gmail.com">mfhshimla01@gmail.com</a></p>
+    <a href="#" class="vacancy-button">Click Here for Active Vacancies</a>
+
+    <h2>INTERN WITH US</h2>
+    <p>At Mountain Forum Himalayas, we offer enriching internship opportunities where you will work with dedicated professionals from different sectors. Learn and grow with us as we address key challenges in disaster response, environmental sustainability, and social equity.</p>
+    <p>If you're eager to learn, grow, and make an impact, write to us at: <a href="mailto:mfhshimla01@gmail.com">mfhshimla01@gmail.com</a></p>
+    <a href="#" class="vacancy-button no-vacancies">No Active Vacancies at Present</a>
+</div>
+
+<%- include("footer.ejs") %>

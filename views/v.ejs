@@ -1,0 +1,150 @@
+<%- include("background.ejs") %>
+<!-- Custom CSS for the Volunteers Database page -->
+<style>
+    .volunteer-form-content {
+        max-width: 900px; /* Adjust max-width as needed */
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #ffffff;
+        color: #2f4507;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    h2.section-title {
+        background-color: #166e8d;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    label {
+        font-weight: bold;
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    select,
+    textarea {
+        width: 100%;
+        padding: 10px;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+
+    textarea {
+        resize: vertical;
+    }
+
+    .checkbox-group {
+        margin-top: 15px;
+    }
+
+    .checkbox-group label {
+        font-weight: normal;
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+</style>
+
+<div class="volunteer-form-content">
+    <!-- Contact Information -->
+    <h2 class="section-title">CONTACT INFORMATION</h2>
+    
+    <div class="form-group">
+        <label for="first-name">First Name:</label>
+        <input type="text" id="first-name" placeholder="Your First name..">
+    </div>
+
+    <div class="form-group">
+        <label for="last-name">Last Name:</label>
+        <input type="text" id="last-name" placeholder="Your Last name..">
+    </div>
+
+    <div class="form-group">
+        <label for="age">Age:</label>
+        <input type="text" id="age" placeholder="Your age..">
+    </div>
+
+    <div class="form-group">
+        <label for="sex">Sex:</label>
+        <select id="sex">
+            <option value="" disabled selected>Select Sex</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="address">Postal Address:</label>
+        <textarea id="address" placeholder="Your address.." rows="3"></textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="district">District:</label>
+        <input type="text" id="district" placeholder="Your District..">
+    </div>
+
+    <div class="form-group">
+        <label for="state">State:</label>
+        <input type="text" id="state" placeholder="Your State..">
+    </div>
+
+    <div class="form-group">
+        <label for="mobile">Mobile:</label>
+        <input type="text" id="mobile" placeholder="Your Mobile..">
+    </div>
+
+    <div class="form-group">
+        <label for="email">E-mail:</label>
+        <input type="text" id="email" placeholder="Your E-mail..">
+    </div>
+
+    <div class="form-group">
+        <label for="country">Country:</label>
+        <input type="text" id="country" placeholder="Your Country..">
+    </div>
+
+    <div class="form-group">
+        <label for="pin-code">Pin-Code:</label>
+        <input type="text" id="pin-code" placeholder="Your Pin-Code..">
+    </div>
+
+    <!-- Login Information -->
+    <h2 class="section-title">LOGIN INFORMATION</h2>
+    
+    <div class="form-group">
+        <label for="username">User Name:</label>
+        <input type="text" id="username" placeholder="Your User Name..">
+    </div>
+
+    <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" placeholder="Your Password..">
+    </div>
+
+    <!-- Professional Details -->
+    <h2 class="section-title">PROFESSIONAL DETAILS</h2>
+
+    <div class="form-group">
+        <label>Language Proficiency:</label>
+        <div class="checkbox-group">
+            <label><input type="checkbox" name="language" value="english"> English</label>
+            <label><input type="checkbox" name="language" value="hindi"> Hindi</label>
+            <label><input type="checkbox" name="language" value="bengali"> Bengali</label>
+        </div>
+    </div>
+</div>
+
+<%- include("footer.ejs") %>

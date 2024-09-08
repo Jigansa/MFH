@@ -1,0 +1,117 @@
+<%- include("background.ejs") %>
+
+<!-- Custom CSS for the Partnership page -->
+<style>
+    .partnership-header {
+        text-align: center;
+        background-color: #2f4507; /* Your website's primary color */
+        color: white;
+        padding: 40px 20px;
+        font-family: 'Arial', sans-serif;
+    }
+
+    .partnership-header h1 {
+        font-size: 2.5rem;
+        margin: 0;
+    }
+
+    .partnership-intro {
+        max-width: 1100px;
+        margin: 40px auto;
+        padding: 20px;
+        background-color: #f8f9fa; /* Light grey background */
+        color: #333;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for a modern look */
+        border-radius: 8px;
+        font-family: 'Arial', sans-serif;
+    }
+
+    .partnership-intro h2 {
+        font-size: 2rem;
+        color: #2f4507;
+        margin-bottom: 20px;
+    }
+
+    .partnership-intro p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+    }
+
+    .partnership-benefits, .how-to-partner {
+        max-width: 1100px;
+        margin: 40px auto;
+        padding: 20px;
+        background-color: #ffffff; 
+        color: #333;
+        border-left: 5px solid #2f4507; /* Adding a vertical line for style */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Light shadow */
+        border-radius: 8px;
+        font-family: 'Arial', sans-serif;
+    }
+
+    .partnership-benefits h2, .how-to-partner h2 {
+        color: #2f4507;
+        margin-bottom: 20px;
+    }
+
+    .partnership-benefits ul, .how-to-partner ul {
+        list-style-type: disc;
+        margin-left: 20px;
+        font-size: 1.1rem;
+    }
+
+    .partner-button {
+        display: block;
+        width: fit-content;
+        margin: 30px auto;
+        padding: 15px 30px;
+        background-color: #2f4507;
+        color: white;
+        text-transform: uppercase;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+    }
+
+    .partner-button:hover {
+        background-color: #3d6709;
+    }
+</style>
+
+<!-- Content Section -->
+<div class="partnership-header">
+    <h1>Partner with Mountain Forum Himalayas</h1>
+</div>
+
+<div class="partnership-intro">
+    <h2>Why Partner With Us?</h2>
+    <p>At Mountain Forum Himalayas, we believe in the power of collaboration to bring about sustainable development in the Himalayan region. Through partnerships, we work with organizations, businesses, and individuals to create impactful projects that benefit communities and the environment. Together, we can foster resilience, promote inclusivity, and support climate adaptation and mitigation efforts in the Himalayas.</p>
+</div>
+
+<div class="partnership-benefits">
+    <h2>Benefits of Partnering</h2>
+    <ul>
+        <li>Contribute to sustainable development and environmental conservation in the Himalayan region.</li>
+        <li>Access a network of like-minded organizations and community leaders working towards common goals.</li>
+        <li>Collaborate on innovative projects that enhance community resilience and economic opportunities.</li>
+        <li>Gain visibility through co-branded initiatives and marketing opportunities.</li>
+        <li>Make a positive impact on the lives of marginalized communities.</li>
+    </ul>
+</div>
+
+<div class="how-to-partner">
+    <h2>How to Become a Partner</h2>
+    <p>If you are an organization or individual looking to contribute to sustainable change in the Himalayan region, there are several ways you can partner with Mountain Forum Himalayas:</p>
+    <ul>
+        <li>Co-develop projects that focus on environmental conservation, disaster risk reduction, or community development.</li>
+        <li>Support local governance and leadership development through financial or technical assistance.</li>
+        <li>Join us in research and advocacy efforts to influence climate-related policies.</li>
+        <li>Participate in community-based programs that empower women and marginalized groups.</li>
+    </ul>
+</div>
+
+<!-- Call to Action Button -->
+<a href="/contact-us" class="partner-button">Contact Us to Partner</a>
+
+<%- include("footer.ejs") %>
