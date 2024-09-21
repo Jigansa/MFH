@@ -1,0 +1,92 @@
+<%- include("background.ejs") %>
+
+<!-- Custom CSS for the Vision and Mission page -->
+<style>
+    .vision-mission-image {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        height: 500px; /* Adjust the height as needed */
+    }
+
+    .vision-mission-img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: auto;
+        transform: translate(-50%, -50%);
+    }
+
+    .vision-mission-content {
+        max-width: 1200px; /* Adjust max-width as needed */
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #ffffff; /* Example background color */
+        color: #2f4507; /* Example text color */
+    }
+
+    .vision-mission-content h1, .vision-mission-content h2, .vision-mission-content h3 {
+        color: #2f4507;
+    }
+
+    .vision-mission-content h1 {
+        margin-bottom: 30px; /* Increase space below h1 */
+    }
+
+    .vision-mission-content h2 {
+        margin-top: 30px; /* Increase space above h2 */
+        margin-bottom: 20px; /* Adjust space below h2 if needed */
+    }
+
+    .vision-mission-content p, .vision-mission-content ul {
+        margin-bottom: 20px;
+        line-height: 1.6;
+        font-size: 1rem;
+    }
+
+    .vision-mission-content ul {
+        list-style-type: disc;
+        padding-left: 20px;
+    }
+</style>
+
+<!-- Image Section -->
+<div class="vision-mission-image">
+    <img src="vis.JPG" alt="Mountain Image" class="vision-mission-img">
+</div>
+
+<!-- Content Section -->
+<div class="vision-mission-content">
+    <h1>Principles of engagement</h1> 
+    <p>Inclusivity and Equity: Ensure that engagement with people’s organizations is inclusive and equitable, giving a platform to diverse voices and perspectives including women, LGBTIQ, indigenous people, marginalised people, differently abled people and Dalits. </p>
+    <p>Respect and Inclusion: Ensure that community engagement is respectful of local customs, traditions, and cultural practices. Involve community members in decision-making processes from the beginning.</p>
+    <p>Empowerment and Ownership: Support local communities in taking ownership of initiatives by providing the tools, knowledge, and resources fostering local ownership and leadership. </p>
+    <p>Collaboration and partnership: Foster collaboration among diverse stakeholders, including local communities, governments, NGOs, academia, and the private sector.</p>
+    <p>Reporting and Accountability: Provide regular and accurate reports on activities, outcomes, and financials to stakeholders, ensuring accountability and trust.</p>
+    <p>Shared Goals: Build partnerships based on shared goals and mutual benefits, ensuring that all parties have a stake in the success of initiatives.</p>
+    <p>Ethical Standards: Uphold high ethical standards in all interactions, ensuring that actions and decisions are made with honesty and fairness.</p>
+    <p>Respect for Rights: Protect and promote human rights, and ensure that engagement does not inadvertently cause harm.</p>
+    <p>Innovative Solutions: Encourage creative problem-solving and innovative approaches to address complex social issues.</p>
+</div>
+
+<%- include("footer.ejs") %>
+
+<!-- JavaScript to bold text before colon -->
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Select all <p> tags in the vision-mission-content class
+        const paragraphs = document.querySelectorAll(".vision-mission-content p");
+
+        paragraphs.forEach(function(p) {
+            const text = p.innerHTML;
+            const index = text.indexOf(':'); // Find the first colon
+
+            if (index !== -1) {
+                // Bold the text before the colon
+                const boldText = "<strong>" + text.substring(0, index) + "</strong>" + text.substring(index);
+                p.innerHTML = boldText; // Update the paragraph's HTML
+            }
+        });
+    });
+</script>

@@ -153,6 +153,9 @@ app.get('/disaster-preparedness', (req, res) => {
 app.get('/partnership', (req, res) => {
     res.render("partnership.ejs"); 
 });
+app.get('/principles',(req,res)=>{
+    res.render("principles.ejs");
+});
 app.get('/volunteer', (req, res) => {
     res.render("volunteer.ejs"); 
 });

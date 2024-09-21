@@ -10,7 +10,14 @@ body {
     margin: 0;
     padding: 0;
 }
-
+.credits {
+    background-color: #f1f1f1; /* Light grey background */
+    text-align: center;
+    padding: 10px;
+    font-size: 12px;
+    color: #555; /* Subtle text color */
+    border-top: 1px solid #ddd; /* Thin top border */
+}
 /* Responsive Styles */
 @media (max-width: 768px) {
     .panel {
