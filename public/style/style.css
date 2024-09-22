@@ -12,94 +12,53 @@ body {
 }
 .credits {
     background-color: #f1f1f1; /* Light grey background */
-    text-align: center;
+    text-align: right;
     padding: 10px;
     font-size: 12px;
     color: #555; /* Subtle text color */
     border-top: 1px solid #ddd; /* Thin top border */
 }
+.panel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Adjust for space between logo and menu */
+}
 /* Responsive Styles */
 @media (max-width: 768px) {
     .panel {
-        flex-direction: column;
-        height: auto;
-    }
-    
-    .panel-all {
-        padding-left: 0;
-        padding-bottom: 10px;
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align items to start */
     }
 
     .panel-ops {
-        justify-content: center;
-        flex-wrap: wrap;
-        padding: 10px 0;
+        flex-direction: column; /* Stack navbar items */
+        width: 100%; /* Full width for items */
     }
-    
+
     .panel-ops .border {
-        padding: 8px 12px;
-        font-size: 0.9rem;
+        padding: 10px; /* Adjust padding for better touch targets */
+        width: 100%; /* Full width for each link */
+        text-align: center; /* Center align text */
     }
 
-    .hero-section {
-        height: auto;
-        padding: 20px 0;
+    /* Dropdown Styles for Mobile */
+    .dropdown {
+        width: 100%; /* Full width dropdown */
     }
 
-    .hero-msg {
-        font-size: 1rem;
-        padding: 8px;
-        width: 90%;
+    .dropdown-content {
+        position: static; /* Change to static to prevent overlapping */
+        display: none; /* Keep hidden initially */
+        width: 100%; /* Full width dropdown */
     }
 
-    .shop-section {
-        flex-direction: column;
-        align-items: center;
+    .dropdown:hover .dropdown-content {
+        display: block; /* Show dropdown on click (you may need JS for click toggle) */
     }
 
-    .box {
-        width: 90%;
-        margin-bottom: 20px;
-    }
-
-    .slider .slides {
-        flex-direction: column;
-    }
-
-    .overlay {
-        font-size: 5vw;
-    }
-
-    .arrow {
-        font-size: 5vw;
-        padding: 8px 16px;
-    }
-
-    .social-media-icons {
-        top: auto;
-        bottom: 10px;
-        right: 50%;
-        transform: translateX(50%);
-        flex-direction: row;
-        gap: 15px;
-        width: auto;
-        padding: 5px;
-    }
-
-    .social-icon {
-        width: 40px;
-        height: 40px;
-        font-size: 20px;
-    }
-
-    .contact-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .contact-form, .contact-info {
-        width: 90%;
-        margin-bottom: 20px;
+    .panel-ops a:hover {
+        background-color: #4CAF50; /* Highlight on hover */
+        color: white; /* Change text color on hover */
     }
 }
 

@@ -83,5 +83,13 @@
             <p>Developed by Jigansa Satapathy</p>
         </div>
     </header>
+    <script>
+        document.querySelectorAll('.dropdown > a').forEach(item => {
+            item.addEventListener('click', event => {
+                const dropdownContent = item.nextElementSibling;
+                dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+    </script>    
 </body>
 </html>
