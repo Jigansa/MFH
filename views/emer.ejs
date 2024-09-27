@@ -1,0 +1,121 @@
+<%- include("background.ejs") %>
+<link rel="stylesheet" href="/style/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<style>
+    .top-image {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        height: 500px;
+    }
+    .top-img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 80%;
+        height: auto;
+        transform: translate(-50%, -50%);
+    }
+    .top-content {
+        max-width: 1200px; /* Adjust max-width as needed */
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #ffffff; /* Example background color */
+        color: #2f4507; /* Example text color */
+    }
+
+    .top-content h1, .top-content h2, .top-content h3 {
+        color: #2f4507;
+    }
+
+    .top-content h1 {
+        margin-bottom: 30px; /* Increase space below h1 */
+    }
+
+    .top-content h2 {
+        margin-top: 30px; /* Increase space above h2 */
+        margin-bottom: 20px; /* Adjust space below h2 if needed */
+    }
+
+    .top-content p, .top ul {
+        margin-bottom: 20px;
+        line-height: 1.6;
+        font-size: 1rem;
+    }
+
+    .top-content ul {
+        list-style-type: disc;
+        padding-left: 20px;
+    }
+
+    /* Box Section */
+    .boxes-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .box {
+        flex: 1 1 calc(33.333% - 20px);
+        margin: 10px;
+        background-color: #f5f5f5;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    .box img {
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .box h3 {
+        color: #2f4507;
+        margin: 15px 0;
+    }
+
+    .read-more-btn {
+        background-color: orange;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        display: inline-block;
+    }
+
+    .read-more-btn:hover {
+        background-color: blue;
+    }
+
+    .read-more-btn:active {
+        background-color: blue;
+    }
+</style>
+
+<!-- Image Section -->
+<div class="top-image">
+    <img src="/f2last.jpg" alt="Mountain Image" class="top-img">
+</div>
+
+<div class="top-content">
+    <h1 style="text-align: center;">Emergency Response, Recovery, and Rehabilitation</h1>
+    <p>At MFH, our commitment extends deep into the heart of the northern Himalayan region, encompassing the most remote villages of Uttarakhand and Himachal Pradesh. In the face of emergencies, including our interventions during the Uttarkashi earthquake, the 2013 Uttarakhand disaster, the Kashmir earthquake and flood, the Leh flash floods, and flash floods in various parts of Himachal Pradesh and Uttarakhand, we remain unwavering in our mission to deliver essential support and accurate information where it is needed most. Our extensive network of partner voluntary organizations and local community groups ensures that we provide last-mile coverage, effectively assessing and addressing the impacts of these disasters. MFH plays a critical role in gathering and sharing vital data on loss and damage, proactively engaging with national and international agencies to coordinate and enhance disaster response efforts. By aligning local strategies with broader response frameworks, we leverage valuable resources to deliver both immediate relief and long-term recovery solutions. Our reach, commitment, and collaborative approach ensure that even the most isolated communities receive the aid and support they need to rebuild and recover.</p>
+    <p>At Mountain Forum Himalayas (MFH), our emergency response strategy adheres to international standards to ensure efficient and equitable aid delivery. We prioritize the most vulnerable, including destitute individuals, single women, persons with disabilities, and marginalized communities. Our approach emphasizes fairness and inclusivity, tailoring support to meet the specific needs of these groups through rigorous assessment and targeting.</p>
+    <p>We combine direct emergency response with community-based methods to reach even the most remote areas, ensuring no one is overlooked. By coordinating closely with local partners, we guarantee prompt and effective aid delivery. MFH's commitment to international protocols ensures our response efforts maintain the highest standards of safety and dignity, providing essential support to help the most vulnerable recover and rebuild their lives.</p>
+    <p>MFH employs a multi-tiered strategy for disaster response, focusing on thorough community needs assessments to guide resource allocation. Our approach ensures rapid mobilization of essential supplies and emergency services through strategic partnerships with local and international donors. For immediate response, we prioritize the quick deployment of critical resources such as shelter, food, and medical care. In the short term, we collaborate with donors and CSR initiatives to support recovery, while long-term efforts focus on rebuilding infrastructure and restoring livelihoods through strategic funding.</p>
+    <p>Our rapid deployment framework relies on pre-established logistics and trained local volunteers, enabling swift action during emergencies. By maintaining robust communication channels and coordinating with national and international agencies, MFH ensures efficient and timely support.</p>
+</div>
+
+
+
+<%- include("footer.ejs") %>

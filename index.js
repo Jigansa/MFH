@@ -97,8 +97,32 @@ app.get('/partners', async (req, res) => {
 app.get('/focus2', (req, res) => {
     res.render("focus2.ejs");
 }); 
+app.get('/focus2/drr', (req, res) => {
+    res.render("drr.ejs");
+});
+app.get('/focus2/building', (req, res) => {
+    res.render("building.ejs");
+});
+app.get('/focus2/school', (req, res) => {
+    res.render("school.ejs");
+});
+app.get('/focus2/capacity', (req, res) => {
+    res.render("capacity.ejs");
+});
+app.get('/focus2/emer', (req, res) => {
+    res.render("emer.ejs");
+});
+app.get('/focus2/long-term', (req, res) => {
+    res.render("long-term.ejs");
+});
+app.get('/focus2/early', (req, res) => {
+    res.render("early.ejs");
+});
 app.get('/focus3', (req, res) => {
     res.render("focus3.ejs");
+});
+app.get('/focus2/community', (req, res) => {
+    res.render("community.ejs");
 });
 app.get('/recovery', (req, res) => {
     res.render("recovery.ejs");
@@ -122,8 +146,17 @@ app.get('/focus1', (req, res) => {
 app.get('/focus1/promo_live', (req, res) => {
     res.render("promo_live.ejs");
 });
+app.get('/focus1/enhance_community', (req, res) => {
+    res.render("enhance_community.ejs");
+});
 app.get('/focus1/farmers', (req, res) => {
     res.render("farmers.ejs");
+});
+app.get('/focus1/tech', (req, res) => {
+    res.render("tech.ejs");
+});
+app.get('/focus1/govt', (req, res) => {
+    res.render("govt.ejs");
 });
 app.get('/opportunities', (req, res) => {
     res.render("opportunities.ejs"); 
