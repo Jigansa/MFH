@@ -121,6 +121,21 @@ app.get('/focus2/early', (req, res) => {
 app.get('/focus3', (req, res) => {
     res.render("focus3.ejs");
 });
+app.get('/focus3/skilling', (req, res) => {
+    res.render("skilling.ejs");
+});
+app.get('/focus3/resilienttech', (req, res) => {
+    res.render("resilienttech.ejs");
+});
+app.get('/focus3/enterprise', (req, res) => {
+    res.render("enterprise.ejs");
+});
+app.get('/focus3/innovation', (req, res) => {
+    res.render("innovation.ejs");
+});
+app.get('/focus3/responsible', (req, res) => {
+    res.render("responsible.ejs");
+});
 app.get('/focus2/community', (req, res) => {
     res.render("community.ejs");
 });

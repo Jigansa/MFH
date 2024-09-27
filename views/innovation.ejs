@@ -1,0 +1,119 @@
+<%- include("background.ejs") %>
+<link rel="stylesheet" href="/style/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<style>
+    .top-image {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        height: 500px;
+    }
+    .top-img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 80%;
+        height: auto;
+        transform: translate(-50%, -50%);
+    }
+    .top-content {
+        max-width: 1200px; /* Adjust max-width as needed */
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #ffffff; /* Example background color */
+        color: #2f4507; /* Example text color */
+    }
+
+    .top-content h1, .top-content h2, .top-content h3 {
+        color: #2f4507;
+    }
+
+    .top-content h1 {
+        margin-bottom: 30px; /* Increase space below h1 */
+    }
+
+    .top-content h2 {
+        margin-top: 30px; /* Increase space above h2 */
+        margin-bottom: 20px; /* Adjust space below h2 if needed */
+    }
+
+    .top-content p, .top ul {
+        margin-bottom: 20px;
+        line-height: 1.6;
+        font-size: 1rem;
+    }
+
+    .top-content ul {
+        list-style-type: disc;
+        padding-left: 20px;
+    }
+
+    /* Box Section */
+    .boxes-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .box {
+        flex: 1 1 calc(33.333% - 20px);
+        margin: 10px;
+        background-color: #f5f5f5;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    .box img {
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .box h3 {
+        color: #2f4507;
+        margin: 15px 0;
+    }
+
+    .read-more-btn {
+        background-color: orange;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        display: inline-block;
+    }
+
+    .read-more-btn:hover {
+        background-color: blue;
+    }
+
+    .read-more-btn:active {
+        background-color: blue;
+    }
+</style>
+
+<!-- Image Section -->
+<div class="top-image">
+    <img src="/research.JPG" alt="Mountain Image" class="top-img">
+</div>
+
+<div class="top-content">
+    <h1 style="text-align: center;">Promotion of Innovation </h1>
+    <p>At Mountain Forum Himalayas (MFH), fostering innovation is at the heart of our mission to build resilient and sustainable communities in the Himalayan region. We recognize that addressing the complex challenges of this unique environment requires creative and forward-thinking solutions.</p>
+    <p>At Mountain Forum Himalayas (MFH), promoting innovation is central to building resilient and sustainable communities in the Himalayas. We support local innovations by providing platforms for grassroots inventors and entrepreneurs, facilitating the refinement and scaling of solutions like new farming techniques and sustainable energy options. Partnering with academic and research institutions, we drive research and development to integrate cutting-edge technologies, such as climate-resilient crops and advanced early warning systems, into the Himalayan context. We also promote technology transfer by adapting global advancements to local needs and support startups and social enterprises with mentorship and resources to foster economic growth. By establishing innovation hubs and encouraging sustainable practices, MFH nurtures a culture of creativity and progress, ensuring that new solutions effectively address regional challenges while contributing to long-term sustainability.</p>
+    <p>MFH supports climate-resilient livelihoods, such as sustainable animal husbandry practices, promotion of diaries and cooperatives to improve milk production and processing in the region. These cooperatives help small-scale dairy farmers pool resources, share knowledge, and access better markets. By providing training in modern dairy farming techniques, animal health management, and quality control, MFH helps cooperatives increase productivity and profitability. Additionally, support is given in building infrastructure for milk collection, processing, and storage, ensuring higher standards of hygiene and product quality. Eco-tourism ventures, are encouraged to diversify income sources and promote environmental conservation.</p>
+</div>
+
+
+
+<%- include("footer.ejs") %>
