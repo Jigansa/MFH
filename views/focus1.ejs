@@ -1,0 +1,147 @@
+<%- include("background.ejs") %>
+<style>
+    .top-image {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        height: 500px;
+    }
+    .top-img {
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        width: 80%;
+        height: auto;
+        transform: translate(-50%, -50%);
+    }
+    .top-content {
+        max-width: 1200px; /* Adjust max-width as needed */
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #ffffff; /* Example background color */
+        color: #2f4507; /* Example text color */
+    }
+
+    .top-content h1, .top-content h2, .top-content h3 {
+        color: #2f4507;
+    }
+
+    .top-content h1 {
+        margin-bottom: 30px; /* Increase space below h1 */
+    }
+
+    .top-content h2 {
+        margin-top: 30px; /* Increase space above h2 */
+        margin-bottom: 20px; /* Adjust space below h2 if needed */
+    }
+
+    .top-content p, .top ul {
+        margin-bottom: 20px;
+        line-height: 1.6;
+        font-size: 1rem;
+    }
+
+    .top-content ul {
+        list-style-type: disc;
+        padding-left: 20px;
+    }
+
+    /* Box Section */
+    .boxes-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .box {
+        flex: 1 1 calc(33.333% - 20px);
+        margin: 10px;
+        background-color: #f5f5f5;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    .box img {
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .box h3 {
+        color: #2f4507;
+        margin: 15px 0;
+    }
+
+    .read-more-btn {
+        background-color: orange;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        display: inline-block;
+    }
+
+    .read-more-btn:hover {
+        background-color: blue;
+    }
+
+    .read-more-btn:active {
+        background-color: blue;
+    }
+</style>
+
+<!-- Image Section -->
+<div class="top-image">
+    <img src="1.JPG" alt="Mountain Image" class="top-img">
+</div>
+
+<div class="top-content">
+    <h1 style="text-align: center;">Sustainable and Resilient Himalayan Livelihoods</h1>
+    <p>At the Mountain Forum Himalayas (MFH), we define sustainable and resilient livelihoods as those that empower poor and marginalized communities—especially poor farmers, landless, herders, pastoralists, and indigenous tribes—to overcome poverty and exclusion. In the mountainous regions of Uttarakhand and Himachal Pradesh, these communities often face systemic barriers that limit their access to resources, markets, and decision-making processes. Sustainable livelihoods are not merely about economic survival; they encompass social equity, environmental stewardship, and cultural integrity. By integrating local knowledge with sustainable practices, we aim to build resilience against economic shocks and climate impacts, enabling these vulnerable groups to thrive within their ecological contexts while preserving their heritage.</p>
+</div>
+
+<!-- Box Section -->
+<div class="boxes-container">
+    <!-- Row 1 -->
+    <div class="box">
+        <img src="b1.JPG" alt="Box 1 Image">
+        <h3>Empowering Vulnerable Farmers and Pastoralists in the Himalayas</h3>
+        <a href="/focus1/farmers" class="read-more-btn">CLICK HERE TO READ</a>
+    </div>
+
+    <div class="box">
+        <img src="B2.JPG" alt="Box 2 Image">
+        <h3>Promoting Sustainable Livelihoods for the Most Vulnerable</h3>
+        <a href="/focus1/promo_live" class="read-more-btn">CLICK HERE TO READ</a>
+    </div>
+
+    <div class="box">
+        <img src="B3.JPG" alt="Box 3 Image">
+        <h3>Enhancing Climate Resilience for Vulnerable Communities</h3>
+        <a href="/focus1/enhance_community" class="read-more-btn">CLICK HERE TO READ</a>
+    </div>
+
+    <!-- Row 2 -->
+    <div class="box">
+        <img src="research.JPG" alt="Box 4 Image">
+        <h3>Supporting Innovative Technologies for Inclusive Growt</h3>
+        <a href="/focus1/tech" class="read-more-btn">CLICK HERE TO READ</a>
+    </div>
+
+    <div class="box">
+        <img src="b5.JPG" alt="Box 5 Image">
+        <h3>Access to Government Schemes and Entitlements for Livelihood Enhancement</h3>
+        <a href="/focus1/govt" class="read-more-btn">CLICK HERE TO READ</a>
+    </div>
+</div>
+
+<%- include("footer.ejs") %>

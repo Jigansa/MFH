@@ -13,10 +13,14 @@
             <a class="panel-all border" href="/">
                 <img src="/mfhlogo.png" alt="Logo" class="logo">
             </a>
-            <div class="panel-ops">
+
+            <!-- Hamburger Menu Icon for Mobile -->
+            <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+
+            <div class="panel-ops" id="navbar">
                 <a class="border" href="/">HOME</a>
                 <div class="dropdown">
-                    <a class="border" >ABOUT US</a>
+                    <a class="border">ABOUT US</a>
                     <div class="dropdown-content">
                         <a href="/overview">Overview</a>
                         <a href="/vision">Vision and Mission</a>
@@ -25,11 +29,11 @@
                     </div>
                 </div>
                 <div class="dropdown">
-                    <a class="border" >FOCUS AREAS</a>
+                    <a class="border">FOCUS AREAS</a>
                     <div class="dropdown-content">
-                        <a href="/drr">Sustainable and Resilient Himalayan Livelihoods</a>
-                        <a href="/emergency_response">Disaster Risk Reduction, Emergency Relief, Recovery, and Rehabilitation</a>
-                        <a href="/recovery">Community Skilling, Resilient Technology, and Enterprise Building at Mountain Forum Himalayas</a>
+                        <a href="/focus1">Sustainable and Resilient Himalayan Livelihoods</a>
+                        <a href="/focus2">Disaster Risk Reduction, Emergency Relief, Recovery, and Rehabilitation</a>
+                        <a href="/focus3">Community Skilling, Resilient Technology, and Enterprise Building at Mountain Forum Himalayas</a>
                         <a href="/recovery">Strengthening Local Governance and Community Engagement</a>
                         <a href="/recovery">Climate change/ climate justice and sustainable environment</a>
                         <a href="/recovery">Research and documentation/Learning and knowledge management</a>
@@ -42,9 +46,8 @@
                     <div class="dropdown-content">
                         <a href="/mc">Mountain Collective(MC)</a>
                         <a href="/mrn">Mountain Relief Network(MRN)</a>
-                        <a href="fundraising.html">Disaster Response Volunteer Team (DRVT) </a>
+                        <a href="fundraising.html">Disaster Response Volunteer Team (DRVT)</a>
                         <a href="/others">Others</a>
-
                     </div>
                 </div>
                 <div class="dropdown">
@@ -61,12 +64,11 @@
                     <div class="dropdown-content">
                         <a href="geographical-outreach.html">Press Release</a>
                         <a href="members-reach.html">Events</a>
-                        <a href="mfh-action.html">Media coverage </a>
+                        <a href="mfh-action.html">Media coverage</a>
                         <a href="events.html">Gallery</a>
                         <a href="brochure.html">Brochure</a>
                     </div>
                 </div>
-                
                 <div class="dropdown">
                     <a class="border" href="#">GET INVOLVED</a>
                     <div class="dropdown-content">
@@ -83,13 +85,27 @@
             <p>Developed by Jigansa Satapathy</p>
         </div>
     </header>
+
+    <!-- Script for Mobile Menu Toggle -->
     <script>
+        function toggleMenu() {
+            const navbar = document.getElementById('navbar');
+            navbar.classList.toggle('active');
+        }
+
         document.querySelectorAll('.dropdown > a').forEach(item => {
             item.addEventListener('click', event => {
                 const dropdownContent = item.nextElementSibling;
                 dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+
+                // Close other dropdowns
+                document.querySelectorAll('.dropdown-content').forEach(content => {
+                    if (content !== dropdownContent) {
+                        content.style.display = 'none';
+                    }
+                });
             });
         });
-    </script>    
+    </script>
 </body>
 </html>

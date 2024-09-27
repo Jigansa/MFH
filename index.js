@@ -86,7 +86,7 @@ app.get('/board-members', (req, res) => {
 
 app.get('/vision', (req, res) => {
     res.render("vision.ejs");
-});
+});  
 app.get('/partners', async (req, res) => {
     let datadb= await (Data.find({})); 
 
@@ -94,11 +94,11 @@ app.get('/partners', async (req, res) => {
         data:(datadb) 
     });
 });
-app.get('/emergency_response', (req, res) => {
-    res.render("emergency_response.ejs");
-});
-app.get('/climatic-justice-domain', (req, res) => {
-    res.render("climatic-justice-domain.ejs");
+app.get('/focus2', (req, res) => {
+    res.render("focus2.ejs");
+}); 
+app.get('/focus3', (req, res) => {
+    res.render("focus3.ejs");
 });
 app.get('/recovery', (req, res) => {
     res.render("recovery.ejs");
@@ -106,6 +106,7 @@ app.get('/recovery', (req, res) => {
 app.get('/waste-management', (req, res) => {
     res.render("waste-management.ejs");
 });
+
 app.get('/campaigns', (req, res) => {
     res.render("campaigns.ejs");
 });
@@ -115,11 +116,17 @@ app.get('/research', (req, res) => {
 app.get('/local', (req, res) => {
     res.render("local.ejs");
 });
-app.get('/drr', (req, res) => {
-    res.render("drr.ejs");
+app.get('/focus1', (req, res) => {
+    res.render("focus1.ejs");
+});
+app.get('/focus1/promo_live', (req, res) => {
+    res.render("promo_live.ejs");
+});
+app.get('/focus1/farmers', (req, res) => {
+    res.render("farmers.ejs");
 });
 app.get('/opportunities', (req, res) => {
-    res.render("opportunities.ejs");
+    res.render("opportunities.ejs"); 
 });
 app.get('/board-members/jayant', (req, res) => {
     res.render("jjayant.ejs");
@@ -135,8 +142,8 @@ app.get('/mc/people', async (req, res) => {
     let datadb= await (People.find({})); 
 
     res.render("people.ejs",{
-        data:datadb
-    });
+        data:datadb 
+    }); 
 });
 app.get('/mc/experts', async (req, res) => {
     let datadb= await (Expert.find({}));

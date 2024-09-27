@@ -1,0 +1,196 @@
+<%- include("background.ejs") %>
+<style>
+    .top-image {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        height: 450px;
+    }
+
+    .top-img {
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        width: 80%;
+        height: auto;
+        transform: translate(-50%, -50%);
+    }
+
+    .top-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #ffffff;
+        color: #2f4507;
+    }
+
+    .top-content h1, .top-content h2 {
+        color: #2f4507;
+    }
+
+    .top-content h1 {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .top-content h2 {
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+
+    /* Box styles */
+    .box-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 40px;
+    }
+
+    .box {
+        flex-basis: 30%;
+        margin-bottom: 20px;
+        text-align: center;
+        background-color: #f5f5f5; /* Box color */
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .box img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    .box-heading {
+        margin-top: 15px;
+        font-size: 1.1rem;
+        font-weight: bold;
+    }
+
+    .box-button {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 10px 15px;
+        background-color: orange;
+        color: white;
+        text-decoration: none;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+    }
+
+    .box-button:hover {
+        background-color: blue;
+    }
+
+    /* Styles for the two side-by-side boxes */
+    .side-by-side-boxes {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px; /* Added spacing between boxes */
+    }
+
+    .side-box {
+        flex-basis: 48%; /* Make both boxes take up equal width */
+        background-color: #f5f5f5;
+        text-align: center;
+        padding: 20px; /* Adjusted padding */
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        box-sizing: border-box; /* Ensure padding doesn't affect the box size */
+    }
+
+    .side-box img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    .box-heading {
+        margin-top: 15px;
+        font-size: 1.1rem;
+        font-weight: bold;
+    }
+
+    .box-button {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 10px 15px;
+        background-color: orange;
+        color: white;
+        text-decoration: none;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+    }
+
+    .box-button:hover {
+        background-color: blue;
+    }
+</style>
+
+<!-- Image Section -->
+<div class="top-image">
+    <img src="image.png" alt="Mountain Image" class="top-img">
+</div>
+
+<!-- Top Content -->
+<div class="top-content">
+    <h1>Disaster Risk Reduction, Emergency Relief, Recovery, and Rehabilitation</h1>
+    <p>Disaster Risk Reduction (DRR) is essential for enhancing community resilience in the vulnerable Himalayan region, where natural and human-induced disasters frequently disrupt lives and livelihoods. At Mountain Forum Himalayas (MFH), we are committed to implementing a holistic approach that not only addresses immediate needs during crises but also focuses on long-term preparedness and recovery. By integrating advanced technology with local knowledge and fostering community engagement, we strive to empower residents to effectively manage risks and recover from disasters. Our comprehensive strategies encompass disaster preparedness, emergency response, and sustainable recovery, ensuring that communities are equipped to face the challenges posed by an increasingly unpredictable environment.</p> 
+</div>
+
+<!-- Subtopic 1: DRR Strategy -->
+<div class="top-content">
+    <h2>Mountain Forum Himalayas' Disaster Risk Reduction (DRR) Strategy</h2>
+    <div class="box-container">
+        <!-- 6 Boxes under DRR Strategy -->
+        <div class="box">
+            <img src="drrr.png" alt="Box 1 Image">
+            <div class="box-heading">Disaster Preparedness</div>
+            <a href="/focus2/drr" class="box-button">Click Here to Read</a>
+        </div>
+        <div class="box">
+            <img src="f2b3.jpg" alt="Box 2 Image">
+            <div class="box-heading">Building Local Capacity</div>
+            <a href="/focus2/building" class="box-button">Click Here to Read</a>
+        </div>
+        <div class="box">
+            <img src="f2b2.jpg" alt="Box 3 Image">
+            <div class="box-heading">Community Training and Micro Planning</div>
+            <a href="/focus2/community" class="box-button">Click Here to Read</a>
+        </div>
+        <div class="box">
+            <img src="dis.jpg" alt="Box 4 Image">
+            <div class="box-heading">School Safety Interventions</div>
+            <a href="/focus2/school" class="box-button">Click Here to Read</a>
+        </div>
+        <div class="box">
+            <img src="weather.jpg" alt="Box 5 Image">
+            <div class="box-heading">Strengthening Early Warning Systems</div>
+            <a href="/focus2/early" class="box-button">Click Here to Read</a>
+        </div>
+        <div class="box">
+            <img src="b5.jpg" alt="Box 6 Image">
+            <div class="box-heading">Coordination and Capacity Building</div>
+            <a href="/focus2/capacity" class="box-button">Click Here to Read</a>
+        </div>
+    </div>
+</div>
+
+<!-- Subtopic 2: Emergency Response, Recovery, and Rehabilitation -->
+<div class="top-content">
+    <div class="side-by-side-boxes">
+        <div class="side-box">
+            <img src="f2last.jpg" alt="Box 7 Image">
+            <div class="box-heading">Emergency Response, Recovery, and Rehabilitation</div>
+            <a href="/focus2/emer.html" class="box-button">Click Here to Read</a>
+        </div>
+        <div class="side-box">
+            <img src="dad.jpg" alt="Box 8 Image">
+            <div class="box-heading">Long-Term Support</div>
+            <a href="/focus2/long-term" class="box-button">Click Here to Read</a>
+        </div>
+    </div>
+</div>
+
+<%- include("footer.ejs") %>
