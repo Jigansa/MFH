@@ -139,6 +139,27 @@ app.get('/focus3/tourism', (req, res) => {
 app.get('/focus2/community', (req, res) => {
     res.render("community.ejs");
 });
+app.get('/focus4', (req, res) => {
+    res.render("focus4.ejs");
+});
+app.get('/focus4/resource_4', (req, res) => {
+    res.render("resource_4.ejs");
+});
+app.get('/focus4/women', (req, res) => {
+    res.render("women.ejs");
+});
+app.get('/focus4/local_leader', (req, res) => {
+    res.render("local_leader.ejs");
+});
+app.get('/focus4/include', (req, res) => {
+    res.render("include.ejs");
+});
+app.get('/focus4/com_forest', (req, res) => {
+    res.render("com_forest.ejs");
+});
+app.get('/focus4/cap_b', (req, res) => {
+    res.render("cap_b.ejs");
+});
 app.get('/recovery', (req, res) => {
     res.render("recovery.ejs");
 });

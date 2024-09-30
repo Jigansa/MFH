@@ -1,0 +1,181 @@
+<%- include("background.ejs") %>
+<style>
+    .top-image {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        height: 450px;
+    }
+
+    .top-img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 80%;
+        height: auto;
+        transform: translate(-50%, -50%);
+    }
+
+    .top-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #ffffff;
+        color: #2f4507;
+    }
+
+    .top-content h1, .top-content h2 {
+        color: #2f4507;
+    }
+
+    .top-content h1 {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .top-content h2 {
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+
+    /* Box styles */
+    .box-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 40px;
+    }
+
+    .box {
+        flex-basis: 30%;
+        margin-bottom: 20px;
+        text-align: center;
+        background-color: #f5f5f5; /* Box color */
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .box img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    .box-heading {
+        margin-top: 15px;
+        font-size: 1.1rem;
+        font-weight: bold;
+    }
+
+    .box-button {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 10px 15px;
+        background-color: orange;
+        color: white;
+        text-decoration: none;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+    }
+
+    .box-button:hover {
+        background-color: blue;
+    }
+
+    /* Styles for the two side-by-side boxes */
+    .side-by-side-boxes {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px; /* Added spacing between boxes */
+    }
+
+    .side-box {
+        flex-basis: 48%; /* Make both boxes take up equal width */
+        background-color: #f5f5f5;
+        text-align: center;
+        padding: 20px; /* Adjusted padding */
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        box-sizing: border-box; /* Ensure padding doesn't affect the box size */
+    }
+
+    .side-box img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    .box-heading {
+        margin-top: 15px;
+        font-size: 1.1rem;
+        font-weight: bold;
+    }
+
+    .box-button {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 10px 15px;
+        background-color: orange;
+        color: white;
+        text-decoration: none;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+    }
+
+    .box-button:hover {
+        background-color: blue;
+    }
+</style>
+
+<!-- Image Section -->
+<div class="top-image">
+    <img src="f4.png" alt="Mountain Image" class="top-img">
+</div>
+
+<!-- Top Content -->
+<div class="top-content">
+    <h1>Strengthening Local Governance and Community Engagement</h1>
+    <p>At Mountain Forum Himalayas (MFH), we are committed to empowering Himalayan communities by strengthening local governance and fostering active community engagement. Our approach emphasizes enhancing decision-making, promoting inclusivity, and driving sustainable development. Here’s how we make a difference:</p>
+</div>
+
+<!-- Subtopic 1: DRR Strategy -->
+<div class="top-content">
+    <div class="box-container">
+        <!-- 6 Boxes under DRR Strategy -->
+        <div class="box">
+            <img src="lead.png" alt="Box 1 Image">
+            <div class="box-heading">Local Leadership Development</div>
+            <a href="/focus4/local_leader" class="box-button">Click Here to Read</a>
+        </div>
+        <div class="box">
+            <img src="f44.jpg" alt="Box 2 Image">
+            <div class="box-heading">Local Resource Mobilization</div>
+            <a href="/focus4/resource_4" class="box-button">Click Here to Read</a>
+        </div>
+        <div class="box">
+            <img src="f2b2.jpg" alt="Box 3 Image">
+            <div class="box-heading">Capacity Building</div>
+            <a href="/focus4/cap_b" class="box-button">Click Here to Read</a>
+        </div>
+        <div class="box">
+            <img src="inc.jpg" alt="Box 4 Image">
+            <div class="box-heading">Inclusivity</div>
+            <a href="/focus4/include" class="box-button">Click Here to Read</a>
+        </div>
+        <div class="box">
+            <img src="WOMEN EMPOWERMENT FOR NATION BUILDING.jpg" alt="Box 5 Image">
+            <div class="box-heading">Empowering Women in Local Governance: </div>
+            <a href="/focus4/women" class="box-button">Click Here to Read</a>
+        </div>
+        <div class="box">
+            <img src="15.jpg" alt="Box 6 Image">
+            <div class="box-heading">Community Forest Management</div>
+            <a href="/focus4/com_forest" class="box-button">Click Here to Read</a>
+        </div>
+    </div>
+</div>
+
+
+
+<%- include("footer.ejs") %>
