@@ -1,0 +1,193 @@
+<%- include("background.ejs") %>
+<style>
+    .top-image {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        height: 450px;
+    }
+
+    .top-img {
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        width: 80%;
+        height: auto;
+        transform: translate(-50%, -50%);
+    }
+
+    .top-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #ffffff;
+        color: #2f4507;
+    }
+
+    .top-content h1, .top-content h2 {
+        color: #2f4507;
+    }
+
+    .top-content h1 {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .top-content h2 {
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+
+    /* Box styles */
+    .box-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 40px;
+    }
+
+    .box {
+        flex-basis: 30%;
+        margin-bottom: 20px;
+        text-align: center;
+        background-color: #f5f5f5; /* Box color */
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .box img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    .box-heading {
+        margin-top: 15px;
+        font-size: 1.1rem;
+        font-weight: bold;
+    }
+
+    .box-button {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 10px 15px;
+        background-color: orange;
+        color: white;
+        text-decoration: none;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+    }
+
+    .box-button:hover {
+        background-color: blue;
+    }
+
+    /* Styles for the two side-by-side boxes */
+    .side-by-side-boxes {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px; /* Added spacing between boxes */
+    }
+
+    .side-box {
+        flex-basis: 48%; /* Make both boxes take up equal width */
+        background-color: #f5f5f5;
+        text-align: center;
+        padding: 20px; /* Adjusted padding */
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        box-sizing: border-box; /* Ensure padding doesn't affect the box size */
+    }
+
+    .side-box img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    .box-heading {
+        margin-top: 15px;
+        font-size: 1.1rem;
+        font-weight: bold;
+    }
+
+    .box-button {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 10px 15px;
+        background-color: orange;
+        color: white;
+        text-decoration: none;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+    }
+
+    .box-button:hover {
+        background-color: blue;
+    }
+</style>
+
+<!-- Image Section -->
+<div class="top-image">
+    <img src="ac.jpg" alt="Mountain Image" class="top-img">
+</div>
+
+<!-- Top Content -->
+<div class="top-content">
+    <h1>MFH in Action</h1>
+</div>
+
+<!-- Subtopic 1: DRR Strategy -->
+<div class="top-content">
+    <div class="box-container">
+        <div class="box">
+            <img src="ac11.png" alt="Box 1 Image">
+            <div class="box-heading">Mountain water resource management and environmental sustainability</div>
+            <a href="/action/mrm" class="box-button">Click Here to Read</a>
+        </div>
+        <div class="box">
+            <img src="" alt="Box 2 Image">
+            <div class="box-heading">Gender equality and Gender justice</div>
+            <a href="/action/gendereq" class="box-button">Click Here to Read</a>
+        </div>
+        <div class="box">
+            <img src="" alt="Box 3 Image">
+            <div class="box-heading">Child protection, human trafficking</div>
+            <a href="/action/child" class="box-button">Click Here to Read</a>
+        </div>
+        <div class="box">
+            <img src="" alt="Box 4 Image">
+            <div class="box-heading">Organizational Development </div>
+            <a href="/action/org_dev" class="box-button">Click Here to Read</a>
+        </div>
+        <div class="box">
+            <img src="" alt="Box 5 Image">
+            <div class="box-heading">Disaster response and humanitarian aid</div>
+            <a href="/action/humanaid" class="box-button">Click Here to Read</a>
+        </div>
+        <div class="box">
+            <img src="" alt="Box 6 Image">
+            <div class="box-heading">MFH Facilitates Enhanced Disaster Resilience through the Mountain Relief Network</div>
+            <a href="/action/action6" class="box-button">Click Here to Read</a>
+        </div>
+    </div>
+</div>
+
+<!-- Subtopic 2: Emergency Response, Recovery, and Rehabilitation -->
+<div class="top-content">
+    <div class="side-by-side-boxes">
+        <div class="side-box">
+            <img src="" alt="Box 7 Image">
+            <div class="box-heading">The Role of Mountain Forum Himalayas in the Mountain HUB Processes</div>
+            <a href="/action/action7" class="box-button">Click Here to Read</a>
+        </div>
+        <div class="side-box">
+            <img src="" alt="Box 8 Image">
+            <div class="box-heading">Social justice, women's empowerment and advocacy efforts </div>
+            <a href="/action/action8" class="box-button">Click Here to Read</a>
+        </div>
+    </div>
+</div>
+
+<%- include("footer.ejs") %>
