@@ -133,8 +133,8 @@ app.get('/focus3/enterprise', (req, res) => {
 app.get('/focus3/innovation', (req, res) => {
     res.render("innovation.ejs");
 });
-app.get('/focus3/responsible', (req, res) => {
-    res.render("responsible.ejs");
+app.get('/focus3/tourism', (req, res) => {
+    res.render("tourism.ejs");
 });
 app.get('/focus2/community', (req, res) => {
     res.render("community.ejs");
