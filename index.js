@@ -121,6 +121,9 @@ app.get('/focus2/early', (req, res) => {
 app.get('/focus3', (req, res) => {
     res.render("focus3.ejs");
 });
+app.get('/action', (req, res) => {
+    res.render("action.ejs");
+});
 app.get('/focus3/skilling', (req, res) => {
     res.render("skilling.ejs");
 });
