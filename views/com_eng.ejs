@@ -1,0 +1,119 @@
+<%- include("background.ejs") %>
+<link rel="stylesheet" href="/style/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<style>
+    .top-image {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        height: 500px;
+    }
+    .top-img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 80%;
+        height: auto;
+        transform: translate(-50%, -50%);
+    }
+    .top-content {
+        max-width: 1200px; /* Adjust max-width as needed */
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #ffffff; /* Example background color */
+        color: #2f4507; /* Example text color */
+    }
+
+    .top-content h1, .top-content h2, .top-content h3 {
+        color: #2f4507;
+    }
+
+    .top-content h1 {
+        margin-bottom: 30px; /* Increase space below h1 */
+    }
+
+    .top-content h2 {
+        margin-top: 30px; /* Increase space above h2 */
+        margin-bottom: 20px; /* Adjust space below h2 if needed */
+    }
+
+    .top-content p, .top ul {
+        margin-bottom: 20px;
+        line-height: 1.6;
+        font-size: 1rem;
+    }
+
+    .top-content ul {
+        list-style-type: disc;
+        padding-left: 20px;
+    }
+
+    /* Box Section */
+    .boxes-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .box {
+        flex: 1 1 calc(33.333% - 20px);
+        margin: 10px;
+        background-color: #f5f5f5;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    .box img {
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .box h3 {
+        color: #2f4507;
+        margin: 15px 0;
+    }
+
+    .read-more-btn {
+        background-color: orange;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        display: inline-block;
+    }
+
+    .read-more-btn:hover {
+        background-color: blue;
+    }
+
+    .read-more-btn:active {
+        background-color: blue;
+    }
+</style>
+
+<!-- Image Section -->
+<div class="top-image">
+    <img src="/coom.jpg" alt="Mountain Image" class="top-img">
+</div>
+
+<div class="top-content">
+    <h1>Community Engagement</h1>
+    <p>
+        To foster a deeper understanding of climate change and spur actionable responses, MFH launches awareness campaigns aimed at educating the public on its impacts and the necessity for proactive measures. By adopting participatory approaches, MFH engages communities in the planning and implementation of climate adaptation projects, ensuring they are both contextually relevant and effective. Additionally, MFH focuses on developing local leadership by enhancing the skills and knowledge of community leaders, empowering them to drive climate action from within. Efforts in sustainable agriculture include promoting organic farming practices that minimize chemical inputs and improve soil health, as well as encouraging water-efficient techniques like mulching and conservation tillage. Finally, MFH implements educational programs in schools to teach students about climate change and inspire them to adopt sustainable practices, creating a more informed and engaged future generation.
+    </p>
+</div>
+
+
+
+<%- include("footer.ejs") %>

@@ -1,0 +1,117 @@
+<%- include("background.ejs") %>
+<link rel="stylesheet" href="/style/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<style>
+    .top-image {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        height: 500px;
+    }
+    .top-img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 80%;
+        height: auto;
+        transform: translate(-50%, -50%);
+    }
+    .top-content {
+        max-width: 1200px; /* Adjust max-width as needed */
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #ffffff; /* Example background color */
+        color: #2f4507; /* Example text color */
+    }
+
+    .top-content h1, .top-content h2, .top-content h3 {
+        color: #2f4507;
+    }
+
+    .top-content h1 {
+        margin-bottom: 30px; /* Increase space below h1 */
+    }
+
+    .top-content h2 {
+        margin-top: 30px; /* Increase space above h2 */
+        margin-bottom: 20px; /* Adjust space below h2 if needed */
+    }
+
+    .top-content p, .top ul {
+        margin-bottom: 20px;
+        line-height: 1.6;
+        font-size: 1rem;
+    }
+
+    .top-content ul {
+        list-style-type: disc;
+        padding-left: 20px;
+    }
+
+    /* Box Section */
+    .boxes-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .box {
+        flex: 1 1 calc(33.333% - 20px);
+        margin: 10px;
+        background-color: #f5f5f5;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    .box img {
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .box h3 {
+        color: #2f4507;
+        margin: 15px 0;
+    }
+
+    .read-more-btn {
+        background-color: orange;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        display: inline-block;
+    }
+
+    .read-more-btn:hover {
+        background-color: blue;
+    }
+
+    .read-more-btn:active {
+        background-color: blue;
+    }
+</style>
+
+<!-- Image Section -->
+
+
+<div class="top-content">
+    <h1>Climate Adaptation Strategies</h1>
+    <p>
+        At Mountain Forum Himalayas, we are actively implementing climate adaptation strategies to address the unique challenges posed by climate change in the region. One of our key initiatives is community-based water resource management, which empowers local populations to manage and conserve their water sources. For instance, through the "Jal Suraksha Abhiyan" in Uttarakhand, we support communities in constructing check dams and recharging wells, enhancing groundwater availability during dry spells. We are also focused on creating Jal Kunds—water conservation ponds that help recharge groundwater—and throwing seed balls in forested areas to increase forest cover. Additionally, we promote agroforestry practices that diversify crops and increase resilience against climate variability. We assist farmers in integrating tree planting with traditional farming methods, improving soil health, reducing erosion, and providing additional income sources. To further enhance resilience, we have introduced farmer-friendly automatic weather stations that provide accurate forecasts, enabling communities to prepare for extreme weather events. By fostering these sustainable practices, we aim to enhance local resilience, demonstrating our commitment to a holistic approach to climate adaptation in the Himalayas.
+    </p>
+</div>
+
+
+
+<%- include("footer.ejs") %>

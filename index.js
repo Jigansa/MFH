@@ -168,6 +168,27 @@ app.get('/focus4/cap_b', (req, res) => {
 app.get('/focus5', (req, res) => {
     res.render("focus5.ejs");
 });
+app.get('/focus5/waste_man', (req, res) => {
+    res.render("focus5/waste_man.ejs");
+});
+app.get('/focus5/tourism', (req, res) => {
+    res.render("focus5/tourism.ejs");
+});
+app.get('/focus5/part_ner', (req, res) => {
+    res.render("focus5/part_ner.ejs");
+});
+app.get('/focus5/adap', (req, res) => {
+    res.render("adap.ejs");
+});
+app.get('/focus5/com_eng', (req, res) => {
+    res.render("com_eng.ejs");
+});
+app.get('/focus5/com_forest', (req, res) => {
+    res.render("com_forest.ejs");
+});
+app.get('/focus5/climate_justice', (req, res) => {
+    res.render("climate_justice.ejs");
+});
 app.get('/focus6', (req, res) => {
     res.render("focus6.ejs");
 });
