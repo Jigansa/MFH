@@ -1,14 +1,18 @@
 <%- include("background.ejs") %>
-<link rel="stylesheet" href="/style/style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 <style>
+    body {
+        font-family: 'Roboto', sans-serif; /* Example modern font */
+        line-height: 1.8;
+    }
+
     .top-image {
         position: relative;
         width: 100%;
         overflow: hidden;
         height: 500px;
     }
+    
     .top-img {
         position: absolute;
         top: 50%;
@@ -17,12 +21,15 @@
         height: auto;
         transform: translate(-50%, -50%);
     }
+
     .top-content {
-        max-width: 1200px; /* Adjust max-width as needed */
+        max-width: 1200px;
         margin: 0 auto;
-        padding: 20px;
-        background-color: #ffffff; /* Example background color */
-        color: #2f4507; /* Example text color */
+        padding: 40px 20px; /* Added more padding for breathing space */
+        background-color: #fff;
+        color: #2f4507;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for a cleaner look */
+        border-radius: 10px;
     }
 
     .top-content h1, .top-content h2, .top-content h3 {
@@ -30,18 +37,22 @@
     }
 
     .top-content h1 {
-        margin-bottom: 30px; /* Increase space below h1 */
+        margin-bottom: 30px;
+        font-size: 2.5rem;
+        text-align: center;
     }
 
     .top-content h2 {
-        margin-top: 30px; /* Increase space above h2 */
-        margin-bottom: 20px; /* Adjust space below h2 if needed */
+        margin-top: 30px;
+        font-size: 1.75rem;
+        text-align: center;
     }
 
-    .top-content p, .top ul {
+    .top-content p, .top-content ul {
         margin-bottom: 20px;
-        line-height: 1.6;
-        font-size: 1rem;
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: #555; /* Softer text color for body paragraphs */
     }
 
     .top-content ul {
@@ -55,18 +66,23 @@
         flex-wrap: wrap;
         justify-content: space-between;
         max-width: 1200px;
-        margin: 0 auto;
+        margin: 20px auto;
         padding: 20px;
+        gap: 20px; /* Ensure even spacing between boxes */
     }
 
     .box {
         flex: 1 1 calc(33.333% - 20px);
-        margin: 10px;
-        background-color: #f5f5f5;
+        background-color: #f9f9f9;
         padding: 20px;
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .box:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     }
 
     .box img {
@@ -79,44 +95,68 @@
     .box h3 {
         color: #2f4507;
         margin: 15px 0;
+        font-size: 1.5rem;
     }
 
     .read-more-btn {
         background-color: orange;
         border: none;
         color: white;
-        padding: 10px 20px;
+        padding: 12px 24px;
         text-decoration: none;
         border-radius: 5px;
         cursor: pointer;
-        transition: background-color 0.3s ease;
-        display: inline-block;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        font-size: 1rem;
     }
 
     .read-more-btn:hover {
-        background-color: blue;
+        background-color: #ff5722;
+        transform: translateY(-3px);
     }
 
     .read-more-btn:active {
-        background-color: blue;
+        background-color: #e64a19;
     }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+        .box {
+            flex: 1 1 100%; /* Full width for mobile */
+        }
+
+        .top-content {
+            padding: 20px;
+        }
+
+        .top-content h1 {
+            font-size: 2rem;
+        }
+
+        .top-content p, .top-content ul {
+            font-size: 1rem;
+        }
+    }
+
 </style>
 
 <!-- Image Section -->
-<div class="top-image">
-    <img src="" alt="Mountain Image" class="top-img">
-</div>
-
 <div class="top-content">
-    <h1 style="text-align: center;">Conflict Transformation and Peacebuilding Efforts by Mountain Forum Himalayas</h1>
+    <h1>Conflict Transformation and Peacebuilding Efforts by Mountain Forum Himalayas</h1>
     <p>Mountain Forum Himalayas (MFH) is dedicated to fostering sustainable peace and transforming conflict dynamics across the Himalayan region. Our approach addresses a broad range of issues, including ideological conflicts and religious extremism, as well as discrimination based on caste, gender, and ethnicity. We also tackle the challenges related to climate-induced conflicts, such as displacement, migration, and resource conflicts. Additionally, MFH confronts economic crises and gender-based violence, including LGBTQIA+ issues, striving to create inclusive and resilient communities.</p>
+    
     <p>Central to our peacebuilding efforts is a robust focus on capacity building for youth, women, and critical mass groups. We recognize that empowering these groups with conflict analysis (CA), peacebuilding (PB), and conflict transformation (CT) skills is essential for fostering long-term peace and stability. Our capacity-building programs include leadership training and skill development workshops, designed to equip participants with the tools needed to address and resolve conflicts effectively. By engaging youth in leadership roles and providing women with platforms for advocacy, we are cultivating a new generation of leaders who can drive conflict transformation from the grassroots level.</p>
+    
     <p>MFH’s approach also emphasizes the importance of strategic engagement with communities, government officials, and religious leaders. We work to build alliances and foster dialogue among these stakeholders to address issues such as gender discrimination and shrinking civil society space. Recognizing the influence of religious and community leaders, we engage them to promote inclusiveness and reduce gender-based violence.</p>
+    
     <p>Our work with youth is particularly crucial. We view trained youth as catalysts for community transformation, capable of leading initiatives and staying engaged when working on their own issues. We leverage the structured environments of schools, colleges, and universities to instil positive values and enhance the role of teachers as change agents. Additionally, our programs include exposure visits, regional youth conventions, and action learning processes to further develop their skills and networks.</p>
+    
     <p>Through continuous dialogue, mutual learning, and collaboration, MFH builds trust and unity among diverse groups. Our regional programs, including conventions and training sessions, provide platforms for sharing best practices and innovative approaches. We also support research and documentation to inform collective advocacy and ensure that our strategies remain relevant and responsive to emerging conflicts.</p>
+    
     <p>MFH is committed to nurturing relationships and strengthening networks to address conflict effectively. By building alliances with likeminded organizations and mainstreaming conflict transformation strategies, we aim to create a cohesive and resilient network capable of tackling the complex challenges facing the Himalayan region. Our comprehensive approach ensures that we not only address immediate conflicts but also contribute to the long-term stability and peace of the region.</p>
 </div>
 
+<!-- Box Section -->
 
 
 <%- include("footer.ejs") %>

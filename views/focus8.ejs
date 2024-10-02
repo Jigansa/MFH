@@ -1,128 +1,133 @@
 <%- include("background.ejs") %>
+<link rel="stylesheet" href="/style/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 <style>
-    .top-image {
-        position: relative;
-        width: 100%;
-        overflow: hidden;
-        height: 500px;
-    }
-    .top-img {
-        position: absolute;
-        top: 10%;
-        left: 50%;
-        width: 80%;
-        height: auto;
-        transform: translate(-50%, -50%);
-    }
-    .top-content {
-        max-width: 1200px; /* Adjust max-width as needed */
-        margin: 0 auto;
-        padding: 20px;
-        background-color: #ffffff; /* Example background color */
-        color: #2f4507; /* Example text color */
-    }
-
-    .top-content h1, .top-content h2, .top-content h3 {
-        color: #2f4507;
-    }
-
-    .top-content h1 {
-        margin-bottom: 30px; /* Increase space below h1 */
-    }
-
-    .top-content h2 {
-        margin-top: 30px; /* Increase space above h2 */
-        margin-bottom: 20px; /* Adjust space below h2 if needed */
-    }
-
-    .top-content p, .top ul {
-        margin-bottom: 20px;
-        line-height: 1.6;
-        font-size: 1rem;
-    }
-
-    .top-content ul {
-        list-style-type: disc;
-        padding-left: 20px;
-    }
-
-    /* Box Section */
-    .boxes-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
+    /* Page Styling */
+    .content-wrapper {
         max-width: 1200px;
         margin: 0 auto;
-        padding: 20px;
+        padding: 40px;
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     }
 
-    .box {
-        flex: 1 1 calc(33.333% - 20px);
-        margin: 10px;
-        background-color: #f5f5f5;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Heading Section */
+    .content-wrapper h1 {
         text-align: center;
+        font-size: 2.5rem;
+        color: #3a6e2b;
+        margin-bottom: 30px;
+        font-weight: bold;
     }
 
-    .box img {
-        max-width: 100%;
-        height: auto;
-        object-fit: cover;
+    /* Section Title */
+    .content-wrapper h2 {
+        font-size: 1.8rem;
+        color: #2f4507;
+        margin-top: 40px;
+        margin-bottom: 15px;
+        font-weight: bold;
+    }
+
+    /* Paragraph Text */
+    .content-wrapper p {
+        font-size: 1.1rem;
+        color: #333;
+        line-height: 1.8;
+        margin-bottom: 20px;
+    }
+
+    /* Bullet Points */
+    .content-wrapper ul {
+        list-style-type: disc;
+        padding-left: 20px;
+        margin-bottom: 30px;
+    }
+
+    /* List Items */
+    .content-wrapper ul li {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        color: #333;
+    }
+
+    /* Quote Styling */
+    .content-wrapper blockquote {
+        font-size: 1.2rem;
+        color: #555;
+        padding: 20px;
+        border-left: 4px solid #3a6e2b;
+        background-color: #f9f9f9;
+        margin: 30px 0;
         border-radius: 10px;
     }
 
-    .box h3 {
-        color: #2f4507;
-        margin: 15px 0;
+    /* Highlighted Text */
+    .content-wrapper span.highlight {
+        font-weight: bold;
+        color: #3a6e2b;
     }
 
-    .read-more-btn {
-        background-color: orange;
-        border: none;
-        color: white;
-        padding: 10px 20px;
-        text-decoration: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-        display: inline-block;
+    /* Icon Bullet Points */
+    .content-wrapper .icon-list {
+        list-style: none;
+        padding: 0;
     }
 
-    .read-more-btn:hover {
-        background-color: blue;
+    .content-wrapper .icon-list li {
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
     }
 
-    .read-more-btn:active {
-        background-color: blue;
+    .content-wrapper .icon-list li i {
+        color: #3a6e2b;
+        margin-right: 10px;
+    }
+
+    /* Line Break */
+    .line-break {
+        margin: 30px 0;
+        border-top: 2px solid #3a6e2b;
     }
 </style>
 
-<!-- Image Section -->
-<div class="top-image">
-    <img src="" alt="Mountain Image" class="top-img">
-</div>
+<div class="content-wrapper">
+    <h1>Strengthening Civil Society and Community Leadership</h1>
 
-<div class="top-content">
-    <h1 style="text-align: center;">Strengthening Civil Society and Community Leadership</h1>
     <p>At Mountain Forum Himalayas (MFH), we recognize that vibrant civil societies and strong community leadership are pivotal for fostering sustainable development and resilience in the mountainous regions. Our initiatives focus on empowering local communities, enhancing leadership skills, and building robust civil society organizations (CSOs) to drive meaningful change and address the unique challenges faced by these regions.</p>
-</div>
 
-<!-- Box Section -->
-<div class="boxes-container">
-    <!-- Row 2 -->
-    <div class="box">
-        <img src="" alt="Box 4 Image">
-        <h3>Empowering Civil Society Organizations</h3>
-        <a href="/focus1/tech" class="read-more-btn">CLICK HERE TO READ</a>
-    </div>
+    <h2>Empowering Civil Society Organizations</h2>
+    <p>MFH is dedicated to strengthening the capacity and effectiveness of civil society organizations across the Himalayan region. We achieve this by providing targeted support and resources that enable CSOs to better advocate for their communities, address local issues, and collaborate with other stakeholders.</p>
 
-    <div class="box">
-        <img src="" alt="Box 5 Image">
-        <h3>Building Community Leadership</h3>
-        <a href="/focus1/govt" class="read-more-btn">CLICK HERE TO READ</a>
-    </div>
+    <ul class="icon-list">
+        <li><i class="fas fa-check-circle"></i> Facilitating training workshops and strengthening compliances</li>
+        <li><i class="fas fa-check-circle"></i> Offering strategic guidance and fostering networking opportunities</li>
+        <li><i class="fas fa-check-circle"></i> Advocating for social transformation, environmental sustainability, and social justice</li>
+    </ul>
+
+    <p>By reinforcing the role of CSOs, we help them become powerful advocates for bringing social transformation, environmental sustainability, social justice, and community well-being.</p>
+
+    <div class="line-break"></div>
+
+    <h2>Building Community Leadership</h2>
+    <p>MFH is committed to empowering communities through strategic <span class="highlight">Community Strengthening</span> initiatives, focusing on promoting leadership among men, women, and youth. We aim to cultivate a deep understanding of the vital role Community-Based Organizations (CBOs) and People’s Organizations (POs) play in the development process.</p>
+
+    <ul class="icon-list">
+        <li><i class="fas fa-check-circle"></i> Training on group management, conflict resolution, and local resource mobilization</li>
+        <li><i class="fas fa-check-circle"></i> Ensuring access to government schemes, livelihood programs, and health services</li>
+        <li><i class="fas fa-check-circle"></i> Emphasizing local resource mobilization for long-term financial viability</li>
+    </ul>
+
+    <blockquote>"Our goal is to build confidence and self-reliance, allowing communities to operate independently over time." — Mountain Forum Himalayas</blockquote>
+
+    <p>The cornerstone of our approach is the <span class="highlight">Coordination Hub</span> model, empowering POs to lead collective action and collaboration. We work towards fostering self-governance, ensuring that these processes are driven by the communities themselves.</p>
+
+    <div class="line-break"></div>
+
+    <p>MFH’s development process is people-centered, context-specific, and grounded in participatory and democratic values. We strive to protect the rights and dignity of the poor, while strengthening the perspectives and capacities of all stakeholders.</p>
 </div>
 
 <%- include("footer.ejs") %>
