@@ -166,6 +166,15 @@ app.get('/focus4/cap_b', (req, res) => {
 app.get('/focus5', (req, res) => {
     res.render("focus5.ejs");
 });
+app.get('/focus6', (req, res) => {
+    res.render("focus6.ejs");
+});
+app.get('/focus7', (req, res) => {
+    res.render("focus7.ejs");
+});
+app.get('/focus8', (req, res) => {
+    res.render("focus8.ejs");
+});
 app.get('/focus5/adap', (req, res) => {
     res.render("adap.ejs");
 });
