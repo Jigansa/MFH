@@ -1,0 +1,119 @@
+<%- include("background.ejs") %>
+
+<!-- Custom CSS for the Vision and Mission page -->
+<style>
+    /* Container Styling */
+    .vision-mission-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        background-color: #f7f7f7; /* Light background for contrast */
+        color: #2f4507;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+        border-radius: 10px; /* Smooth corners */
+        font-family: 'Open Sans', sans-serif; /* Modern and clean font */
+        line-height: 1.8;
+    }
+
+    /* Headings Styling */
+    .vision-mission-content h1,
+    .vision-mission-content h2,
+    .vision-mission-content h3 {
+        color: #2f4507;
+        font-family: 'Merriweather', serif; /* Font for a classy feel */
+        margin-bottom: 20px;
+        text-transform: capitalize; /* Title case for headings */
+    }
+
+    .vision-mission-content h1 {
+        font-size: 2.5rem; /* Larger font for the main heading */
+        font-weight: 700; /* Make it stand out */
+        margin-bottom: 35px;
+        text-align: center; /* Center the main heading */
+    }
+
+    .vision-mission-content h2 {
+        font-size: 1.8rem;
+        margin-top: 40px; /* Extra space above subheading */
+        margin-bottom: 20px;
+    }
+
+    /* Paragraph and List Styling */
+    .vision-mission-content p {
+        font-size: 1.1rem; /* Increase font size for readability */
+        margin-bottom: 25px;
+        line-height: 1.8;
+    }
+
+    .vision-mission-content ul {
+        list-style-type: disc;
+        padding-left: 40px;
+        margin-bottom: 25px;
+        font-size: 1.1rem;
+    }
+
+    /* Image Section */
+    .vision-mission-image {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        height: 500px;
+        margin-bottom: 30px;
+        border-radius: 10px; /* Rounded corners for images */
+    }
+
+    .vision-mission-img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: auto;
+        transform: translate(-50%, -50%);
+        border-radius: 10px;
+    }
+
+    /* Additional Styles for Text Content */
+    .vision-mission-content blockquote {
+        background-color: #e8f5e9;
+        border-left: 5px solid #2f4507;
+        margin: 20px 0;
+        padding: 15px 20px;
+        font-size: 1.1rem;
+        color: #333;
+        font-style: italic;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .vision-mission-content h1 {
+            font-size: 2rem;
+        }
+
+        .vision-mission-content h2 {
+            font-size: 1.5rem;
+        }
+
+        .vision-mission-content p,
+        .vision-mission-content ul {
+            font-size: 1rem;
+        }
+
+        .vision-mission-image {
+            height: 350px;
+        }
+    }
+</style>
+
+<!-- Content Section -->
+<div class="vision-mission-content">
+    <h1>Disaster Response Voluntary Team of Mountain Forum Himalayas</h1>
+    <div class="vision-mission-image">
+        <img class="vision-mission-img" src="your-image-path.jpg" alt="Disaster Response Team">
+    </div>
+    <p>The Disaster Response Voluntary Team of Mountain Forum Himalayas (MFH) plays a crucial role in addressing the challenges posed by natural disasters in the vulnerable regions of Himachal Pradesh and Uttarakhand. Through comprehensive Search and Rescue Training, young volunteers are equipped with essential skills for real-time emergency response, enabling them to save lives during crises such as landslides and flash floods. Many of these dedicated individuals have become Apada Mitra (disaster friends), embodying a spirit of solidarity and preparedness in their communities. Their proactive approach not only aids in immediate rescue efforts but also fosters a culture of resilience, empowering local populations to face the uncertainties brought by nature.</p>
+    <blockquote>"Their efforts not only saved countless lives but also provided much-needed support to affected families, helping them navigate the immediate aftermath of the disaster."</blockquote>
+    <p>The Disaster Response Voluntary Team of Mountain Forum Himalayas (MFH) has been instrumental in various disaster scenarios, most notably during the catastrophic Uttarakhand disaster in 2013. In the wake of severe flooding and landslides that devastated communities, the team mobilized quickly, leveraging their training and local knowledge to conduct search and rescue operations. Their efforts not only saved countless lives but also provided much-needed support to affected families, helping them navigate the immediate aftermath of the disaster. With approximately 100 dedicated disaster volunteers, MFH has established a robust network that enhances community preparedness and response capabilities, ensuring that the region is better equipped to handle future emergencies.</p>
+    <p>Through their unwavering commitment and exemplary service, these volunteers have become a vital lifeline for vulnerable populations in the Himalayas.</p>
+</div>
+
+<%- include("footer.ejs") %>

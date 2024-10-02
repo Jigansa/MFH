@@ -62,7 +62,9 @@ app.get('/', (req, res) => {
 app.get('/media-gallery', (req, res) => {
     res.render("media-gallery.ejs");
 });
-
+app.get('/drvt', (req, res) => {
+    res.render("drvt.ejs");
+});
 app.get('/contact', (req, res) => {
     res.render("contact.ejs",{
         alert:false
