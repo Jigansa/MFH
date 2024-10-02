@@ -192,6 +192,12 @@ app.get('/focus5/climate_justice', (req, res) => {
 app.get('/focus6', (req, res) => {
     res.render("focus6.ejs");
 });
+app.get('/focus6/shc', (req, res) => {
+    res.render("shc.ejs");
+});
+app.get('/focus6/mountain_water', (req, res) => {
+    res.render("focus6/mountain_water.ejs");
+});
 app.get('/focus7', (req, res) => {
     res.render("focus7.ejs");
 });
