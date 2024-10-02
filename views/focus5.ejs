@@ -1,0 +1,147 @@
+<%- include("background.ejs") %>
+<style>
+    .top-image {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        height: 500px;
+    }
+    .top-img {
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        width: 80%;
+        height: auto;
+        transform: translate(-50%, -50%);
+    }
+    .top-content {
+        max-width: 1200px; /* Adjust max-width as needed */
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #ffffff; /* Example background color */
+        color: #2f4507; /* Example text color */
+    }
+
+    .top-content h1, .top-content h2, .top-content h3 {
+        color: #2f4507;
+    }
+
+    .top-content h1 {
+        margin-bottom: 30px; /* Increase space below h1 */
+    }
+
+    .top-content h2 {
+        margin-top: 30px; /* Increase space above h2 */
+        margin-bottom: 20px; /* Adjust space below h2 if needed */
+    }
+
+    .top-content p, .top ul {
+        margin-bottom: 20px;
+        line-height: 1.6;
+        font-size: 1rem;
+    }
+
+    .top-content ul {
+        list-style-type: disc;
+        padding-left: 20px;
+    }
+
+    /* Box Section */
+    .boxes-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .box {
+        flex: 1 1 calc(33.333% - 20px);
+        margin: 10px;
+        background-color: #f5f5f5;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    .box img {
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .box h3 {
+        color: #2f4507;
+        margin: 15px 0;
+    }
+
+    .read-more-btn {
+        background-color: orange;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        display: inline-block;
+    }
+
+    .read-more-btn:hover {
+        background-color: blue;
+    }
+
+    .read-more-btn:active {
+        background-color: blue;
+    }
+</style>
+
+<!-- Image Section -->
+<div class="top-image">
+    <img src="19.jpg" alt="Mountain Image" class="top-img">
+</div>
+
+<div class="top-content">
+    <h1 style="text-align: center;">Climate change/ climate justice and sustainable environment</h1>
+    <p>Mountain Forum Himalayas (MFH) recognizes the urgent need to address the profound climate challenges facing the Himalayan regions of Himachal Pradesh and Uttarakhand. These areas are experiencing rapid environmental changes, including accelerated glacier melt, erratic weather patterns, and increased natural disasters, all of which disproportionately affect local communities that are already vulnerable due to socioeconomic factors. The resulting disruptions threaten agriculture, livelihoods, and the rich biodiversity that sustains both people and ecosystems. From a climate justice perspective, marginalized communities—who contribute the least to global emissions—suffer the most severe consequences. In response, MFH is committed to fostering sustainable practices and advocating for equitable climate action through community engagement, innovative adaptation strategies, and strong partnerships with local and governmental organizations. By integrating local knowledge and empowering communities, MFH aims to build resilience, promote sustainable development, and ensure that climate justice is central to all efforts in the region.</p>
+</div>
+
+<!-- Box Section -->
+<div class="boxes-container">
+    <!-- Row 1 -->
+    <div class="box">
+        <img src="b1.jpg" alt="Box 1 Image">
+        <h3>Community Engagement</h3>
+        <a href="/focus5/com_eng" class="read-more-btn">CLICK HERE TO READ</a>
+    </div>
+
+    <div class="box">
+        <img src="B2.jpg" alt="Box 2 Image">
+        <h3>Climate Adaptation Strategies</h3>
+        <a href="/focus5/adap" class="read-more-btn">CLICK HERE TO READ</a>
+    </div>
+
+    <div class="box">
+        <img src="RISE UP FOR CLIMATE JUSCTCE.jpg" alt="Box 3 Image">
+        <h3>Sustainable Environment and Climate: Waste Management</h3>
+        <a href="/focus5/waste_man" class="read-more-btn">CLICK HERE TO READ</a>
+    </div>
+
+    <!-- Row 2 -->
+    <div class="box">
+        <img src="research.jpg" alt="Box 4 Image">
+        <h3>Partnerships with NGOs and Governments</h3>
+        <a href="/focus5/part_ner" class="read-more-btn">CLICK HERE TO READ</a>
+    </div>
+
+    <div class="box">
+        <img src="RISE UP FOR CLIMATE JUSTICE.jpg" alt="Box 5 Image">
+        <h3>Advocating for Climate Justice in Mountain Communities</h3>
+        <a href="/focus5/climate_justice" class="read-more-btn">CLICK HERE TO READ</a>
+    </div>
+</div>
+
+<%- include("footer.ejs") %>
