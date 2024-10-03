@@ -129,6 +129,15 @@ app.get('/action', (req, res) => {
 app.get('/action/mrm', (req, res) => {
     res.render("mrm.ejs");
 });
+app.get('/action/child', (req, res) => {
+    res.render("child.ejs");
+});
+app.get('/action/action8', (req, res) => {
+    res.render("action8.ejs");
+});
+app.get('/action/org_dev', (req, res) => {
+    res.render("org_dev.ejs");
+});
 app.get('/action/gendereq', (req, res) => {
     res.render("gendereq.ejs");
 });

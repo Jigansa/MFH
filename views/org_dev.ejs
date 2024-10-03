@@ -1,0 +1,100 @@
+<%- include("background.ejs") %>
+<link rel="stylesheet" href="/style/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<style>
+    /* Main Container Styling */
+    .main-container {
+        background-color: #f5f5f5;
+        color: #333;
+        padding: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    /* Title and Header Styling */
+    .title-section h1 {
+        color: #006400; /* Deep Green */
+        font-size: 1.8rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .title-section h2 {
+        color: #8b0000; /* Dark Red */
+        font-size: 1.4rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    /* Text Content Styling */
+    .content-section p {
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 1rem;
+        text-align: justify;
+    }
+
+    /* Highlighted Text */
+    .highlight {
+        color: #006400; /* Deep Green for emphasis */
+        font-weight: bold;
+    }
+
+    /* Subheadings */
+    .content-section h3 {
+        color: #8b0000; /* Dark Red */
+        font-size: 1.2rem;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    /* Bullet Points Styling */
+    .content-section ul {
+        margin-left: 20px;
+        list-style-type: disc;
+    }
+
+    .content-section li {
+        margin-bottom: 10px;
+        color: #333; /* Dark Grey text */
+    }
+
+    /* Image Styling */
+    .image-section img {
+        max-width: 100%;
+        height: auto;
+        margin-top: 20px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+
+</style>
+
+<div class="main-container">
+    <!-- Organisational Development Section -->
+    <div class="title-section">
+        <h1>Organisational Development</h1>
+        <h2>Vision Building Exercise</h2>
+    </div>
+
+    <div class="content-section">
+        <p>The Vision Building exercise of the <span class="highlight">Mountain Forum Himalayas (MFH)</span>, held from May 22-24, 2023, at the Himalayan Torchbearer in Dehradun, was a pivotal step in aligning the forum's objectives with the evolving socio-political landscape of the Himalayan region. This workshop was driven by the need to reassess the MFH's strategic direction in light of significant changes in the context over the past three decades, including shifts in government policies and emerging challenges faced by voluntary organizations.</p>
+        
+        <h3>Collaborative Discussions</h3>
+        <p>Participants engaged in collaborative discussions to review past successes and identify common tools and processes that fostered community resilience and adaptive governance. The outcome of this exercise was a recalibrated vision, mission, and strategic goals for MFH, emphasizing enhanced participation and accountability among stakeholders.</p>
+
+        <h3>Strengthening Community Engagement</h3>
+        <p>By prioritizing a multi-stakeholder approach and acknowledging the diverse aspirations of local communities, the forum aims to strengthen its community engagement and operational frameworks, ensuring sustainable development in the mountain regions.</p>
+
+        <h3>Conclusion</h3>
+        <p>This exercise not only solidified the MFH’s commitment to local empowerment but also laid the groundwork for future initiatives that are responsive to the dynamic needs of the communities it serves.</p>
+    </div>
+
+    <!-- Image Section -->
+    <div class="image-section">
+        <img src="/operdev.png" alt="Vision Building Exercise, Mountain Forum Himalayas">
+    </div>
+</div>
+
+<%- include("footer.ejs") %>
