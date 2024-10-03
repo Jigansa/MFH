@@ -1,0 +1,115 @@
+<%- include("background.ejs") %>
+<link rel="stylesheet" href="/style/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<style>
+    /* Container for the entire content */
+    .main-container {
+        background-color: #f5f5f5; /* Light background */
+        color: #333; /* Darker text for readability */
+        padding: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    /* Title Section */
+    .title-section {
+        font-family: Arial, sans-serif;
+        margin-bottom: 10px;
+    }
+
+    .title-section h1 {
+        color: #006400; /* Dark green matching environmental theme */
+        font-size: 1.8rem;
+        font-weight: bold;
+    }
+
+    .title-section h2 {
+        font-size: 1.2rem;
+        font-weight: normal;
+        margin-bottom: 5px;
+    }
+
+    .title-section h2 span {
+        color: #8b0000; /* Dark red for highlighted village name */
+        font-style: italic;
+    }
+
+    /* Text and Image Content */
+    .content-section {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .text-content {
+        font-size: 1rem;
+        line-height: 1.6;
+        color: #333; /* Dark gray text */
+    }
+
+    .text-content p {
+        margin-bottom: 1rem;
+    }
+
+    .highlight {
+        color: #006400; /* Green for highlighting important terms */
+        font-weight: bold;
+    }
+
+    .place {
+        color: #8b0000; /* Dark red for place names */
+        font-weight: bold;
+    }
+
+    /* Image Styling */
+    .image-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .image-section img {
+        max-width: 80%;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow for images */
+        margin-bottom: 20px;
+    }
+
+    .image-caption {
+        font-style: italic;
+        color: #555; /* Softer gray for captions */
+        text-align: center;
+    }
+
+</style>
+
+<!-- Main Container -->
+<div class="main-container">
+    <!-- Title Section -->
+    <div class="title-section">
+        <h1>Mountain water resource management and environmental sustainability</h1>
+        <h2>Restoring Hope: MFH's Commitment to Preserving Traditional Water Sources in <span class="place">Chidiyali</span> Village</h2>
+    </div>
+
+    <!-- Content Section -->
+    <div class="content-section">
+        <div class="text-content">
+            <p>The Mountain Forum Himalayas (MFH) has made significant strides in preserving traditional water sources such as <span class="highlight">spring sheds, Chal,</span> and <span class="highlight">Khals</span>, recognizing that the water crisis can only be effectively addressed through collective community efforts.</p>
+            <p>In <span class="place">Chidiyali</span> village, located in the <span class="place">Hemwal Valley</span>, residents have faced a decade-long struggle with water scarcity. However, the joint initiatives led by Uttarakhand Jan Jagriti Samiti, Mountain Forum Himalayas, HIMCON Himalayan Springs & Seeds, and Himalaya Resources have rekindled hope among the villagers.</p>
+            <p>This year, on 22<sup>nd</sup> August 2024, as part of their ongoing commitment to water conservation, the community came together to engage in tree plantation activities, enhancing the health of their ancestral water sources. With renewed enthusiasm, the villagers demonstrated their dedication to not only restoring their water supply but also fostering a culture of environmental stewardship, thereby ensuring a sustainable future for generations to come.</p>
+        </div>
+
+        <!-- Image Section -->
+        <div class="image-section">
+            <img src="/a1p2.png" alt="Villagers participating in tree planting activities">
+            <div class="image-caption">Villagers in Chidiyali engaged in water conservation activities - August 2024</div>
+
+            <img src="/ac11.png" alt="Local women in Chidiyali">
+            <div class="image-caption">Local women in Chidiyali village - A symbol of strength and perseverance</div>
+        </div>
+    </div>
+</div>
+
+<%- include("footer.ejs") %>

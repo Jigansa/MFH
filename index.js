@@ -126,6 +126,12 @@ app.get('/focus3', (req, res) => {
 app.get('/action', (req, res) => {
     res.render("action.ejs");
 });
+app.get('/action/mrm', (req, res) => {
+    res.render("mrm.ejs");
+});
+app.get('/action/gendereq', (req, res) => {
+    res.render("gendereq.ejs");
+});
 app.get('/focus3/skilling', (req, res) => {
     res.render("skilling.ejs");
 });

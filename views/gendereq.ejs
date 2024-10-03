@@ -1,0 +1,129 @@
+<%- include("background.ejs") %>
+<link rel="stylesheet" href="/style/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<style>
+    /* Container for the entire content */
+    .main-container {
+        background-color: #f5f5f5;
+        color: #333;
+        padding: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    /* Title Section */
+    .title-section {
+        font-family: Arial, sans-serif;
+        margin-bottom: 10px;
+    }
+
+    .title-section h1 {
+        color: #006400; 
+        font-size: 1.8rem;
+        font-weight: bold;
+    }
+
+    .title-section h2 {
+        font-size: 1.2rem;
+        font-weight: normal;
+        margin-bottom: 5px;
+    }
+
+    .title-section h2 span {
+        color: #8b0000;
+        font-style: italic;
+    }
+
+    /* Text and Image Content */
+    .content-section {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .text-content {
+        font-size: 1rem;
+        line-height: 1.6;
+        color: #333;
+    }
+
+    .text-content p {
+        margin-bottom: 1rem;
+    }
+
+    .highlight {
+        color: #006400;
+        font-weight: bold;
+    }
+
+    .place {
+        color: #8b0000;
+        font-weight: bold;
+    }
+
+    /* Image Styling */
+    .image-section {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .image-section img {
+        max-width: 48%;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        margin-bottom: 10px;
+    }
+
+    .image-caption {
+        font-style: italic;
+        color: #555;
+        text-align: center;
+    }
+</style>
+
+<!-- Main Container -->
+<div class="main-container">
+    <!-- Title Section for Gender Equality -->
+    <div class="title-section">
+        <h1>Gender Equality and Gender Justice</h1>
+        <h2>Empowering Change: Gender Awareness Campaign in <span class="place">Dallupuri</span> Village</h2>
+    </div>
+
+    <!-- Content Section -->
+    <div class="content-section">
+        <div class="text-content">
+            <p>On September 14, 2024, the Mountain Forum Himalayas conducted a successful awareness campaign in <span class="place">Dallupuri</span> village, Block Bahadrabad, Haridwar District. The campaign focused on critical issues surrounding gender-based violence, gender equality, and gender sensitization.</p>
+            <p>It attracted 65 participants, including both women and men, fostering an inclusive dialogue on these vital topics. The primary objectives were to enhance understanding of gender justice concepts, challenge prevailing gender norms and stereotypes, and promote the importance of gender mainstreaming.</p>
+        </div>
+
+        <!-- Image Section for the First Campaign -->
+        <div class="image-section">
+            <img src="/hehe.png" alt="Gender Awareness Campaign in Dallupuri Village">
+            <div class="image-caption">Participants at the Gender Awareness Campaign in Dallupuri Village</div>
+        </div>
+    </div>
+
+    <!-- Title Section for School Campaign -->
+    <div class="title-section">
+        <h2>Report on Gender Equality Awareness Campaign at National Inter College, <span class="place">Nand Prayag</span></h2>
+    </div>
+
+    <!-- Content Section -->
+    <div class="content-section">
+        <div class="text-content">
+            <p>On 18<sup>th</sup> September 2024, MFH conducted an impactful awareness campaign on gender equality at the National Inter College in <span class="place">Nand Prayag</span>, addressing the critical issue of gender discrimination.</p>
+            <p>The campaign focused on how societal divisions between men and women can perpetuate inequality and violence against women. Through visual aids and interactive sessions, students learned about gender equality and took a pledge to stand against gender discrimination.</p>
+        </div>
+
+        <!-- Image Section for the Second Campaign -->
+        <div class="image-section">
+            <img src="/equality.png" alt="Gender Equality Awareness Campaign at National Inter College">
+            <div class="image-caption">Gender Equality Awareness Campaign at National Inter College, Nand Prayag</div>
+        </div>
+    </div>
+</div>
+
+<%- include("footer.ejs") %>
