@@ -138,6 +138,15 @@ app.get('/action/action8', (req, res) => {
 app.get('/action/org_dev', (req, res) => {
     res.render("org_dev.ejs");
 });
+app.get('/action/humanaid', (req, res) => {
+    res.render("humanaid.ejs");
+});
+app.get('/action/action6', (req, res) => {
+    res.render("action6.ejs");
+});
+app.get('/action/action7', (req, res) => {
+    res.render("action7.ejs");
+});
 app.get('/action/gendereq', (req, res) => {
     res.render("gendereq.ejs");
 });

@@ -1,0 +1,110 @@
+<%- include("background.ejs") %>
+<link rel="stylesheet" href="/style/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<style>
+    /* Main Container Styling */
+    .main-container {
+        background-color: #f9f9f9;
+        color: #333;
+        padding: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    /* Title Section */
+    .title-section h1 {
+        color: #8b0000; /* Dark Red */
+        font-size: 1.8rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .title-section h2 {
+        color: #006400; /* Deep Green */
+        font-size: 1.4rem;
+        margin-bottom: 20px;
+    }
+
+    /* Content Section */
+    .content-section p {
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 1rem;
+        text-align: justify;
+    }
+
+    /* Subheadings */
+    .content-section h3 {
+        color: #8b0000; /* Dark Red */
+        font-size: 1.2rem;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    /* First Image Float */
+    .float-left-image {
+        float: left;
+        width: 30%; /* Smaller size */
+        margin-right: 20px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Image Section */
+    .image-section img {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Bullet Points Styling */
+    .content-section ul {
+        margin-left: 20px;
+        list-style-type: disc;
+    }
+
+    .content-section li {
+        margin-bottom: 10px;
+        color: #333; /* Dark Grey text */
+    }
+
+    /* Clear floats after floating elements */
+    .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+</style>
+
+<div class="main-container">
+    <!-- Title Section -->
+    <div class="title-section">
+        <h1>Relief Distribution Program Report</h1>
+        <h2>Uttarakhand Landslide and Flood Relief</h2>
+    </div>
+
+    <!-- First Section with Floating Image -->
+    <div class="content-section clearfix">
+        <img class="float-left-image" src="/yehaw.png" alt="Relief Distribution in Uttarakhand, August 2024">
+        <p>In August 2024, Uttarakhand faced a devastating natural disaster due to heavy rains and flash floods, particularly affecting the Tehri district. Toli village near Budha Kedar was severely impacted, with landslides and flooding causing extensive destruction of homes, infrastructure, and tragically, several lives lost. In response to the catastrophic floods and landslides that struck Uttarakhand in August 2024, Mountain Forum Himalayas (MFH) launched a comprehensive relief distribution program aimed at assisting the most vulnerable communities. MFH prioritized the needs of marginalized populations, including Dalits, widows, single female-headed households, and individuals with disabilities.</p>
+        
+        <h3>Relief Distribution Process</h3>
+        <p>Local staff and volunteers worked tirelessly to identify and verify beneficiaries through coordination with district authorities and local panchayats, ensuring that aid reached those who needed it most. The distribution took place across multiple locations, including Toli, Budha Kedar, Jakhnyali, and Mulaygaon, on August 13 and 14, 2024, respectively.</p>
+    </div>
+
+    <!-- Second Image Section -->
+    <div class="image-section">
+        <img src="/actiondrr.png" alt="Relief Items Distribution">
+    </div>
+
+    <!-- Third Content Section -->
+    <div class="content-section">
+        <h3>Collaborative Efforts and Future Plans</h3>
+        <p>Moreover, MFH’s collaboration with organizations like Donatekart, Amazon, and the district administration significantly enhanced the relief efforts. By leveraging CSR resources and local volunteers, MFH not only delivered immediate aid but also fostered a sense of solidarity among residents. As recovery efforts continue, MFH is committed to addressing the long-term needs of these communities, including housing reconstruction and livelihood restoration, while advocating for the necessary support from government agencies to aid families in rebuilding their lives.</p>
+    </div>
+</div>
+
+<%- include("footer.ejs") %>

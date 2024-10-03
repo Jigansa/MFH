@@ -1,0 +1,131 @@
+<%- include("background.ejs") %>
+<link rel="stylesheet" href="/style/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<style>
+    /* Main Container Styling */
+    .main-container {
+        background-color: #ffffff;
+        color: #333;
+        padding: 30px;
+        max-width: 1200px;
+        margin: 0 auto;
+        border-radius: 8px;
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Title Section */
+    .title-section h1 {
+        color: #8b0000; /* Dark Red */
+        font-size: 2rem;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 20px;
+        border-bottom: 2px solid #8b0000;
+        padding-bottom: 10px;
+    }
+
+    /* Content Section */
+    .content-section {
+        margin-top: 20px;
+    }
+
+    /* Subheadings */
+    .content-section h2 {
+        color: #006400; /* Deep Green */
+        font-size: 1.6rem;
+        margin-top: 30px;
+        margin-bottom: 15px;
+        text-align: left;
+        font-weight: bold;
+        border-left: 4px solid #8b0000;
+        padding-left: 10px;
+    }
+
+    /* Paragraphs */
+    .content-section p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        margin-bottom: 1.5rem;
+        text-align: justify;
+        color: #555;
+    }
+
+    /* Highlight Boxes */
+    .highlight-box {
+        background-color: #f4f4f4;
+        padding: 15px;
+        border-left: 4px solid #006400;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.05);
+    }
+
+    /* Bullet Points */
+    .content-section ul {
+        margin-left: 20px;
+        list-style-type: disc;
+        color: #333;
+        font-size: 1.1rem;
+    }
+
+    /* List Items */
+    .content-section li {
+        margin-bottom: 10px;
+    }
+
+    /* Emphasis text */
+    .emphasis {
+        color: #8b0000;
+        font-weight: bold;
+    }
+
+    /* Responsive Design */
+    @media screen and (max-width: 768px) {
+        .main-container {
+            padding: 15px;
+        }
+
+        .title-section h1 {
+            font-size: 1.6rem;
+        }
+
+        .content-section h2 {
+            font-size: 1.4rem;
+        }
+
+        .content-section p {
+            font-size: 1rem;
+        }
+    }
+</style>
+
+<div class="main-container">
+    <!-- Title Section -->
+    <div class="title-section">
+        <h1>Empowering Disaster Resilience and Local Communities in the Himalayas</h1>
+    </div>
+
+    <!-- Content Section -->
+    <div class="content-section">
+        <h2>MFH Facilitates Enhanced Disaster Resilience through the Mountain Relief Network</h2>
+        <p>Mountain Forum Himalayas (MFH) plays a pivotal role in facilitating processes within the Mountain Relief Network (<span class="emphasis">MRN</span>), an initiative focused on strengthening disaster resilience in the Indian Himalayan Region (IHR). With a robust network of over 115 member organizations, MRN is essential in providing timely disaster relief, rehabilitation, and post-relief support.</p>
+
+        <div class="highlight-box">
+            <p>MRN acts as a crucial platform for local, national, and international agencies, enabling aid delivery within <span class="emphasis">24-48 hours</span> of a disaster. This proactive approach ensures that relief operations are timely, accurate, and effective, particularly in the face of severe climate change impacts on the Himalayan ecosystem.</p>
+        </div>
+
+        <p>MRN has systematically mapped the region and established local focal organisations (partners) equipped to conduct rapid damage assessments and coordinate relief efforts. These focal points optimize aid distribution, ensuring that assistance reaches the most affected communities quickly and efficiently. Beyond immediate relief, MFH through MRN collaborates with local partners and donors to foster ongoing rehabilitation and development initiatives.</p>
+
+        <h2>Empowering the Northern Himalayas: The Role of MFH in the Mountain Collective Processes</h2>
+        <p>Mountain Forum Himalayas (<span class="emphasis">MFH</span>) plays a pivotal role in empowering the Northern Himalayas through its facilitation of the Mountain Collective and Mountain HUB processes. Launched in December 2012, the <span class="emphasis">Mountain Collective</span> serves as a transformative multi-stakeholder platform that brings together grassroots organizations, civil society networks, and dedicated individuals from Himachal Pradesh and Uttarakhand.</p>
+
+        <div class="highlight-box">
+            <p>This coalition effectively addresses pressing regional issues such as climate change, rural employment, river conservation, forest fire prevention, and women’s empowerment.</p>
+        </div>
+
+        <p>Through the Mountain Collective, MFH has successfully spearheaded impactful campaigns, including the <span class="emphasis">Save River Movement</span> and the <span class="emphasis">Millets Movement</span>, while also promoting initiatives like water conservation and the seed ball campaign. The Collective’s robust alliance, comprising 115 voluntary organizations, 21 grassroots entities, 23 subject experts, and 13 institutions, exemplifies MFH's commitment to leveraging local expertise and fostering sustainable development in marginalized communities across the region.</p>
+    </div>
+</div>
+
+<%- include("footer.ejs") %>
