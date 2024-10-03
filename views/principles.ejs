@@ -1,92 +1,114 @@
 <%- include("background.ejs") %>
+<link rel="stylesheet" href="/style/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-<!-- Custom CSS for the Vision and Mission page -->
 <style>
-    .vision-mission-image {
+    /* Container for the circular design */
+    .circle-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+    }
+
+    /* Outer Circle */
+    .circle {
         position: relative;
-        width: 100%;
-        overflow: hidden;
-        height: 500px; /* Adjust the height as needed */
+        width: 500px;
+        height: 500px;
+        border-radius: 50%;
+        background: conic-gradient(
+            #5a5cc9 0% 12.5%, #7d77d9 12.5% 25%, 
+            #a08ae9 25% 37.5%, #c29df9 37.5% 50%, 
+            #e5b0ff 50% 62.5%, #c78ce8 62.5% 75%, 
+            #a769d1 75% 87.5%, #8756bb 87.5% 100%
+        );
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
-    .vision-mission-img {
+    /* Center Circle for the title */
+    .circle .center {
         position: absolute;
-        top: 50%;
-        left: 50%;
+        width: 180px;
+        height: 180px;
+        background-color: #333;
+        color: #fff;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 10px;
+        font-weight: bold;
+    }
+
+    /* Styling the text for each segment */
+    .segment {
+        position: absolute;
+        width: 50%;
+        height: 50%;
+        overflow: hidden;
+        transform-origin: 100% 100%;
+    }
+
+    .segment span {
+        position: absolute;
         width: 100%;
-        height: auto;
-        transform: translate(-50%, -50%);
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: white;
+        font-weight: bold;
+        padding: 10px;
     }
 
-    .vision-mission-content {
-        max-width: 1200px; /* Adjust max-width as needed */
-        margin: 0 auto;
-        padding: 20px;
-        background-color: #ffffff; /* Example background color */
-        color: #2f4507; /* Example text color */
-    }
+    /* Specific rotation and position for each segment */
+    .segment1 { transform: rotate(0deg); }
+    .segment1 span { transform: rotate(-45deg); }
+    
+    .segment2 { transform: rotate(45deg); }
+    .segment2 span { transform: rotate(-90deg); }
 
-    .vision-mission-content h1, .vision-mission-content h2, .vision-mission-content h3 {
-        color: #2f4507;
-    }
+    .segment3 { transform: rotate(90deg); }
+    .segment3 span { transform: rotate(-135deg); }
 
-    .vision-mission-content h1 {
-        margin-bottom: 30px; /* Increase space below h1 */
-    }
+    .segment4 { transform: rotate(135deg); }
+    .segment4 span { transform: rotate(-180deg); }
 
-    .vision-mission-content h2 {
-        margin-top: 30px; /* Increase space above h2 */
-        margin-bottom: 20px; /* Adjust space below h2 if needed */
-    }
+    .segment5 { transform: rotate(180deg); }
+    .segment5 span { transform: rotate(-225deg); }
 
-    .vision-mission-content p, .vision-mission-content ul {
-        margin-bottom: 20px;
-        line-height: 1.6;
-        font-size: 1rem;
-    }
+    .segment6 { transform: rotate(225deg); }
+    .segment6 span { transform: rotate(-270deg); }
 
-    .vision-mission-content ul {
-        list-style-type: disc;
-        padding-left: 20px;
-    }
+    .segment7 { transform: rotate(270deg); }
+    .segment7 span { transform: rotate(-315deg); }
+
+    .segment8 { transform: rotate(315deg); }
+    .segment8 span { transform: rotate(-360deg); }
+
 </style>
 
-<!-- Image Section -->
-<div class="vision-mission-image">
-    <img src="vis.JPG" alt="Mountain Image" class="vision-mission-img">
-</div>
+<div class="circle-container">
+    <div class="circle">
+        <!-- Center text -->
+        <div class="center">Our Engagement Principles</div>
 
-<!-- Content Section -->
-<div class="vision-mission-content">
-    <h1>Principles of engagement</h1> 
-    <p>Inclusivity and Equity: Ensure that engagement with people’s organizations is inclusive and equitable, giving a platform to diverse voices and perspectives including women, LGBTIQ, indigenous people, marginalised people, differently abled people and Dalits. </p>
-    <p>Respect and Inclusion: Ensure that community engagement is respectful of local customs, traditions, and cultural practices. Involve community members in decision-making processes from the beginning.</p>
-    <p>Empowerment and Ownership: Support local communities in taking ownership of initiatives by providing the tools, knowledge, and resources fostering local ownership and leadership. </p>
-    <p>Collaboration and partnership: Foster collaboration among diverse stakeholders, including local communities, governments, NGOs, academia, and the private sector.</p>
-    <p>Reporting and Accountability: Provide regular and accurate reports on activities, outcomes, and financials to stakeholders, ensuring accountability and trust.</p>
-    <p>Shared Goals: Build partnerships based on shared goals and mutual benefits, ensuring that all parties have a stake in the success of initiatives.</p>
-    <p>Ethical Standards: Uphold high ethical standards in all interactions, ensuring that actions and decisions are made with honesty and fairness.</p>
-    <p>Respect for Rights: Protect and promote human rights, and ensure that engagement does not inadvertently cause harm.</p>
-    <p>Innovative Solutions: Encourage creative problem-solving and innovative approaches to address complex social issues.</p>
+        <!-- Each segment with content -->
+        <div class="segment segment1"><span>Inclusivity and Equity</span></div>
+        <div class="segment segment2"><span>Respect and Inclusion</span></div>
+        <div class="segment segment3"><span>Empowerment and Ownership</span></div>
+        <div class="segment segment4"><span>Collaboration and Partnership</span></div>
+        <div class="segment segment5"><span>Reporting and Accountability</span></div>
+        <div class="segment segment6"><span>Shared Goals</span></div>
+        <div class="segment segment7"><span>Ethical Standards</span></div>
+        <div class="segment segment8"><span>Respect for Rights</span></div>
+    </div>
 </div>
 
 <%- include("footer.ejs") %>
-
-<!-- JavaScript to bold text before colon -->
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        // Select all <p> tags in the vision-mission-content class
-        const paragraphs = document.querySelectorAll(".vision-mission-content p");
-
-        paragraphs.forEach(function(p) {
-            const text = p.innerHTML;
-            const index = text.indexOf(':'); // Find the first colon
-
-            if (index !== -1) {
-                // Bold the text before the colon
-                const boldText = "<strong>" + text.substring(0, index) + "</strong>" + text.substring(index);
-                p.innerHTML = boldText; // Update the paragraph's HTML
-            }
-        });
-    });
-</script>
