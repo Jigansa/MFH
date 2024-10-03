@@ -384,3 +384,27 @@ body {
 .contact-info p {
     color: #555;
 }
+.arrow {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Center the arrow */
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
+    border: none; /* No border */
+    border-radius: 50%; /* Round shape */
+    cursor: pointer; /* Change cursor to pointer */
+    padding: 10px; /* Add some padding */
+    z-index: 10; /* Ensure arrows are on top */
+}
+
+.arrow.left {
+    left: 20px; /* Position left arrow */
+}
+
+.arrow.right {
+    right: 20px; /* Position right arrow */
+}
+
+/* Optional: Add hover effect */
+.arrow:hover {
+    background-color: rgba(255, 255, 255, 1); /* Fully opaque on hover */
+}
