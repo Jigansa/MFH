@@ -145,7 +145,7 @@ app.get('/action/action6', (req, res) => {
     res.render("action6.ejs");
 });
 app.get('/action/action7', (req, res) => {
-    res.render("action7.ejs");
+    res.render("action7.ejs"); 
 });
 app.get('/action/gendereq', (req, res) => {
     res.render("gendereq.ejs");
@@ -193,13 +193,13 @@ app.get('/focus5', (req, res) => {
     res.render("focus5.ejs");
 });
 app.get('/focus5/waste_man', (req, res) => {
-    res.render("focus5/waste_man.ejs");
+    res.render("waste_man.ejs");
 });
 app.get('/focus5/tourism', (req, res) => {
-    res.render("focus5/tourism.ejs");
+    res.render("tourism.ejs");
 });
 app.get('/focus5/part_ner', (req, res) => {
-    res.render("focus5/part_ner.ejs");
+    res.render("part_ner.ejs");
 });
 app.get('/focus5/adap', (req, res) => {
     res.render("adap.ejs");
@@ -219,8 +219,8 @@ app.get('/focus6', (req, res) => {
 app.get('/focus6/shc', (req, res) => {
     res.render("shc.ejs");
 });
-app.get('/focus6/mountain_water', (req, res) => {
-    res.render("focus6/mountain_water.ejs");
+app.get('/focus6/mw', (req, res) => {
+    res.render("mw.ejs");
 });
 app.get('/focus7', (req, res) => {
     res.render("focus7.ejs");
