@@ -1,6 +1,4 @@
 <%- include("background.ejs") %>
-<link rel="stylesheet" href="/style/style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 <style>
     /* Page Styling */
@@ -92,48 +90,74 @@
         margin: 30px 0;
         border-top: 2px solid #3a6e2b;
     }
+
+    /* Image and Text Side by Side */
+    .content-with-image {
+        display: flex;
+        flex-direction: row; /* Ensures image and text stay side by side */
+        gap: 20px;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+
+    .content-with-image img {
+        max-width: 40%; /* Set image width smaller for better balance */
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .content-with-image .content-text {
+        max-width: 60%; /* Ensure text takes up more space */
+        flex-grow: 1;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .content-with-image {
+            flex-direction: column; /* Stacks image and text vertically on smaller screens */
+        }
+
+        .content-with-image img,
+        .content-with-image .content-text {
+            max-width: 100%; /* Full width for both elements on mobile */
+        }
+    }
 </style>
 
 <div class="content-wrapper">
     <h1>Strengthening Civil Society and Community Leadership</h1>
 
-    <!-- Image for Strengthening Civil Society -->
-    <div style="text-align: center; margin-bottom: 20px;">
-        <img src="todaycom.png" alt="Today Com" style="max-width: 100%; height: auto; border-radius: 10px;">
+    <!-- Content Section: Building Community Leadership -->
+    <div class="content-with-image">
+        <img src="todstr.png" alt="Todstr" />
+        <div class="content-text">
+            <h2>Building Community Leadership</h2>
+            <p>MFH is committed to empowering communities through strategic <span class="highlight">Community Strengthening</span> initiatives, focusing on promoting leadership among men, women, and youth. We aim to cultivate a deep understanding of the vital role Community-Based Organizations (CBOs) and People’s Organizations (POs) play in the development process.</p>
+            <ul class="icon-list">
+                <li><i class="fas fa-check-circle"></i> Training on group management, conflict resolution, and local resource mobilization</li>
+                <li><i class="fas fa-check-circle"></i> Ensuring access to government schemes, livelihood programs, and health services</li>
+                <li><i class="fas fa-check-circle"></i> Emphasizing local resource mobilization for long-term financial viability</li>
+            </ul>
+        </div>
     </div>
-
-    <p>At Mountain Forum Himalayas (MFH), we recognize that vibrant civil societies and strong community leadership are pivotal for fostering sustainable development and resilience in the mountainous regions. Our initiatives focus on empowering local communities, enhancing leadership skills, and building robust civil society organizations (CSOs) to drive meaningful change and address the unique challenges faced by these regions.</p>
-
-    <h2>Empowering Civil Society Organizations</h2>
-    <p>MFH is dedicated to strengthening the capacity and effectiveness of civil society organizations across the Himalayan region. We achieve this by providing targeted support and resources that enable CSOs to better advocate for their communities, address local issues, and collaborate with other stakeholders.</p>
-
-    <ul class="icon-list">
-        <li><i class="fas fa-check-circle"></i> Facilitating training workshops and strengthening compliances</li>
-        <li><i class="fas fa-check-circle"></i> Offering strategic guidance and fostering networking opportunities</li>
-        <li><i class="fas fa-check-circle"></i> Advocating for social transformation, environmental sustainability, and social justice</li>
-    </ul>
-
-    <p>By reinforcing the role of CSOs, we help them become powerful advocates for bringing social transformation, environmental sustainability, social justice, and community well-being.</p>
-
-    <div class="line-break"></div>
-
-    <h2>Building Community Leadership</h2>
-    <p>MFH is committed to empowering communities through strategic <span class="highlight">Community Strengthening</span> initiatives, focusing on promoting leadership among men, women, and youth. We aim to cultivate a deep understanding of the vital role Community-Based Organizations (CBOs) and People’s Organizations (POs) play in the development process.</p>
-
-    <!-- Image for Building Community Leadership -->
-    <div style="text-align: center; margin-bottom: 20px;">
-        <img src="todstr.png" alt="Todstr" style="max-width: 100%; height: auto; border-radius: 10px;">
-    </div>
-
-    <ul class="icon-list">
-        <li><i class="fas fa-check-circle"></i> Training on group management, conflict resolution, and local resource mobilization</li>
-        <li><i class="fas fa-check-circle"></i> Ensuring access to government schemes, livelihood programs, and health services</li>
-        <li><i class="fas fa-check-circle"></i> Emphasizing local resource mobilization for long-term financial viability</li>
-    </ul>
 
     <blockquote>"Our goal is to build confidence and self-reliance, allowing communities to operate independently over time." — Mountain Forum Himalayas</blockquote>
 
-    <p>The cornerstone of our approach is the <span class="highlight">Coordination Hub</span> model, empowering POs to lead collective action and collaboration. We work towards fostering self-governance, ensuring that these processes are driven by the communities themselves.</p>
+    <div class="line-break"></div>
+
+    <!-- Content Section: Empowering Civil Society -->
+    <div class="content-with-image">
+        <img src="todaycom.png" alt="Today Com" />
+        <div class="content-text">
+            <h2>Empowering Civil Society Organizations</h2>
+            <p>MFH is dedicated to strengthening the capacity and effectiveness of civil society organizations across the Himalayan region. We achieve this by providing targeted support and resources that enable CSOs to better advocate for their communities, address local issues, and collaborate with other stakeholders.</p>
+            <ul class="icon-list">
+                <li><i class="fas fa-check-circle"></i> Facilitating training workshops and strengthening compliances</li>
+                <li><i class="fas fa-check-circle"></i> Offering strategic guidance and fostering networking opportunities</li>
+                <li><i class="fas fa-check-circle"></i> Advocating for social transformation, environmental sustainability, and social justice</li>
+            </ul>
+        </div>
+    </div>
 
     <div class="line-break"></div>
 
