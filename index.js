@@ -274,6 +274,9 @@ app.get('/focus1/promo_live', (req, res) => {
 app.get('/focus1/enhance_community', (req, res) => {
     res.render("enhance_community.ejs");
 });
+app.get('/donate', (req, res) => {
+    res.render("donate.ejs");
+});
 app.get('/focus1/farmers', (req, res) => {
     res.render("farmers.ejs");
 });
