@@ -1,0 +1,205 @@
+<%- include("background.ejs") %>
+
+<style>
+     .top-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #ffffff;
+        color: #2f4507;
+    }
+
+    .top-content h1 {
+        text-align: center;
+        margin-bottom: 30px;
+        color: #2f4507;
+    }
+
+    .campaigns-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .campaign-box {
+        flex: 1 1 calc(33.333% - 20px);
+        background-color: #f5f5f5;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        position: relative;
+    }
+
+    .campaign-box h3 {
+        margin: 10px 0;
+        color: #2f4507;
+    }
+
+    .campaign-box p {
+        font-size: 14px;
+        color: #4f4f4f;
+        margin-bottom: 15px;
+    }
+
+    .donation-options {
+        margin: 15px 0;
+    }
+
+    .donate-btn {
+        background-color: orange;
+        color: white;
+        padding: 8px 12px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin: 5px;
+    }
+
+    .donate-btn:hover {
+        background-color: blue;
+    }
+
+    .custom-donation {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        width: 80%;
+        margin: 10px auto;
+        text-align: center;
+    }
+
+    .progress-bar-container {
+        width: 100%;
+        height: 20px;
+        background-color: #e0e0e0;
+        border-radius: 10px;
+        overflow: hidden;
+        margin: 10px 0;
+        position: relative;
+    }
+
+    .progress-bar {
+        height: 100%;
+        background-color: #2f4507;
+        width: 0%; /* Initial width */
+        transition: width 0.5s ease;
+    }
+
+    .progress-text {
+        font-size: 12px;
+        position: absolute;
+        top: 2px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: #fff;
+        font-weight: bold;
+    }
+    .target-text {
+        font-size: 14px;
+        color: #4f4f4f;
+        margin-top: 5px;
+    }
+</style>
+
+<div class="top-content">
+    <h1>Support Our Campaigns</h1>
+</div>
+
+<!-- Campaigns Section -->
+<div class="campaigns-container">
+    <div class="campaign-box">
+        <h3>End child trafficking</h3>
+        <p>The "Ending Child Trafficking and Restoring Freedom" campaign focuses on raising awareness, strengthening protections, and curbing trafficking at the Indo-Nepal border, while providing support for vulnerable children to break free from exploitation and build a brighter, safer future.</p>
+        <div class="progress-bar-container">
+            <div class="progress-bar" id="progress1">
+                <span class="progress-text">0%</span>
+            </div>
+        </div>
+        <p class="target-text">Target: ₹100,000</p>
+        <div class="donation-options">
+            <button class="donate-btn" onclick="donate(5, 1)">Donate ₹5</button>
+            <button class="donate-btn" onclick="donate(10, 1)">Donate ₹10</button>
+            <button class="donate-btn" onclick="donate(100, 1)">Donate ₹100</button>
+            <button class="donate-btn" onclick="donate(1000, 1)">Donate ₹1000</button>
+            <button class="donate-btn" onclick="donate(10000, 1)">Donate ₹10000</button>
+        </div>
+        <input type="number" id="customAmount1" class="custom-donation" placeholder="Custom amount">
+        <button class="donate-btn" onclick="donateCustom(1)">Donate Custom</button>
+    </div>
+
+    <div class="campaign-box">
+        <h3>Building Disaster Resilience</h3>
+        <p>The "Building Disaster Resilient Communities" campaign focuses on empowering communities and children with the knowledge, resources, and strategies needed to prepare for, respond to, and recover from natural and man-made disasters, ensuring long-term safety and sustainability.</p>
+        <div class="progress-bar-container">
+            <div class="progress-bar" id="progress2">
+                <span class="progress-text">0%</span>
+            </div>
+        </div>
+        <p class="target-text">Target: ₹50,000</p>
+        <div class="donation-options">
+            <button class="donate-btn" onclick="donate(5, 2)">Donate ₹5</button>
+            <button class="donate-btn" onclick="donate(10, 2)">Donate ₹10</button>
+            <button class="donate-btn" onclick="donate(100, 2)">Donate ₹100</button>
+            <button class="donate-btn" onclick="donate(1000, 2)">Donate ₹1000</button>
+            <button class="donate-btn" onclick="donate(10000, 2)">Donate ₹10000</button>
+        </div>
+        <input type="number" id="customAmount2" class="custom-donation" placeholder="Custom amount">
+        <button class="donate-btn" onclick="donateCustom(2)">Donate Custom</button>
+    </div>
+
+    <div class="campaign-box">
+        <h3>Seeds of sustainability</h3>
+        <p>Cultivating Resilience through Climate-Smart Agriculture" campaign focuses on empowering mountain communities with sustainable farming practices, strengthening livelihoods, conserving resources, and building resilience against the impacts of climate change for long-term prosperity.</p>
+        <div class="progress-bar-container">
+            <div class="progress-bar" id="progress3">
+                <span class="progress-text">0%</span>
+            </div>
+        </div>
+        <p class="target-text">Target: ₹75,000</p>
+        <div class="donation-options">
+            <button class="donate-btn" onclick="donate(5, 3)">Donate ₹5</button>
+            <button class="donate-btn" onclick="donate(10, 3)">Donate ₹10</button>
+            <button class="donate-btn" onclick="donate(100, 3)">Donate ₹100</button>
+            <button class="donate-btn" onclick="donate(1000, 3)">Donate ₹1000</button>
+            <button class="donate-btn" onclick="donate(10000, 3)">Donate ₹10000</button>
+        </div>
+        <input type="number" id="customAmount3" class="custom-donation" placeholder="Custom amount">
+        <button class="donate-btn" onclick="donateCustom(3)">Donate Custom</button>
+    </div>
+</div>
+
+<script>
+    const targets = [100000, 50000, 75000]; // Target amounts for each campaign
+
+    function donate(amount, campaignId) {
+        updateProgress(amount, campaignId);
+        alert(`Thank you for donating ₹${amount} to Campaign ${campaignId}!`);
+    }
+
+    function donateCustom(campaignId) {
+        const amount = parseInt(document.getElementById(`customAmount${campaignId}`).value);
+        if (amount && amount > 0) {
+            updateProgress(amount, campaignId);
+            alert(`Thank you for donating ₹${amount} to Campaign ${campaignId}!`);
+        } else {
+            alert('Please enter a valid donation amount.');
+        }
+    }
+
+    function updateProgress(amount, campaignId) {
+        const progressBar = document.getElementById(`progress${campaignId}`);
+        const target = targets[campaignId - 1];
+        const currentWidth = parseInt(progressBar.style.width) || 0;
+        const newWidth = Math.min((currentWidth + (amount / target) * 100), 100);
+        progressBar.style.width = `${newWidth}%`;
+        progressBar.querySelector('.progress-text').innerText = `${Math.floor(newWidth)}%`;
+    }
+</script>
+
+<%- include("footer.ejs") %>
