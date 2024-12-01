@@ -58,7 +58,9 @@ app.set('view engine', 'ejs');
 app.get('/', (req, res) => {
     res.render(__dirname+"/views/index.ejs");
 });
-
+app.get('/annual', (req, res) => {
+    res.render("annual.ejs");
+});
 app.get('/media-gallery', (req, res) => {
     res.render("media-gallery.ejs");
 });

@@ -1,0 +1,62 @@
+<%-include("background.ejs")%>
+<style>
+    /* Ensure the entire page uses full height */
+    html, body {
+        height: 100%;
+        margin: 0;
+    }
+
+    /* Main container for content and footer placement */
+    .main-container {
+        display: flex;
+        flex-direction: column;
+        min-height: 100%;
+    }
+
+    /* Content should grow and push footer down */
+    .content {
+        flex: 1;
+    }
+
+    .annual-reports-container {
+        width: 100%;
+        max-width: 600px;
+        margin: 50px auto;
+        font-family: Arial, sans-serif;
+    }
+
+    .annual-reports-title {
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+        color: #333;
+    }
+
+    .annual-report-link {
+        display: block;
+        background-color: #005f73;
+        color: #fff;
+        text-decoration: none;
+        padding: 15px;
+        border-radius: 5px;
+        margin: 10px 0;
+        text-align: left;
+        font-size: 18px;
+    }
+
+    .arrow-icon {
+        margin-right: 10px;
+    }
+</style>
+
+<div class="main-container">
+    <div class="content">
+        <div class="annual-reports-container">
+            <h1 class="annual-reports-title">Annual Reports</h1>
+            <a href="/annual.pdf" target="_blank" class="annual-report-link">
+                <span class="arrow-icon">&#9658;</span>Annual Report 2023-2024
+            </a>
+        </div>
+    </div>
+    <%-include("footer.ejs")%>
+</div>
