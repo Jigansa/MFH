@@ -5,8 +5,10 @@
     html, body {
         height: 100%;
         margin: 0;
-        font-family: Arial, sans-serif;
-        line-height: 1.6;
+        font-family: 'Roboto', Arial, sans-serif;
+        line-height: 1.8;
+        color: #333;
+        background-color: #f8f9fa;
     }
 
     .main-container {
@@ -17,38 +19,52 @@
 
     .content {
         flex: 1;
-        padding: 20px;
-        max-width: 1200px; /* Adjust this value as needed */
-        margin: 0 auto; /* Centers the content */
+        padding: 40px;
+        max-width: 1200px;
+        margin: 0 auto;
+        background: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
     /* Heading Styles */
     h1, h2 {
         text-align: center;
         color: #004d4d;
-    }
-
-    h1 {
-        font-size: 28px;
         margin-bottom: 20px;
     }
 
+    h1 {
+        font-size: 36px;
+        font-weight: bold;
+    }
+
     h2 {
-        font-size: 22px;
-        margin-bottom: 15px;
+        font-size: 28px;
+    }
+
+    /* Paragraph Styling */
+    p {
+        font-size: 18px;
+        margin-bottom: 20px;
+        line-height: 1.6;
+        text-align: justify;
     }
 
     /* Table Styling */
     table {
         width: 100%;
-        margin: 20px auto;
+        margin: 30px 0;
         border-collapse: collapse;
+        overflow: hidden;
+        border-radius: 8px;
     }
 
     th, td {
         border: 1px solid #ddd;
-        padding: 10px;
+        padding: 15px;
         text-align: center;
+        font-size: 16px;
     }
 
     th {
@@ -58,28 +74,79 @@
     }
 
     tr:nth-child(even) {
-        background-color: #f2f2f2;
+        background-color: #f9f9f9;
     }
 
-    /* Key Achievements and Vision Section */
-    .section {
-        margin: 30px auto;
-        width: 100%;
+    tr:hover {
+        background-color: #f1f1f1;
     }
 
+    /* List Styling */
     .section ul {
-        list-style-type: disc;
-        margin-left: 30px;
+        list-style: none;
+        padding-left: 20px;
     }
 
-    /* Footer Fix */
+    .section ul li {
+        position: relative;
+        padding-left: 25px;
+        margin-bottom: 10px;
+    }
+
+    .section ul li::before {
+        content: "\2022";
+        position: absolute;
+        left: 0;
+        color: #004d4d;
+        font-size: 20px;
+    }
+
+    /* Buttons */
+    .btn {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 10px 20px;
+        color: #fff;
+        background-color: #004d4d;
+        border: none;
+        border-radius: 5px;
+        text-decoration: none;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+        background-color: #003838;
+    }
+
+    /* Footer */
     footer {
         margin-top: auto;
         text-align: center;
-        font-size: 12px;
-        padding: 10px 0;
+        font-size: 14px;
+        padding: 15px 0;
         background-color: #004d4d;
         color: #fff;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .content {
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 28px;
+        }
+
+        h2 {
+            font-size: 22px;
+        }
+
+        table {
+            font-size: 14px;
+        }
     }
 </style>
 
@@ -122,36 +189,16 @@
             </thead>
             <tbody>
                 <tr><td>1</td><td>Himachal Pradesh</td><td>Kangra</td><td>Dehra</td><td>30</td></tr>
-                <tr><td>2</td><td>Himachal Pradesh</td><td>Kangra</td><td>Khundiyan</td><td>18</td></tr>
-                <tr><td>3</td><td>Himachal Pradesh</td><td>Chamba</td><td>Salooni</td><td>15</td></tr>
-                <tr><td>4</td><td>Himachal Pradesh</td><td>Chamba</td><td>Mehla</td><td>10</td></tr>
-                <tr><td>5</td><td>Himachal Pradesh</td><td>Lahaul-Spiti</td><td>Keylong</td><td>8</td></tr>
-                <tr><td>6</td><td>Himachal Pradesh</td><td>Lahaul-Spiti</td><td>Udaipur</td><td>6</td></tr>
-                <tr><td>7</td><td>Himachal Pradesh</td><td>Kinnaur</td><td>Kalpa</td><td>12</td></tr>
-                <tr><td>8</td><td>Himachal Pradesh</td><td>Kinnaur</td><td>Pooh</td><td>9</td></tr>
-                <tr><td>9</td><td>Himachal Pradesh</td><td>Pangi</td><td>Tribal</td><td>5</td></tr>
-                <tr><td>10</td><td>Uttarakhand</td><td>Chamoli</td><td>Gairsain</td><td>12</td></tr>
-                <tr><td>11</td><td>Uttarakhand</td><td>Chamoli</td><td>Karnaprayag</td><td>8</td></tr>
-                <tr><td>12</td><td>Uttarakhand</td><td>Almora</td><td>Hawalbagh</td><td>20</td></tr>
-                <tr><td>13</td><td>Uttarakhand</td><td>Almora</td><td>Bhikiyasain</td><td>15</td></tr>
-                <tr><td>14</td><td>Uttarakhand</td><td>Pithoragarh</td><td>Didihat</td><td>10</td></tr>
-                <tr><td>15</td><td>Uttarakhand</td><td>Pithoragarh</td><td>Dharchula</td><td>5</td></tr>
-                <tr><td>16</td><td>Uttarakhand</td><td>Bageshwar</td><td>Kapkote</td><td>18</td></tr>
-                <tr><td>17</td><td>Uttarakhand</td><td>Bageshwar</td><td>Garur</td><td>12</td></tr>
-                <tr><td>18</td><td>Uttarakhand</td><td>Tehri Garhwal</td><td>Pratapnagar</td><td>15</td></tr>
-                <tr><td>19</td><td>Uttarakhand</td><td>Tehri Garhwal</td><td>Chamba</td><td>10</td></tr>
-                <tr><td>20</td><td>Uttarakhand</td><td>Uttarkashi</td><td>Bhatwari</td><td>8</td></tr>
-                <tr><td>21</td><td>Uttarakhand</td><td>Uttarkashi</td><td>Puraula</td><td>5</td></tr>
-                <tr><td>22</td><td>Uttarakhand</td><td>Haridwar</td><td>Roorkee</td><td>12</td></tr>
-                <tr><td>23</td><td>Uttarakhand</td><td>Haridwar</td><td>Bhagwanpur</td><td>10</td></tr>
-                <tr><td>24</td><td>Uttarakhand</td><td>Dehradun</td><td>Vikasnagar</td><td>20</td></tr>
-                <tr><td>25</td><td>Uttarakhand</td><td>Dehradun</td><td>Chakrata</td><td>15</td></tr>
-                <tr><td>26</td><td>Uttarakhand</td><td>Nainital</td><td>Haldwani</td><td>18</td></tr>
-                <tr><td>27</td><td>Uttarakhand</td><td>Nainital</td><td>Ramnagar</td><td>10</td></tr>
-                <tr><td>28</td><td>Uttarakhand</td><td>Udham Singh Nagar</td><td>Kashipur</td><td>12</td></tr>
-                <tr><td>29</td><td>Uttarakhand</td><td>Udham Singh Nagar</td><td>Jaspur</td><td>8</td></tr>
+                <tr><td>2</td><td>Himachal Pradesh</td><td>Chamba</td><td>Salooni</td><td>15</td></tr>
+                <tr><td>3</td><td>Himachal Pradesh</td><td>Lahaul-Spiti</td><td>Keylong</td><td>10</td></tr>
+                <tr><td>4</td><td>Himachal Pradesh</td><td>Kinnaur</td><td>Reckong Peo</td><td>12</td></tr>
+                <tr><td>5</td><td>Uttarakhand</td><td>Chamoli</td><td>Karnaprayag</td><td>8</td></tr>
+                <tr><td>6</td><td>Uttarakhand</td><td>Tehri Garhwal</td><td>Chamba</td><td>18</td></tr>
+                <tr><td>7</td><td>Uttarakhand</td><td>Almora</td><td>Someshwar</td><td>14</td></tr>
+                <tr><td>8</td><td>Uttarakhand</td><td>Rudraprayag</td><td>Agastyamuni</td><td>11</td></tr>
             </tbody>
         </table>
+
 
         <div class="section">
             <h2>Key Achievements</h2>
@@ -170,6 +217,7 @@
                 and sustainable development. With a foundation of research, knowledge-sharing, and community empowerment, MFH strives to build a resilient 
                 and sustainable future for mountain communities.
             </p>
+            <a href="#" class="btn">Learn More</a>
         </div>
     </div>
 
