@@ -1,0 +1,177 @@
+<%- include("background.ejs") %>
+
+<style>
+    /* General Page Styling */
+    html, body {
+        height: 100%;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+    }
+
+    .main-container {
+        display: flex;
+        flex-direction: column;
+        min-height: 100%;
+    }
+
+    .content {
+        flex: 1;
+        padding: 20px;
+        max-width: 1200px; /* Adjust this value as needed */
+        margin: 0 auto; /* Centers the content */
+    }
+
+    /* Heading Styles */
+    h1, h2 {
+        text-align: center;
+        color: #004d4d;
+    }
+
+    h1 {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+    h2 {
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+
+    /* Table Styling */
+    table {
+        width: 100%;
+        margin: 20px auto;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: center;
+    }
+
+    th {
+        background-color: #004d4d;
+        color: #fff;
+        font-weight: bold;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    /* Key Achievements and Vision Section */
+    .section {
+        margin: 30px auto;
+        width: 100%;
+    }
+
+    .section ul {
+        list-style-type: disc;
+        margin-left: 30px;
+    }
+
+    /* Footer Fix */
+    footer {
+        margin-top: auto;
+        text-align: center;
+        font-size: 12px;
+        padding: 10px 0;
+        background-color: #004d4d;
+        color: #fff;
+    }
+</style>
+
+<div class="main-container">
+    <div class="content">
+        <h1>Outreach of Mountain Forum Himalayas</h1>
+        <p>
+            Mountain Forum Himalayas (MFH) is a pioneering organization working to enhance the quality of life and sustainability in the remote 
+            and fragile Himalayan regions of Himachal Pradesh and Uttarakhand. With a focus on disaster risk reduction, climate resilience, 
+            and sustainable livelihoods, MFH empowers local communities to thrive amidst environmental and socio-economic challenges.
+        </p>
+
+        <h2>Our Mission</h2>
+        <p>
+            MFH is committed to fostering sustainable mountain development by addressing critical issues such as climate change, ecological 
+            degradation, and socio-economic vulnerabilities. By promoting participatory development and leveraging local knowledge, MFH creates 
+            impactful solutions tailored to the unique needs of Himalayan communities.
+        </p>
+
+        <h2>Our Approach</h2>
+        <p><strong>Regional Focus</strong></p>
+        <p>
+            Himachal Pradesh: MFH operates extensively in tribal districts like Lahaul-Spiti, Kinnaur, Pangi, and Bharmour, addressing climate change 
+            impacts, disaster preparedness, and sustainable agriculture.
+            <br>
+            Uttarakhand: In the disaster-prone districts of Kumaon and Garhwal, MFH works on climate adaptation, biodiversity conservation, and 
+            resilient livelihoods.
+        </p>
+
+        <!-- Table -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Sl. No.</th>
+                    <th>State</th>
+                    <th>District</th>
+                    <th>Block</th>
+                    <th>No. of Panchayats</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>1</td><td>Himachal Pradesh</td><td>Kangra</td><td>Dehra</td><td>30</td></tr>
+                <tr><td>2</td><td>Himachal Pradesh</td><td>Kangra</td><td>Khundiyan</td><td>18</td></tr>
+                <tr><td>3</td><td>Himachal Pradesh</td><td>Chamba</td><td>Salooni</td><td>15</td></tr>
+                <tr><td>4</td><td>Himachal Pradesh</td><td>Chamba</td><td>Mehla</td><td>10</td></tr>
+                <tr><td>5</td><td>Himachal Pradesh</td><td>Lahaul-Spiti</td><td>Keylong</td><td>8</td></tr>
+                <tr><td>6</td><td>Himachal Pradesh</td><td>Lahaul-Spiti</td><td>Udaipur</td><td>6</td></tr>
+                <tr><td>7</td><td>Himachal Pradesh</td><td>Kinnaur</td><td>Kalpa</td><td>12</td></tr>
+                <tr><td>8</td><td>Himachal Pradesh</td><td>Kinnaur</td><td>Pooh</td><td>9</td></tr>
+                <tr><td>9</td><td>Himachal Pradesh</td><td>Pangi</td><td>Tribal</td><td>5</td></tr>
+                <tr><td>10</td><td>Uttarakhand</td><td>Chamoli</td><td>Gairsain</td><td>12</td></tr>
+                <tr><td>11</td><td>Uttarakhand</td><td>Chamoli</td><td>Karnaprayag</td><td>8</td></tr>
+                <tr><td>12</td><td>Uttarakhand</td><td>Almora</td><td>Hawalbagh</td><td>20</td></tr>
+                <tr><td>13</td><td>Uttarakhand</td><td>Almora</td><td>Bhikiyasain</td><td>15</td></tr>
+                <tr><td>14</td><td>Uttarakhand</td><td>Pithoragarh</td><td>Didihat</td><td>10</td></tr>
+                <tr><td>15</td><td>Uttarakhand</td><td>Pithoragarh</td><td>Dharchula</td><td>5</td></tr>
+                <tr><td>16</td><td>Uttarakhand</td><td>Bageshwar</td><td>Kapkote</td><td>18</td></tr>
+                <tr><td>17</td><td>Uttarakhand</td><td>Bageshwar</td><td>Garur</td><td>12</td></tr>
+                <tr><td>18</td><td>Uttarakhand</td><td>Tehri Garhwal</td><td>Pratapnagar</td><td>15</td></tr>
+                <tr><td>19</td><td>Uttarakhand</td><td>Tehri Garhwal</td><td>Chamba</td><td>10</td></tr>
+                <tr><td>20</td><td>Uttarakhand</td><td>Uttarkashi</td><td>Bhatwari</td><td>8</td></tr>
+                <tr><td>21</td><td>Uttarakhand</td><td>Uttarkashi</td><td>Puraula</td><td>5</td></tr>
+                <tr><td>22</td><td>Uttarakhand</td><td>Haridwar</td><td>Roorkee</td><td>12</td></tr>
+                <tr><td>23</td><td>Uttarakhand</td><td>Haridwar</td><td>Bhagwanpur</td><td>10</td></tr>
+                <tr><td>24</td><td>Uttarakhand</td><td>Dehradun</td><td>Vikasnagar</td><td>20</td></tr>
+                <tr><td>25</td><td>Uttarakhand</td><td>Dehradun</td><td>Chakrata</td><td>15</td></tr>
+                <tr><td>26</td><td>Uttarakhand</td><td>Nainital</td><td>Haldwani</td><td>18</td></tr>
+                <tr><td>27</td><td>Uttarakhand</td><td>Nainital</td><td>Ramnagar</td><td>10</td></tr>
+                <tr><td>28</td><td>Uttarakhand</td><td>Udham Singh Nagar</td><td>Kashipur</td><td>12</td></tr>
+                <tr><td>29</td><td>Uttarakhand</td><td>Udham Singh Nagar</td><td>Jaspur</td><td>8</td></tr>
+            </tbody>
+        </table>
+
+        <div class="section">
+            <h2>Key Achievements</h2>
+            <ul>
+                <li>Policy advocacy, including contributions to disaster management policies in Himachal Pradesh and Uttarakhand.</li>
+                <li>Establishing Disaster Management Resource Centers to enhance preparedness and response.</li>
+                <li>Promoting sustainable livelihoods and conservation practices with a focus on climate-resilient approaches.</li>
+                <li>Strengthening over 500 Panchayats across Himachal Pradesh and Uttarakhand to ensure inclusive growth.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Vision for the Future</h2>
+            <p>
+                MFH envisions expanding its efforts across the entire Hindu Kush region, addressing shared challenges of climate change, disaster risk, 
+                and sustainable development. With a foundation of research, knowledge-sharing, and community empowerment, MFH strives to build a resilient 
+                and sustainable future for mountain communities.
+            </p>
+        </div>
+    </div>
+
+    <%- include("footer.ejs") %>
+</div>

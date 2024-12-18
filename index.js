@@ -67,6 +67,9 @@ app.get('/media-gallery', (req, res) => {
 app.get('/drvt', (req, res) => {
     res.render("drvt.ejs");
 });
+app.get('/outreach', (req, res) => {
+    res.render("outreach.ejs");
+});
 app.get('/contact', (req, res) => {
     res.render("contact.ejs",{
         alert:false
