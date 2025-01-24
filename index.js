@@ -140,6 +140,9 @@ app.get('/action', (req, res) => {
 app.get('/action/mrm', (req, res) => {
     res.render("mrm.ejs");
 });
+app.get('/action/gupt', (req, res) => {
+    res.render("gupt.ejs");
+});
 app.get('/action/child', (req, res) => {
     res.render("child.ejs");
 });
