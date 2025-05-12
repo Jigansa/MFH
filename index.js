@@ -1,8 +1,8 @@
-
 import express from "express";
 import bodyParser from "body-parser";
 import mongoose from "mongoose";
 import env from "dotenv";
+import Razorpay from 'razorpay';
 const app = express();
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
@@ -11,14 +11,20 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 const port = 3000;
 env.config();
-console.log(process.env.MONGODB_PASSWORD);
+
+// Check if Razorpay credentials are available
+if (!process.env.RAZORPAY_KEY_ID || !process.env.RAZORPAY_KEY_SECRET) {
+    console.error('Razorpay credentials are missing. Please check your .env file.');
+    process.exit(1);
+}  
+
 mongoose.connect('mongodb+srv://jigansasatapathy:'+process.env.MONGODB_PASSWORD+'@mongodatabasereview.b1g5w.mongodb.net/ReviewDataBase');
 const db=mongoose.connection;
 db.once('open',()=>{ 
     console.log("mongoDB connected");
 });
 const UserSchema =new mongoose.Schema({
-    name:String,
+    name:String, 
     email:String,
     message:String
 });
@@ -50,6 +56,7 @@ const Expert=mongoose.model("experts",ExpertDbSchema);
 // Middleware
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(__dirname+"/public"));
+app.use(express.json());
   
 // Set view engine to EJS
 app.set('view engine', 'ejs');
@@ -124,7 +131,7 @@ app.get('/focus2/capacity', (req, res) => {
 });
 app.get('/focus2/emer', (req, res) => {
     res.render("emer.ejs");
-});
+}); 
 app.get('/focus2/long-term', (req, res) => {
     res.render("long-term.ejs");
 });
@@ -283,7 +290,9 @@ app.get('/focus1/enhance_community', (req, res) => {
     res.render("enhance_community.ejs");
 });
 app.get('/donate', (req, res) => {
-    res.render("donate.ejs");
+    res.render("donate.ejs", {
+        RAZORPAY_KEY_ID: process.env.RAZORPAY_KEY_ID
+    });
 });
 app.get('/focus1/farmers', (req, res) => {
     res.render("farmers.ejs");
@@ -376,6 +385,60 @@ app.post('/submit-feedback',async (req,res)=>{
         alert:true
     });
 });
+
+// Initialize Razorpay
+const razorpay = new Razorpay({
+    key_id: process.env.RAZORPAY_KEY_ID,
+    key_secret: process.env.RAZORPAY_KEY_SECRET
+});
+
+app.post('/create-order', async (req, res) => {
+    try {
+        console.log('Received body:', req.body); // Debug
+        const { amount } = req.body;
+        if (!amount || isNaN(amount) || amount <= 0) {
+            return res.status(400).json({ success: false, error: 'Invalid amount' });
+        }
+        const options = {
+            amount: parseInt(amount) * 100, // amount in paise
+            currency: "INR",
+            receipt: `receipt_${Date.now()}`,
+        };
+        const order = await razorpay.orders.create(options);
+        res.json({ success: true, order });
+    } catch (error) {
+        console.error('Error creating order:', error);
+        res.status(500).json({ success: false, error: error.message });
+    }
+});
+
+app.post('/payment-success', async (req, res) => {
+    try {
+        const { razorpay_payment_id, razorpay_order_id, razorpay_signature, amount, campaignId } = req.body;
+        
+        // Here you can add code to store the payment details in your database
+        // For example:
+        // await Payment.create({
+        //     paymentId: razorpay_payment_id,
+        //     orderId: razorpay_order_id,
+        //     signature: razorpay_signature,
+        //     amount: amount,
+        //     campaignId: campaignId
+        // });
+
+        res.json({
+            success: true,
+            message: 'Payment successful'
+        });
+    } catch (error) {
+        console.error('Error processing payment:', error);
+        res.status(500).json({
+            success: false,
+            error: error.message
+        });
+    }
+});
+
 // Start server
 app.listen(port, () => {
     console.log(`Listening on port ${port}`);
