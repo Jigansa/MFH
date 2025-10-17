@@ -70,8 +70,11 @@ app.get('/punjab', (req, res) => {
 app.get('/uttarkashi', (req, res) => {
     res.render("p2uttarkashi.ejs");
 });
-app.get('/pauri-garhwal', (req, res) => {
+app.get('/garhwal', (req, res) => {
     res.render("p3garhwal.ejs");
+});
+app.get('/dharali', (req, res) => {
+    res.render("dharali.ejs");
 });
 app.get('/kupra-village', (req, res) => {
     res.render("p4kupra.ejs");

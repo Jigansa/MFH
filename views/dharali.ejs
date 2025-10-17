@@ -6,22 +6,21 @@
         color: #333;
     }
 
-    .pauri-hero {
-        background: linear-gradient(rgba(47, 69, 7, 0.7), rgba(47, 69, 7, 0.7)), url('https://placehold.co/1500x500/8B9A7A/8B9A7A') no-repeat center center/cover;
+    .dharali-hero {
+        background: linear-gradient(rgba(47, 69, 7, 0.7), rgba(47, 69, 7, 0.7)), url('https://placehold.co/1500x500/7A8B9A/7A8B9A') no-repeat center center/cover;
         color: white;
         text-align: center;
         padding: 80px 20px;
     }
 
-    .pauri-hero h1 {
+    .dharali-hero h1 {
         font-size: 3.5em;
         margin-bottom: 20px;
         font-weight: bold;
         text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
-        text-transform: uppercase;
     }
 
-    .pauri-container {
+    .dharali-container {
         max-width: 1200px;
         margin: 40px auto;
         padding: 40px;
@@ -30,74 +29,74 @@
         box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     }
 
-    .intro-section p {
+    .disaster-description {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .disaster-description h2 {
+        color: #d32f2f; /* A color to signify urgency/disaster */
+        font-size: 2em;
+        margin-bottom: 15px;
+    }
+
+    .disaster-description p {
         font-size: 1.2em;
         line-height: 1.8;
-        margin-bottom: 30px;
-        text-align: center;
         color: #555;
     }
 
-    .support-highlight {
+    .response-section {
         background-color: #e8f5e9;
         border-left: 5px solid #2f4507;
-        padding: 25px;
+        padding: 30px;
         margin: 40px 0;
         border-radius: 8px;
-    }
-    
-    .support-highlight p {
-        font-size: 1.3em;
-        color: #2f4507;
-        margin: 0;
-        font-weight: 500;
         text-align: center;
     }
+
+    .response-section p {
+        font-size: 1.3em;
+        color: #2f4507;
+        margin: 0 0 25px 0;
+        font-weight: 500;
+    }
     
-    .support-highlight span {
+    .response-section span {
         font-weight: bold;
     }
 
-    .kits-list {
-        background-color: #f5f5f5;
-        border-radius: 8px;
-        padding: 30px;
-        margin-top: 20px;
-    }
-
-    .kits-list h3 {
-        color: #2f4507;
-        margin-bottom: 20px;
-        font-size: 1.8em;
-        text-align: center;
-    }
-
-    .kits-list ul {
+    .aid-list {
         list-style: none;
         padding: 0;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 20px;
-        justify-content: center;
     }
 
-    .kits-list li {
+    .aid-list li {
         background-color: #ffffff;
-        padding: 20px;
+        padding: 15px;
         border-radius: 8px;
         box-shadow: 0 2px 5px rgba(0,0,0,0.08);
         display: flex;
         align-items: center;
-        justify-content: center;
-        font-size: 1.2em;
+        font-size: 1.1em;
         font-weight: 500;
     }
     
-    .kits-list li::before {
-        content: '📦';
-        margin-right: 15px;
+    .aid-list li::before {
         font-size: 1.5em;
+        margin-right: 15px;
     }
+    
+    /* Unique icons for each item */
+    .aid-list .shelter::before { content: '⛺'; }
+    .aid-list .wash::before { content: '🧼'; }
+    .aid-list .utensils::before { content: '🍴'; }
+    .aid-list .blankets::before { content: '🧣'; }
+    .aid-list .needs::before { content: '🛍️'; }
+    .aid-list .lights::before { content: '💡'; }
 
     .gallery-section h3 {
         color: #2f4507;
@@ -146,46 +145,46 @@
     }
 </style>
 
-<div class="pauri-hero">
-    <h1>FLOOD RELIEF IN ACTION</h1>
+<div class="dharali-hero">
+    <h1>Mountain Forum Himalayas Makes Its Way to Dharali, Uttarkashi</h1>
 </div>
 
-<div class="pauri-container">
-    <div class="intro-section">
-        <p>Devastating floods hit Sainji and Buransi villages in Pauri Garhwal, leaving families without homes, livelihoods, or hope.</p>
+<div class="dharali-container">
+    <div class="disaster-description">
+        <h2>A Village Swept Away by Catastrophe</h2>
+        <p>Homes, markets, even the sacred Kalp Kedar temple — all swept away in the fury of water and debris. Families are left with nothing but loss and despair.</p>
     </div>
 
-    <div class="support-highlight">
-        <p><span>Mountain Forum Himalayas</span>, in partnership with Amazon/Donatekart, stepped in to provide critical support to <span>200 affected families.</span></p>
-    </div>
-
-    <div class="kits-list">
-        <h3>Helping families rebuild, recover, and regain their strength with:</h3>
-        <ul>
-            <li>Shelter kits</li>
-            <li>Hygiene kits</li>
-            <li>Ready-to-eat kits</li>
+    <div class="response-section">
+        <p>In this darkest hour, <span>Mountain Forum Himalayas</span> stands with Dharali, bringing essential aid to the affected families:</p>
+        <ul class="aid-list">
+            <li class="shelter">Shelter kits</li>
+            <li class="wash">Wash &amp; Hygiene kits</li>
+            <li class="utensils">Utensils</li>
+            <li class="blankets">Blankets</li>
+            <li class="needs">Daily Needs</li>
+            <li class="lights">Solar Lights</li>
         </ul>
     </div>
     
     <div class="gallery-section">
-        <h3>Glimpses from Pauri Garhwal</h3>
+        <h3>Glimpses of Hope from Dharali</h3>
         <div class="gallery-grid">
             <div class="gallery-item">
-                <img src="pauri1.jpg" alt="Relief Distribution in Pauri Garhwal 1">
+                <img src="dharali1.jpg" alt="Relief Efforts in Dharali 1">
             </div>
             <div class="gallery-item">
-                <img src="pauri2.jpg" alt="Relief Distribution in Pauri Garhwal 2">
+                <img src="dharali2.jpg" alt="Relief Efforts in Dharali 2">
             </div>
             <div class="gallery-item">
-                <img src="pauri3.jpg" alt="Relief Distribution in Pauri Garhwal 3">
+                <img src="dharali3.jpg" alt="Relief Efforts in Dharali 3">
             </div>
         </div>
     </div>
     
     <div class="call-to-action">
-        <p>Let's come together to support these communities in need!</p>
-        <p class="hashtags">#FloodRelief #CommunitySupport #MountainForumHimalayas</p>
+        <p>Together, let’s rebuild hope for Uttarkashi.</p>
+        <p class="hashtags">#SaveDharali #UttarkashiFlood #MountainForumHimalayas #DisasterRelief</p>
     </div>
 
 </div>
