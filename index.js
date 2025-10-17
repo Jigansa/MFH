@@ -3,7 +3,7 @@ import express from "express";
 import bodyParser from "body-parser";
 import mongoose from "mongoose";
 import env from "dotenv";
-const app = express();
+const app = express(); 
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 import path from 'path';
@@ -63,6 +63,18 @@ app.get('/annual', (req, res) => {
 });
 app.get('/media-gallery', (req, res) => {
     res.render("media-gallery.ejs");
+});
+app.get('/punjab', (req, res) => {
+    res.render("p1punjab.ejs");
+});
+app.get('/uttarkashi', (req, res) => {
+    res.render("p2uttarkashi.ejs");
+});
+app.get('/pauri-garhwal', (req, res) => {
+    res.render("p3garhwal.ejs");
+});
+app.get('/kupra-village', (req, res) => {
+    res.render("p4kupra.ejs");
 });
 app.get('/drvt', (req, res) => {
     res.render("drvt.ejs");

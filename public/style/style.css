@@ -98,7 +98,8 @@ body {
         flex-direction: column;
     }
 
-    .contact-form, .contact-info {
+    .contact-form,
+    .contact-info {
         width: 100%;
     }
 
@@ -146,7 +147,8 @@ body {
 
     .main-content {
         display: block;
-        overflow-x: auto; /* Allows scrolling left-right */
+        overflow-x: auto;
+        /* Allows scrolling left-right */
     }
 
     .credit-bar {
@@ -199,24 +201,27 @@ body {
     display: inline-block;
 }
 
-.dropdown-content, .dropdown-content-sub {
+.dropdown-content,
+.dropdown-content-sub {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
     min-width: 160px;
-    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1;
     font-size: 0.9rem;
 }
 
-.dropdown-content a, .dropdown-content-sub a {
+.dropdown-content a,
+.dropdown-content-sub a {
     color: black;
     padding: 8px 12px;
     text-decoration: none;
     display: block;
 }
 
-.dropdown-content a:hover, .dropdown-content-sub a:hover {
+.dropdown-content a:hover,
+.dropdown-content-sub a:hover {
     background-color: #f1f1f1;
 }
 
@@ -241,6 +246,97 @@ body {
     max-height: 80px;
     width: auto;
 }
+
+/* Styles for New Humanitarian Carousel */
+.humanitarian-carousel-container {
+    padding: 20px 0;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+.carousel-title {
+    font-size: 2.5rem;
+    color: #2f4507;
+    margin-bottom: 20px;
+}
+
+.humanitarian-slider {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+}
+
+.humanitarian-slides {
+    display: flex;
+    width: 100%;
+}
+
+.humanitarian-slide {
+    width: 100%;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.humanitarian-slide a {
+    display: block;
+    text-decoration: none;
+}
+
+.humanitarian-slide img {
+    width: 100%;
+    height: 60vh;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+}
+
+.humanitarian-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    text-align: center;
+    padding: 15px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.humanitarian-overlay h3 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+.humanitarian-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 15px;
+    z-index: 10;
+    font-size: 20px;
+    line-height: 1;
+}
+
+.humanitarian-arrow.humanitarian-left {
+    left: 25px;
+}
+
+.humanitarian-arrow.humanitarian-right {
+    right: 25px;
+}
+
+.humanitarian-arrow:hover {
+    background-color: white;
+}
+
 
 /* Slider */
 .slider {
@@ -352,7 +448,8 @@ body {
     color: #333;
 }
 
-.contact-form input, .contact-form textarea {
+.contact-form input,
+.contact-form textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
@@ -384,27 +481,39 @@ body {
 .contact-info p {
     color: #555;
 }
+
 .arrow {
     position: absolute;
-    top: 50%; /* Center vertically */
-    transform: translateY(-50%); /* Center the arrow */
-    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
-    border: none; /* No border */
-    border-radius: 50%; /* Round shape */
-    cursor: pointer; /* Change cursor to pointer */
-    padding: 10px; /* Add some padding */
-    z-index: 10; /* Ensure arrows are on top */
+    top: 50%;
+    /* Center vertically */
+    transform: translateY(-50%);
+    /* Center the arrow */
+    background-color: rgba(255, 255, 255, 0.7);
+    /* Semi-transparent background */
+    border: none;
+    /* No border */
+    border-radius: 50%;
+    /* Round shape */
+    cursor: pointer;
+    /* Change cursor to pointer */
+    padding: 10px;
+    /* Add some padding */
+    z-index: 10;
+    /* Ensure arrows are on top */
 }
 
 .arrow.left {
-    left: 20px; /* Position left arrow */
+    left: 20px;
+    /* Position left arrow */
 }
 
 .arrow.right {
-    right: 20px; /* Position right arrow */
+    right: 20px;
+    /* Position right arrow */
 }
 
 /* Optional: Add hover effect */
 .arrow:hover {
-    background-color: rgba(255, 255, 255, 1); /* Fully opaque on hover */
+    background-color: rgba(255, 255, 255, 1);
+    /* Fully opaque on hover */
 }

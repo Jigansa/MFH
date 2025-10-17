@@ -1,0 +1,221 @@
+<%- include("background.ejs") %>
+
+<style>
+    body {
+        background-color: #f9f9f9;
+        color: #333;
+    }
+
+    .punjab-hero {
+        background: linear-gradient(rgba(47, 69, 7, 0.6), rgba(47, 69, 7, 0.6)), url('https://placehold.co/1500x500/A2AEBB/A2AEBB') no-repeat center center/cover;
+        color: white;
+        text-align: center;
+        padding: 80px 20px;
+    }
+
+    .punjab-hero h1 {
+        font-size: 3.5em;
+        margin-bottom: 20px;
+        font-weight: bold;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+
+    .punjab-container {
+        max-width: 1200px;
+        margin: 40px auto;
+        padding: 20px;
+        background-color: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    }
+    
+    .summary-section {
+        background-color: #e8f5e9;
+        border-left: 5px solid #2f4507;
+        padding: 20px;
+        margin-bottom: 40px;
+        text-align: center;
+        border-radius: 8px;
+    }
+
+    .summary-section h2 {
+        color: #2f4507;
+        font-size: 1.8em;
+        margin: 0;
+    }
+
+    .location-section {
+        margin-bottom: 50px;
+        padding-bottom: 30px;
+        border-bottom: 2px solid #e0e0e0;
+    }
+    
+    .location-section:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+    }
+
+    .location-section h2 {
+        color: #2f4507;
+        font-size: 2.5em;
+        margin-bottom: 20px;
+        border-left: 5px solid #2f4507;
+        padding-left: 15px;
+    }
+    
+    .location-section h3 {
+        color: #2f4507;
+        font-size: 1.8em;
+        margin-top: 40px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .location-section p {
+        font-size: 1.1em;
+        line-height: 1.7;
+        margin-bottom: 20px;
+        color: #555;
+    }
+
+    .materials-list {
+        background-color: #f5f5f5;
+        border-radius: 8px;
+        padding: 25px;
+        margin-top: 20px;
+    }
+
+    .materials-list h3 {
+        color: #2f4507;
+        margin-bottom: 15px;
+        font-size: 1.5em;
+        text-align: left;
+    }
+
+    .materials-list ul {
+        list-style: none;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 15px;
+    }
+
+    .materials-list li {
+        background-color: #ffffff;
+        padding: 12px;
+        border-radius: 6px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        display: flex;
+        align-items: center;
+    }
+    
+    .materials-list li::before {
+        content: '✓';
+        color: #2f4507;
+        font-weight: bold;
+        margin-right: 10px;
+        font-size: 1.2em;
+    }
+
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+    }
+
+    .gallery-item img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery-item img:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+</style>
+
+<div class="punjab-hero">
+    <h1>Mountain Forum Himalaya's Response in Punjab</h1>
+</div>
+
+<div class="punjab-container">
+
+    <div class="summary-section">
+        <h2>MFH has reached out to 1300 families in Punjab</h2>
+    </div>
+
+    <div class="location-section">
+        <h2>Support to Farmer Families in Tarantaran</h2>
+        <p>
+            Mountain Forum Himalaya has reached out to support farmer families affected by recent floods in the Tarantaran district of Punjab. The relief initiative focuses on helping them rebuild their livelihoods and homes. This effort reflects our continued commitment to stand with the farming community during difficult times and help restore hope, dignity, and livelihood security.
+        </p>
+        <div class="materials-list">
+            <h3>Essential Relief Materials Distributed:</h3>
+            <ul>
+                <li>Agricultural Tools (5-6 types)</li>
+                <li>Agricultural Seeds</li>
+                <li>Handloom Daris</li>
+                <li>Mosquito Nets</li>
+                <li>Utensil Kits</li>
+                <li>Folding Beds</li>
+            </ul>
+        </div>
+        <h3>Glimpses from Tarantaran</h3>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="tan1.jpg" alt="Relief Distribution in Tarantaran 1">
+            </div>
+            <div class="gallery-item">
+                <img src="tan2.jpg" alt="Relief Distribution in Tarantaran 2">
+            </div>
+            <div class="gallery-item">
+                <img src="tan3.jpg" alt="Relief Distribution in Tarantaran 3">
+            </div>
+        </div>
+    </div>
+
+    <div class="location-section">
+        <h2>Aid for Flood Survivors in Gurdaspur</h2>
+        <p>
+            MFH also reached out to the flood survivors of Gurdaspur, Punjab. In this initiative, 200 families received essential relief materials to help them cope with the aftermath of the floods.
+        </p>
+         <h3>Glimpses from Gurdaspur</h3>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="gurd1.jpg" alt="Community Interaction in Gurdaspur">
+            </div>
+            <div class="gallery-item">
+                <img src="gurd2.jpg" alt="Community Interaction in Gurdaspur 2">
+            </div>
+            <div class="gallery-item">
+                <img src="gurd3.jpg" alt="Community Interaction in Gurdaspur 3">
+            </div>
+        </div>
+    </div>
+    
+    <div class="location-section">
+        <h2>Relief Efforts in Amritsar</h2>
+        <p>
+            In Amritsar, our teams worked tirelessly to provide immediate assistance to families displaced by the floods, ensuring access to clean water, food supplies, and temporary shelter.
+        </p>
+         <h3>Glimpses from Amritsar</h3>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="amrit1.jpg" alt="Family Receiving Aid in Amritsar">
+            </div>
+            <div class="gallery-item">
+                <img src="amrit2.jpg" alt="Family Receiving Aid in Amritsar 2">
+            </div>
+            <div class="gallery-item">
+                <img src="amrit3.jpg" alt="Family Receiving Aid in Amritsar 3">
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<%- include("footer.ejs") %>
+
