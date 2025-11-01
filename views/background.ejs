@@ -4,8 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MFH website</title>
-    <link rel="stylesheet" href="/style/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- 
+      NEW CACHE-BUSTING LINK: I've changed this to v=1.3
+      This will 100% force your browser to download the new CSS file.
+    -->
+    <link rel="stylesheet" href="/style/style.css?v=1.6">    
+    <!-- This Font Awesome link is required for the menu icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" xintegrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <header>
@@ -15,12 +20,15 @@
             </a>
 
             <!-- Hamburger Menu Icon for Mobile -->
-            <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+            <div class="hamburger-icon" onclick="toggleMobileMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
 
+            <!-- Desktop Navigation -->
             <div class="panel-ops" id="navbar">
                 <a class="border" href="/">HOME</a>
                 <div class="dropdown">
-                    <a class="border">ABOUT US</a>
+                    <a class="border">ABOUT US <i class="fa-solid fa-chevron-down"></i></a>
                     <div class="dropdown-content">
                         <a href="/overview">Overview</a>
                         <a href="/vision">Vision and Mission</a>
@@ -30,7 +38,7 @@
                     </div>
                 </div>
                 <div class="dropdown">
-                    <a class="border">FOCUS AREAS</a>
+                    <a class="border">FOCUS AREAS <i class="fa-solid fa-chevron-down"></i></a>
                     <div class="dropdown-content">
                         <a href="/focus1">Sustainable and Resilient Himalayan Livelihoods</a>
                         <a href="/focus2">Disaster Risk Reduction, Emergency Relief, Recovery, and Rehabilitation</a>
@@ -43,7 +51,7 @@
                     </div>
                 </div>
                 <div class="dropdown">
-                    <a class="border" href="#">OUR NETWORK</a>
+                    <a class="border" href="#">OUR NETWORK <i class="fa-solid fa-chevron-down"></i></a>
                     <div class="dropdown-content">
                         <a href="/mc">Mountain Collective(MC)</a>
                         <a href="/mrn">Mountain Relief Network(MRN)</a>
@@ -53,7 +61,7 @@
                 </div>
         
                 <div class="dropdown">
-                    <a class="border" href="#">ACCOUNTABILITY</a>
+                    <a class="border" href="#">ACCOUNTABILITY <i class="fa-solid fa-chevron-down"></i></a>
                     <div class="dropdown-content">
                         <a href="/annual">Annual Reports</a>
                         <!--<a href="volunteer.html">Financial Reports</a>
@@ -73,7 +81,7 @@
                 </div>
                 
                 <div class="dropdown">
-                    <a class="border" href="#">GET INVOLVED</a>
+                    <a class="border" href="#">GET INVOLVED <i class="fa-solid fa-chevron-down"></i></a>
                     <div class="dropdown-content">
                         <a href="/donate">DONATE NOW</a>
                         <a href="/opportunities">Opportunities</a>
@@ -90,26 +98,79 @@
         </div>
     </header>
 
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav-overlay" id="mobileNavOverlay">
+        <div class="mobile-nav-header">
+            <h3>Menu</h3>
+            <div class="mobile-nav-close" onclick="toggleMobileMenu()">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+        </div>
+        <div class="mobile-nav-links">
+            <a href="/" class="mobile-nav-home">HOME</a>
+            
+            <div class="mobile-nav-group">
+                <h3>ABOUT US</h3>
+                <a href="/overview">Overview</a>
+                <a href="/vision">Vision and Mission</a>
+                <a href="/board-members">Board Members and Profile</a>
+                <a href="/principles">Principles of engagement</a>
+                <a href="/action">MFH in action</a>
+            </div>
+            
+            <div class="mobile-nav-group">
+                <h3>FOCUS AREAS</h3>
+                <a href="/focus1">Sustainable and Resilient Himalayan Livelihoods</a>
+                <a href="/focus2">Disaster Risk Reduction, Emergency Relief, Recovery, and Rehabilitation</a>
+                <a href="/focus3">Community Skilling, Resilient Technology, and Enterprise Building</a>
+                <a href="/focus4">Strengthening Local Governance and Community Engagement</a>
+                <a href="/focus5">Climate change/ climate justice and sustainable environment</a>
+                <a href="/focus6">Research and documentation/Learning and knowledge management</a>
+                <a href="/focus7">Conflict Transformation and Peacebuilding Efforts</a>
+                <a href="/focus8">Strengthening Civil Society and Community Leadership</a>
+            </div>
+
+            <div class="mobile-nav-group">
+                <h3>OUR NETWORK</h3>
+                <a href="/mc">Mountain Collective(MC)</a>
+                <a href="/mrn">Mountain Relief Network(MRN)</a>
+                <a href="/drvt">Disaster Response Volunteer Team (DRVT)</a>
+                <a href="/others">Others</a>
+            </div>
+
+            <div class="mobile-nav-group">
+                <h3>ACCOUNTABILITY</h3>
+                <a href="/annual">Annual Reports</a>
+            </div>
+
+            <div class="mobile-nav-group">
+                <h3>OUTREACH</h3>
+                <a href="/outreach">Outreach</a>
+            </div>
+
+            <div class="mobile-nav-group">
+                <h3>GET INVOLVED</h3>
+                <a href="/donate">DONATE NOW</a>
+                <a href="/opportunities">Opportunities</a>
+                <a href="/volunteer">Volunteer with Us</a>
+                <a href="/become_member">Become a Member</a>
+                <a href="/partnership">Collaborate</a>
+            </div>
+
+            <div class="mobile-nav-group">
+                <h3>CONTACT US</h3>
+                <a href="/contact">Contact Us</a>
+            </div>
+        </div>
+    </div>
+
     <!-- Script for Mobile Menu Toggle -->
     <script>
-        function toggleMenu() {
-            const navbar = document.getElementById('navbar');
-            navbar.classList.toggle('active');
+        function toggleMobileMenu() {
+            const overlay = document.getElementById('mobileNavOverlay');
+            overlay.classList.toggle('active');
         }
-
-        document.querySelectorAll('.dropdown > a').forEach(item => {
-            item.addEventListener('click', event => {
-                const dropdownContent = item.nextElementSibling;
-                dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
-
-                // Close other dropdowns
-                document.querySelectorAll('.dropdown-content').forEach(content => {
-                    if (content !== dropdownContent) {
-                        content.style.display = 'none';
-                    }
-                });
-            });
-        });
     </script>
 </body>
 </html>
+

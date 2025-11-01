@@ -9,6 +9,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f7f8f9; /* Light gray background */
 }
 
 .credits {
@@ -21,65 +22,135 @@ body {
 }
 
 .panel {
+    height: 90px;
+    background-color: #2f4507;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; /* Ensures logo is left, items are right */
+    padding: 0 20px; /* Added padding */
+}
+
+/* Hamburger Icon (Mobile Only) */
+.hamburger-icon {
+    display: none; /* Hidden by default on desktop */
+    font-size: 1.8rem;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
 }
 
 .hamburger {
-    display: none;
-    cursor: pointer;
-    font-size: 2rem;
-    color: white;
+    display: none; /* Removed old hamburger */
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .hamburger {
-        display: block;
-    }
+/* --- Mobile Navigation Overlay Styles --- */
+.mobile-nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #2f4507;
+    color: white;
+    z-index: 2000;
+    padding: 20px;
+    overflow-y: auto;
+    transform: translateX(100%); /* Start off-screen */
+    transition: transform 0.3s ease-in-out;
+}
 
+.mobile-nav-overlay.active {
+    transform: translateX(0); /* Slide in */
+}
+
+.mobile-nav-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #5a7033;
+    padding-bottom: 15px;
+}
+
+.mobile-nav-header h3 {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.mobile-nav-close {
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.mobile-nav-links {
+    margin-top: 20px;
+}
+
+.mobile-nav-home {
+    display: block;
+    font-size: 1.1rem;
+    color: white;
+    text-decoration: none;
+    padding: 12px 0;
+    font-weight: bold;
+}
+
+.mobile-nav-group {
+    margin-top: 15px;
+    border-top: 1px solid #5a7033;
+    padding-top: 15px;
+}
+
+.mobile-nav-group h3 {
+    font-size: 1.3rem;
+    color: #b5d8b2; /* Lighter green for titles */
+    margin-bottom: 10px;
+}
+
+.mobile-nav-group a {
+    display: block;
+    font-size: 1.1rem;
+    color: white;
+    text-decoration: none;
+    padding: 10px 0;
+    padding-left: 10px; /* Indent links under group */
+}
+
+.mobile-nav-group a:hover {
+    background-color: #5a7033;
+}
+
+
+/* --- Responsive Styles --- */
+
+/* This rule hides the desktop nav and shows the hamburger on ALL screens up to 1024px wide */
+@media (max-width: 1024px) {
+    /* --- Header & Nav --- */
     .panel-ops {
-        display: none;
-        flex-direction: column;
-        width: 100%;
+        display: none !important; /* Hide desktop nav */
     }
 
-    .panel-ops.active {
-        display: flex;
+    .hamburger-icon {
+        display: block !important; /* Show hamburger icon */
+    }
+    
+    .panel-all {
+        padding-left: 0; /* Remove extra padding on mobile */
     }
 
-    .panel {
-        flex-direction: column;
-        align-items: flex-start;
+    /* **********************************
+      * HERE IS THE FIX YOU ASKED FOR  *
+      **********************************
+      This hides the social bar on all tablet and mobile screens
+    */
+    .social-media-icons {
+        display: none !important;
     }
+}
 
-    .panel-ops .border {
-        padding: 10px;
-        width: 100%;
-        text-align: center;
-    }
 
-    .dropdown {
-        width: 100%;
-    }
-
-    .dropdown-content {
-        position: static;
-        display: none;
-        width: 100%;
-    }
-
-    .dropdown:hover .dropdown-content {
-        display: block;
-    }
-
-    .panel-ops a:hover {
-        background-color: #4CAF50;
-        color: white;
-    }
-
-    /* Adjust hero section for mobile */
+/* Mobile-specific adjustments (smaller than tablet) */
+@media (max-width: 768px) {
+    /* --- Page Content --- */
     .hero-section {
         height: 150px;
     }
@@ -89,8 +160,17 @@ body {
         width: 95%;
     }
 
-    .slider img {
-        height: 60vh;
+    /* Unified carousel image height on mobile */
+    .humanitarian-slide img {
+        height: 40vh; /* Adjust height for mobile */
+    }
+
+    .carousel-title {
+        font-size: 2rem;
+    }
+
+    .humanitarian-overlay h3 {
+        font-size: 1.2rem;
     }
 
     /* Make contact section stack vertically */
@@ -102,21 +182,37 @@ body {
     .contact-info {
         width: 100%;
     }
+    
+    /* Impact Section Responsive */
+    .impact-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .impact-card {
+        width: 90%;
+    }
 
-    /* Fix for social media icons */
-    .social-media-icons {
-        top: auto;
-        bottom: 20px;
-        right: 10px;
-        flex-direction: row;
-        justify-content: center;
-        width: 100%;
-        gap: 5px;
+    /* This old rule is no longer needed */
+    /* .social-media-icons {
+        ...
+    } 
+    */
+}
+
+/* Tablet-specific adjustments */
+@media (min-width: 769px) and (max-width: 1024px) {
+    /* Impact Section Responsive */
+    .impact-card {
+        width: 45%;
     }
 }
 
-/* Full Screen Layout */
-@media (min-width: 1024px) {
+/* --- Desktop Styles --- */
+
+/* Styles for screens LARGER than 1024px */
+@media (min-width: 1025px) {
     .navbar {
         display: flex;
         justify-content: space-between;
@@ -137,57 +233,28 @@ body {
     }
 }
 
-/* Smaller Window Screens */
-@media (min-width: 768px) and (max-width: 1024px) {
-    .navbar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
 
-    .main-content {
-        display: block;
-        overflow-x: auto;
-        /* Allows scrolling left-right */
-    }
-
-    .credit-bar {
-        position: relative;
-        bottom: 0;
-    }
-
-    /* Adjust button placement */
-    .social-buttons {
-        display: block;
-        padding: 10px 0;
-    }
-}
-
-/* Original Styles */
-.panel {
-    height: 90px;
-    background-color: #2f4507;
-    display: flex;
-    align-items: center;
-}
-
+/* Original Desktop Styles */
 .panel-all {
     flex: 0 0 auto;
-    padding-left: 20px;
+    padding-left: 0; /* Adjusted */
 }
 
 .panel-ops {
     flex: 1;
-    display: flex;
+    display: flex; /* This is correct for desktop */
     justify-content: flex-end;
     align-items: center;
 }
-
 .panel-ops .border {
     border: 1.5px solid transparent;
     padding: 10px 15px;
     text-decoration: none;
     color: #FFFFFF;
+}
+.panel-ops .border i { /* Style for dropdown icon */
+    font-size: 0.7em;
+    margin-left: 5px;
 }
 
 .panel-ops .border:hover {
@@ -243,21 +310,21 @@ body {
 }
 
 .logo {
-    max-height: 80px;
+    max-height: 70px; /* Slightly smaller for better padding */
     width: auto;
 }
 
-/* Styles for New Humanitarian Carousel */
+/* Styles for Unified Humanitarian Carousel */
 .humanitarian-carousel-container {
-    padding: 20px 0;
-    background-color: #f8f9fa;
+    padding: 40px 0;
+    background-color: #ffffff; /* Set to white to contrast body */
     text-align: center;
 }
 
 .carousel-title {
     font-size: 2.5rem;
     color: #2f4507;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .humanitarian-slider {
@@ -267,6 +334,7 @@ body {
     overflow: hidden;
     position: relative;
     border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
 }
 
 .humanitarian-slides {
@@ -287,10 +355,9 @@ body {
 
 .humanitarian-slide img {
     width: 100%;
-    height: 60vh;
+    height: 70vh; /* Consistent height for all slides */
     object-fit: cover;
     display: block;
-    border-radius: 10px;
 }
 
 .humanitarian-overlay {
@@ -298,17 +365,16 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(0, 0, 0, 0.6);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
     color: white;
     text-align: center;
-    padding: 15px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    padding: 40px 20px 20px 20px;
 }
 
 .humanitarian-overlay h3 {
     margin: 0;
     font-size: 1.8rem;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
 }
 
 .humanitarian-arrow {
@@ -323,6 +389,7 @@ body {
     z-index: 10;
     font-size: 20px;
     line-height: 1;
+    transition: background-color 0.3s ease;
 }
 
 .humanitarian-arrow.humanitarian-left {
@@ -338,59 +405,66 @@ body {
 }
 
 
-/* Slider */
-.slider {
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-    margin-top: 1px;
-}
+/* Old slider styles removed */
+/* .slider, .slides, .slide, .slide img, .overlay, .arrow, etc. are gone */
 
-.slides {
-    display: flex;
-    width: 100%;
-    transition: transform 1s ease-in-out;
-}
 
-.slide {
-    width: 100%;
-    flex-shrink: 0;
-    position: relative;
-}
-
-.slide img {
-    width: 100%;
-    height: 85vh;
-    object-fit: cover;
-    display: block;
-}
-
-.overlay {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    color: white;
-    font-size: 3vw;
+/* New Impact Section Styles */
+.impact-section {
+    padding: 60px 20px;
+    background-color: #f7f8f9; /* Alternating color */
     text-align: center;
-    font-weight: bold;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 10px;
-    border-radius: 5px;
+}
+.impact-section h2 {
+    font-size: 2.5rem;
+    color: #2f4507;
+    margin-bottom: 50px;
+}
+.impact-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.impact-card {
+    background-color: #ffffff; /* Cards are white to contrast section */
+    border-radius: 10px;
+    padding: 30px;
+    width: 280px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-bottom: 4px solid transparent;
+}
+.impact-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    border-bottom-color: #2f4507;
+}
+.impact-card .icon {
+    font-size: 3.5rem;
+    color: #2f4507;
+    margin-bottom: 20px;
+}
+.impact-card h3 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+.impact-card p {
+    font-size: 1.1rem;
+    color: #555;
 }
 
-.overlay a {
-    color: white;
-    text-decoration: none;
-}
 
-/* Social Media Icons */
+/* Social Media Icons (DESKTOP ONLY) */
 .social-media-icons {
     position: fixed;
     top: 35%;
     right: 10px;
     transform: translateY(-50%);
-    display: flex;
+    display: flex; /* This will be overridden by the @media query */
     flex-direction: column;
     gap: 10px;
     background-color: #B5D8B2;
@@ -398,6 +472,7 @@ body {
     align-items: center;
     padding: 10px;
     border-radius: 10px;
+    z-index: 100;
 }
 
 .social-icon {
@@ -482,38 +557,3 @@ body {
     color: #555;
 }
 
-.arrow {
-    position: absolute;
-    top: 50%;
-    /* Center vertically */
-    transform: translateY(-50%);
-    /* Center the arrow */
-    background-color: rgba(255, 255, 255, 0.7);
-    /* Semi-transparent background */
-    border: none;
-    /* No border */
-    border-radius: 50%;
-    /* Round shape */
-    cursor: pointer;
-    /* Change cursor to pointer */
-    padding: 10px;
-    /* Add some padding */
-    z-index: 10;
-    /* Ensure arrows are on top */
-}
-
-.arrow.left {
-    left: 20px;
-    /* Position left arrow */
-}
-
-.arrow.right {
-    right: 20px;
-    /* Position right arrow */
-}
-
-/* Optional: Add hover effect */
-.arrow:hover {
-    background-color: rgba(255, 255, 255, 1);
-    /* Fully opaque on hover */
-}
