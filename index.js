@@ -73,6 +73,9 @@ app.get('/uttarkashi', (req, res) => {
 app.get('/garhwal', (req, res) => {
     res.render("p3garhwal.ejs");
 });
+app.get('/himachal', (req, res) => {
+    res.render("himachal.ejs");
+});
 app.get('/dharali', (req, res) => {
     res.render("dharali.ejs");
 });

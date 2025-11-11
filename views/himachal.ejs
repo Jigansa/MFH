@@ -1,0 +1,202 @@
+<%- include("background.ejs") %>
+
+<style>
+    /* --- CSS Changes Summary ---
+    1. Changed .support-highlight colors to earthy tones to match original Pauri theme.
+    2. Changed .support-highlight p and span to use strong tags (or just rely on the content being bolded).
+    3. Updated related theme colors (kits-list h3, call-to-action .hashtags) to a cohesive deep forest green (#1f3d05).
+    */
+
+    body {
+        background-color: #f9f9f9;
+        color: #333;
+    }
+
+    /* Green/Earth tones for HP Hero */
+    .hp-hero {
+        background: linear-gradient(rgba(47, 69, 7, 0.7), rgba(47, 69, 7, 0.7)), url('https://placehold.co/1500x500/8B9A7A/8B9A7A') no-repeat center center/cover;
+        color: white;
+        text-align: center;
+        padding: 80px 20px;
+    }
+
+    .hp-hero h1 {
+        font-size: 3.5em;
+        margin-bottom: 20px;
+        font-weight: bold;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+        text-transform: uppercase;
+    }
+
+    .hp-container {
+        max-width: 1200px;
+        margin: 40px auto;
+        padding: 40px;
+        background-color: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .intro-section p {
+        font-size: 1.2em;
+        line-height: 1.8;
+        margin-bottom: 30px;
+        text-align: center;
+        color: #555;
+    }
+
+    /* REVISED COLOR SCHEME for highlight box: Earthy Green */
+    .support-highlight {
+        background-color: #e8f5e9; /* Lightest green */
+        border-left: 5px solid #2f4507; /* Deep forest green border */
+        padding: 25px;
+        margin: 40px 0;
+        border-radius: 8px;
+    }
+    
+    .support-highlight p {
+        font-size: 1.3em;
+        color: #2f4507; /* Deep forest green text */
+        margin: 0;
+        font-weight: 500;
+        text-align: center;
+    }
+    
+    .support-highlight span {
+        font-weight: bold;
+    }
+
+    .kits-list {
+        background-color: #f5f5f5;
+        border-radius: 8px;
+        padding: 30px;
+        margin-top: 20px;
+    }
+
+    .kits-list h3 {
+        color: #1f3d05; /* Deep forest green */
+        margin-bottom: 20px;
+        font-size: 1.8em;
+        text-align: center;
+    }
+
+    .kits-list ul {
+        list-style: none;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .kits-list li {
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2em;
+        font-weight: 500;
+    }
+    
+    .kits-list li::before {
+        content: '🩹'; 
+        margin-right: 15px;
+        font-size: 1.5em;
+    }
+
+    .gallery-section h3 {
+        color: #1f3d05; /* Deep forest green */
+        font-size: 2.2em;
+        margin-top: 50px;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+    }
+
+    .gallery-item img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery-item img:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    
+    .call-to-action {
+        text-align: center;
+        margin-top: 50px;
+        padding: 20px;
+        background-color: #fff;
+        border-top: 2px solid #e0e0e0;
+    }
+
+    .call-to-action p {
+        font-size: 1.3em;
+        margin-bottom: 15px;
+        font-weight: 500;
+    }
+
+    .call-to-action .hashtags {
+        color: #2f4507; /* Deep forest green for hashtags */
+        font-weight: bold;
+    }
+</style>
+
+<div class="hp-hero">
+    <h1>FLASHFLOOD RELIEF: KULLU & MANALI</h1>
+</div>
+
+<div class="hp-container">
+    <div class="intro-section">
+        <p>The monsoon season brought a series of devastating cloudbursts across Himachal Pradesh, with Mandi and Kullu districts being severely affected by flashfloods.</p>
+        <p>Mountain Forum Himalayas (MFH) quickly mobilized support for the survivor families in **Manali and Kullu blocks.**</p>
+    </div>
+
+    <div class="support-highlight">
+        <p>This joint relief effort, supported by <span>Amazon and Donatekart</span>, provided critical aid to <span>250 Flashflood survivor families</span> across <span>15 villages</span>.</p>
+    </div>
+
+    <div class="kits-list">
+        <h3>Items Distributed to Help Families Recover:</h3>
+        <ul>
+            <li>Shelter Kits (Tarpaulins, Blankets)</li>
+            <li>Hygiene Kits (Soaps, Sanitary items, Detergents)</li>
+            <li>Dry Ration Packs (Rice, Pulses, Oil, Salt)</li>
+        </ul>
+    </div>
+    
+    <div class="gallery-section">
+        <h3>Distribution Highlights from Himachal Pradesh</h3>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="himachal.jpg" alt="Relief Distribution in Kullu Block">
+            </div>
+            <div class="gallery-item">
+                <img src="hima.jpg" alt="Volunteers and Panchayat members during distribution">
+            </div>
+            <div class="gallery-item">
+                <img src="hima3.jpg" alt="Flashflood survivor receiving kit">
+            </div>
+        </div>
+        <p style="text-align: center; margin-top: 20px; font-style: italic; color: #777;">Distribution was carried out with the help of local volunteers and panchayats to ensure maximum reach in 5 villages of Naggar and 10 villages of Kullu block.</p>
+    </div>
+    
+    <div class="call-to-action">
+        <p>Strong community support and cooperation are vital for recovery. Thank you to all partners!</p>
+        <p class="hashtags">#HimachalFloods #KulluManaliRelief #MFHSupport #AmazonDonatekart</p>
+    </div>
+
+</div>
+
+<%- include("footer.ejs") %>
