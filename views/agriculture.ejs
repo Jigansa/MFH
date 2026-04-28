@@ -1,0 +1,155 @@
+<%- include("background.ejs") %>
+<link rel="stylesheet" href="/style/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<style>
+    .top-image {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        height: 500px;
+    }
+    .top-img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 80%;
+        height: auto;
+        transform: translate(-50%, -50%);
+    }
+    .top-content {
+        max-width: 1200px; /* Adjust max-width as needed */
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #ffffff; /* Example background color */
+        color: #2f4507; /* Example text color */
+    }
+
+    .top-content h1, .top-content h2, .top-content h3 {
+        color: #2f4507;
+    }
+
+    .top-content h1 {
+        margin-bottom: 30px; /* Increase space below h1 */
+    }
+
+    .top-content h2 {
+        margin-top: 30px; /* Increase space above h2 */
+        margin-bottom: 20px; /* Adjust space below h2 if needed */
+    }
+
+    .top-content p, .top ul {
+        margin-bottom: 20px;
+        line-height: 1.6;
+        font-size: 1rem;
+    }
+
+    .top-content ul {
+        list-style-type: disc;
+        padding-left: 20px;
+    }
+
+    /* Box Section */
+    .boxes-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .box {
+        flex: 1 1 calc(33.333% - 20px);
+        margin: 10px;
+        background-color: #f5f5f5;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    .box img {
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .box h3 {
+        color: #2f4507;
+        margin: 15px 0;
+    }
+
+    .read-more-btn {
+        background-color: orange;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        display: inline-block;
+    }
+
+    .read-more-btn:hover {
+        background-color: blue;
+    }
+
+    .read-more-btn:active {
+        background-color: blue;
+    }
+</style>
+
+<!-- Image Section -->
+<div class="top-image">
+    <img src="/xyz.jpg" alt="Wildlife Mitigation" class="top-img">
+</div>
+
+<div class="top-content">
+    <h1 style="text-align: center;">🌿 Protecting Fields, Preserving Livelihoods: Wildlife Mitigation Initiative in Tipali Village</h1>
+    <p>Nestled in the serene hills of Tehri Garhwal, Tipali Village in Narendra Nagar Block, Uttarakhand, is a community deeply rooted in agriculture. For generations, farming and animal husbandry have been the backbone of village life, sustaining families with crops, livestock, and a close connection to the land.</p>
+    <p>Yet in recent years, this age-old livelihood began facing an alarming challenge.</p>
+
+    <h2>🐗 When Wildlife Turns Into a Daily Threat</h2>
+    <p>The fertile fields of Tipali, though rich in potential, lie vulnerable to frequent invasions by wild animals such as wild boars, deer, bears, and rabbits. Entire patches of standing crops were often destroyed overnight, leaving farmers helpless after months of hard work.</p>
+    <p>Combined with erratic weather patterns and changing climatic conditions, these repeated losses pushed many families toward uncertainty. Farming no longer felt secure, and the fear of losing harvests season after season started discouraging people from cultivating their ancestral land.</p>
+    <p>For many households, this was not just a loss of crops — it was a loss of confidence, food security, and hope.</p>
+
+    <h2>🛡️ A Community-Led Solution for Safer Agriculture</h2>
+    <p>Understanding the urgent need to protect farmland from wildlife intrusion, Mountain Forum Himalaya initiated a focused mitigation effort in Tipali Village through the installation of a durable chain-link fencing barrier around the most vulnerable agricultural stretch.</p>
+    <p>After close interaction with local residents and farmers, a practical and long-term solution was identified: securing the land with a strong physical boundary that could effectively deter wild animals without disrupting the natural terrain of the village.</p>
+    <p>A four-foot-high chain-link fence was installed around more than two hectares of primary agricultural land, creating a protective perimeter for the community's most productive fields.</p>
+
+    <h2>🌾 Securing More Than Land — Securing 50 Farming Families</h2>
+    <p>This protected zone directly benefits nearly 50 farming households whose livelihoods depend heavily on seasonal agriculture.</p>
+    <p>The fenced land is used for cultivating:</p>
+    <ul>
+        <li>✨ Paddy</li>
+        <li>✨ Wheat</li>
+        <li>✨ Lentils</li>
+        <li>✨ Onions</li>
+        <li>✨ Chilies</li>
+        <li>✨ Seasonal vegetables</li>
+    </ul>
+    <p>These crops are not only the primary source of food for village families but also contribute to their annual household income.</p>
+    <p>By preventing wildlife from entering these farmlands, the project has significantly reduced crop damage and ensured that months of labor now translate into successful harvests.</p>
+
+    <h2>💚 Restoring Confidence in Farming</h2>
+    <p>One of the most meaningful outcomes of the initiative has been the return of farmer confidence.</p>
+    <p>Where uncertainty once discouraged cultivation, families are now able to sow crops with greater assurance. The reduced risk of destruction has revived local agricultural activity, improved food availability, and strengthened the economic resilience of the village.</p>
+    <p>This intervention is also helping address a deeper social concern — distress migration.</p>
+    <p>In many Himalayan villages, repeated farming losses force younger generations to leave their homes in search of unstable urban work. By making agriculture viable again, Tipali's fencing initiative is helping families remain connected to their land, traditions, and community.</p>
+
+    <h2>🤝 Building Collective Ownership</h2>
+    <p>Beyond the installation of fencing, the project has brought villagers together with a renewed sense of shared responsibility. Farmers collectively recognize the value of protecting their resources, and the initiative has inspired stronger community participation in maintaining and safeguarding the agricultural zone.</p>
+    <p>This spirit of cooperation ensures that the effort is not just a one-time intervention, but a sustainable local asset for years to come.</p>
+
+    <h2>🌄 A Step Toward Sustainable Mountain Agriculture</h2>
+    <p>The Tipali wildlife mitigation initiative stands as a strong example of how practical, community-centered infrastructure can create lasting impact in mountain regions.</p>
+    <p>By protecting crops, strengthening food security, supporting livelihoods, and reducing migration pressures, this effort demonstrates that even a simple intervention can transform the future of rural Himalayan communities.</p>
+    <p>Mountain Forum Himalaya remains committed to building such resilient models that allow village communities to thrive — safely, sustainably, and with dignity.</p>
+</div>
+
+<%- include("footer.ejs") %>

@@ -1,4 +1,3 @@
-
 import express from "express";
 import bodyParser from "body-parser";
 import mongoose from "mongoose";
@@ -7,15 +6,21 @@ const app = express();
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 import path from 'path';
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 const port = 3000;
-env.config();
-console.log(process.env.MONGODB_PASSWORD);
-mongoose.connect('mongodb+srv://jigansasatapathy:'+process.env.MONGODB_PASSWORD+'@mongodatabasereview.b1g5w.mongodb.net/ReviewDataBase');
-const db=mongoose.connection;
-db.once('open',()=>{ 
-    console.log("mongoDB connected");
+
+env.config({ path: "./.env" });
+
+console.log(process.env.MONGO_URL);
+
+mongoose.connect(process.env.MONGO_URL)
+.then(() => {
+    console.log("MongoDB connected");
+})
+.catch((err) => {
+    console.log("Mongo connection failed:", err);
 });
 const UserSchema =new mongoose.Schema({
     name:String,
@@ -299,6 +304,9 @@ app.get('/focus1/promo_live', (req, res) => {
 });
 app.get('/focus1/enhance_community', (req, res) => {
     res.render("enhance_community.ejs");
+});
+app.get('/agriculture', (req, res) => {
+    res.render("agriculture.ejs");
 });
 app.get('/donate', (req, res) => {
     res.render("donate.ejs");
